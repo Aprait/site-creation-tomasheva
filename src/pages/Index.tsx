@@ -4,6 +4,7 @@ import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
 import AcceleratorsSection from '@/components/AcceleratorsSection';
 import EducationSection from '@/components/EducationSection';
+import CertificateCarousel from '@/components/CertificateCarousel';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -17,6 +18,7 @@ const Index = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <EducationSection />
       </div>
+      <CertificateCarousel />
       <ContactSection />
       <Footer />
     </div>
