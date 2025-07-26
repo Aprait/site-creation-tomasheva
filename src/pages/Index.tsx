@@ -343,6 +343,20 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
+                
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <div className="flex items-center justify-center space-x-3">
+                    <Icon name="FileText" size={20} className="text-[#1E3A8A]" />
+                    <a 
+                      href="https://disk.yandex.ru/d/_CbV983nnZMatQ" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#1E3A8A] hover:underline font-medium text-lg"
+                    >
+                      Просмотреть все сертификаты курсов
+                    </a>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
