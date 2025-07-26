@@ -4,7 +4,7 @@ const AcceleratorsSection = () => {
   const accelerators = [
     {
       name: "Школа стартапов Skolkovo",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Skolkovo_logo_2020.svg/240px-Skolkovo_logo_2020.svg.png",
+      logo: "https://cdn.poehali.dev/files/69e445ac-b6ca-4147-ae70-7c249bf8befe.jpg",
       role: "Трекер (грейд В+)"
     },
     {
