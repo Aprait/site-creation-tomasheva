@@ -18,7 +18,19 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+				'body': ['Roboto', 'system-ui', 'sans-serif'],
+				sans: ['Roboto', 'system-ui', 'sans-serif']
+			},
 			colors: {
+				// Профессиональная цветовая схема
+				'brand': {
+					'navy': '#1E3A8A', // Основной темно-синий
+					'blue': '#3B82F6', // Акцентный синий
+					'light': '#EFF6FF', // Светлый фон
+					'accent': '#F59E0B' // Акцентный цвет для кнопок
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

@@ -12,42 +12,66 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    id: 'mim-link',
-    title: 'Диплом МИМ ЛИНК',
-    description: 'Профессиональная переподготовка по менеджменту',
-    imageUrl: 'https://cdn.poehali.dev/files/0f5e3233-e593-4677-acc3-b0fcf87f3395.JPG',
-    date: '17 июня 2011',
-    organization: 'Международный Институт Менеджмента ЛИНК'
-  },
-  {
-    id: 'open-university',
-    title: 'Professional Diploma in Management',
-    description: 'Teaching conducted in Russian language',
-    imageUrl: 'https://cdn.poehali.dev/files/70e0e592-961a-43f5-9eec-40da806c5bf8.JPG',
-    date: '31st July 2009',
-    organization: 'The Open University'
-  },
-  {
     id: 'okr-coach',
     title: 'Professional OKR Coach',
-    description: '6 модулей, 24 часа интенсивного обучения',
+    description: 'Сертификат профессионального OKR-коуча',
     imageUrl: 'https://cdn.poehali.dev/files/8a607dea-b189-4762-aefe-04e54fcae4ff.png',
-    date: 'Март 2024',
+    date: '2024',
     organization: 'OKR Academy'
   },
   {
-    id: 'mfti-recognition',
-    title: 'Благодарность МФТИ',
-    description: 'За научное руководство выпускными квалификационными работами',
-    imageUrl: 'https://cdn.poehali.dev/files/7f755f85-080b-442f-bb61-ab3aa4e9ebdb.png',
-    date: '2022-2024',
-    organization: 'Московский физико-технический институт'
+    id: 'skolkovo-tracker',
+    title: 'Трекер, Грейд В+',
+    description: 'Аттестация трекеров высшего уровня',
+    imageUrl: '/api/placeholder/600/800',
+    date: '2023',
+    organization: 'Школа стартапов Skolkovo'
   },
   {
-    id: 'i2bf-recommendation',
-    title: 'Рекомендательное письмо',
-    description: 'Венчурный анализ и инвестиционная экспертиза',
+    id: 'frii-product',
+    title: 'Продуктовый трекинг',
+    description: 'Специализированная программа по продуктовому трекингу',
+    imageUrl: '/api/placeholder/600/800',
+    date: '2025',
+    organization: 'ФРИИ'
+  },
+  {
+    id: 'i2bf-analyst',
+    title: 'Венчурный аналитик',
+    description: 'VC analyst course по анализу инвестиций',
     imageUrl: 'https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png',
+    date: '2023',
+    organization: 'I2BF Global Ventures'
+  },
+  {
+    id: 'strong-ideas-thanks',
+    title: 'Благодарственное письмо',
+    description: 'За работу Тимлидом в акселераторе',
+    imageUrl: '/api/placeholder/600/800',
+    date: '2022',
+    organization: 'Форум «Сильные идеи для нового времени»'
+  },
+  {
+    id: 'effie-jury',
+    title: 'Член жюри Effie Russia',
+    description: 'Диплом члена жюри главной награды за эффективность в маркетинге',
+    imageUrl: '/api/placeholder/600/800',
+    date: '2019',
+    organization: 'Effie Awards'
+  },
+  {
+    id: 'sport-pitch-winner',
+    title: '1-е место в питч-сессии',
+    description: 'Победитель в номинации «Спортивный стартап»',
+    imageUrl: '/api/placeholder/600/800',
+    date: '2022',
+    organization: '«Россия – спортивная держава»'
+  },
+  {
+    id: 'product-manager',
+    title: 'Product-Manager',
+    description: 'Сертификат об успешном завершении курса продакт-менеджмента',
+    imageUrl: '/api/placeholder/600/800',
     date: '2023',
     organization: 'I2BF Global Ventures'
   },
