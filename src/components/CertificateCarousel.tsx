@@ -12,44 +12,60 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    id: '1',
-    title: 'Директор по развитию',
-    description: 'Отработка практических навыков',
-    imageUrl: 'https://cdn.poehali.dev/files/594eff2a-6834-46b8-9741-9db44e79ff1a.png',
-    date: '13-14 октября 2020',
-    organization: 'Стратегии успешного развития'
+    id: 'mim-link',
+    title: 'Диплом МИМ ЛИНК',
+    description: 'Профессиональная переподготовка по менеджменту',
+    imageUrl: 'https://cdn.poehali.dev/files/0f5e3233-e593-4677-acc3-b0fcf87f3395.JPG',
+    date: '17 июня 2011',
+    organization: 'Международный Институт Менеджмента ЛИНК'
   },
   {
-    id: '2',
-    title: 'Методическая подготовка',
-    description: 'Социальные проекты',
-    imageUrl: 'https://cdn.poehali.dev/files/9721579a-e9b2-417b-97b4-e4f4e91e71a6.png',
-    date: '08 июня 2022',
-    organization: 'ИТ-Контракт'
+    id: 'open-university',
+    title: 'Professional Diploma in Management',
+    description: 'Teaching conducted in Russian language',
+    imageUrl: 'https://cdn.poehali.dev/files/70e0e592-961a-43f5-9eec-40da806c5bf8.JPG',
+    date: '31st July 2009',
+    organization: 'The Open University'
   },
   {
-    id: '3',
-    title: 'OKR Standard',
-    description: 'Сертифицированный OKR коуч',
-    imageUrl: 'https://cdn.poehali.dev/files/cbd8a9b7-f7f7-4b15-b006-3b9f5603ecfc.png',
-    date: '04 апреля 2024',
-    organization: 'OKR Standard'
+    id: 'okr-coach',
+    title: 'Professional OKR Coach',
+    description: '6 модулей, 24 часа интенсивного обучения',
+    imageUrl: 'https://cdn.poehali.dev/files/8a607dea-b189-4762-aefe-04e54fcae4ff.png',
+    date: 'Март 2024',
+    organization: 'OKR Academy'
   },
   {
-    id: '4',
-    title: 'Бережливое производство',
-    description: 'Мастерская по внедрению шаг за шагом',
-    imageUrl: 'https://cdn.poehali.dev/files/0a0cfa92-0fd5-4227-8792-471e970cd6f4.JPG',
-    date: 'октябрь-ноябрь 2009',
-    organization: 'Школа Эффективного Бизнеса'
+    id: 'mfti-recognition',
+    title: 'Благодарность МФТИ',
+    description: 'За научное руководство выпускными квалификационными работами',
+    imageUrl: 'https://cdn.poehali.dev/files/7f755f85-080b-442f-bb61-ab3aa4e9ebdb.png',
+    date: '2022-2024',
+    organization: 'Московский физико-технический институт'
   },
   {
-    id: '5',
-    title: 'Внутренние аудиторы СМК',
-    description: 'ISO 9001:2000',
-    imageUrl: 'https://cdn.poehali.dev/files/ac41379f-a02d-4eb0-999c-aa9261c406d0.JPG',
-    date: '20-22 сентября 2006',
-    organization: 'SGS'
+    id: 'i2bf-recommendation',
+    title: 'Рекомендательное письмо',
+    description: 'Венчурный анализ и инвестиционная экспертиза',
+    imageUrl: 'https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png',
+    date: '2023',
+    organization: 'I2BF Global Ventures'
+  },
+  {
+    id: 'digital-transformation',
+    title: 'Цифровая трансформация',
+    description: 'Государственная программа цифровой трансформации',
+    imageUrl: 'https://cdn.poehali.dev/files/705f4018-6841-4dd2-b9a8-2c91eda6768a.png',
+    date: 'Январь 2024',
+    organization: 'Минпромторг России'
+  },
+  {
+    id: 'risk-management',
+    title: 'Управление рисками проекта',
+    description: 'Профессиональная переподготовка по риск-менеджменту',
+    imageUrl: 'https://cdn.poehali.dev/files/d3f5e358-3c69-4073-8074-6078db8f34f8.png',
+    date: 'Декабрь 2023',
+    organization: 'НАДПО'
   }
 ];
 
