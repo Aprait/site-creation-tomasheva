@@ -320,28 +320,137 @@ const Index = () => {
               </Card>
             </div>
 
-            {/* Additional Certifications */}
+            {/* Professional Certificates Gallery */}
             <Card className="animate-fade-in" style={{animationDelay: "0.4s"}}>
               <CardHeader>
                 <CardTitle className="text-2xl text-[#1E3A8A] mb-4 text-center">
-                  Дополнительные сертификаты и курсы
+                  Профессиональные сертификаты
                 </CardTitle>
+                <CardDescription className="text-center">
+                  Документы, подтверждающие экспертизу в различных областях
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    "Professional OKR Coach, OKR Academy (2024)",
-                    "Продуктовый трекинг, ФРИИ (2025)",
-                    "Аттестация трекеров (Грейд В+), Школа стартапов Skolkovo (2023)",
-                    "VC analyst course, I2BF Global Ventures (2023)",
-                    "Product-Manager, Skillsetter (2021)",
-                    "Курсы повышения квалификации в области управления"
-                  ].map((cert, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <Icon name="GraduationCap" size={20} className="text-[#1E3A8A]" />
-                      <span className="text-gray-700">{cert}</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  {/* OKR Coach Certificate */}
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/a3b125cf-9540-4e0a-8e79-dec4385113d3.png" 
+                        alt="OKR Academy - Certified professional OKR Coach"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                  ))}
+                    <div className="mt-3 text-center">
+                      <h4 className="font-semibold text-gray-900">OKR Coach</h4>
+                      <p className="text-sm text-gray-600">OKR Academy · Март 2024</p>
+                      <div className="mt-2 flex justify-center">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                          6 модулей, 24 часа
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* MFTI Recognition */}
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/20693778-f274-4711-bb8d-d105c5edb8f7.png" 
+                        alt="Благодарность МФТИ за научное руководство ВКР"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="mt-3 text-center">
+                      <h4 className="font-semibold text-gray-900">Благодарность МФТИ</h4>
+                      <p className="text-sm text-gray-600">Научное руководство ВКР · 2022/2024</p>
+                      <div className="mt-2 flex justify-center">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          Наставничество
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Venture Analyst Recommendation */}
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/dc2a3d68-0274-4b92-9127-cd53d1af5f5c.png" 
+                        alt="Рекомендательное письмо венчурного аналитика"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="mt-3 text-center">
+                      <h4 className="font-semibold text-gray-900">Рекомендация</h4>
+                      <p className="text-sm text-gray-600">I2BF Global Ventures</p>
+                      <div className="mt-2 flex justify-center">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                          Венчурный анализ
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Digital Transformation Certificate */}
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/ef951a43-3618-4679-b6a4-fcb0945b9c27.png" 
+                        alt="Сертификат цифровой трансформации Минпромторг"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="mt-3 text-center">
+                      <h4 className="font-semibold text-gray-900">Цифровая трансформация</h4>
+                      <p className="text-sm text-gray-600">Минпромторг · Январь 2024</p>
+                      <div className="mt-2 flex justify-center">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          Госпрограмма
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Risk Management Certificate */}
+                  <div className="group cursor-pointer">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
+                      <img 
+                        src="https://cdn.poehali.dev/files/1163c818-8ef0-4272-a91b-b47e334ea980.png" 
+                        alt="Сертификат по управлению рисками проекта"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="mt-3 text-center">
+                      <h4 className="font-semibold text-gray-900">Управление рисками</h4>
+                      <p className="text-sm text-gray-600">НАДПО · Декабрь 2023</p>
+                      <div className="mt-2 flex justify-center">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                          Риск-менеджмент
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Additional Certifications List */}
+                <div className="border-t border-gray-200 pt-8">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-6 text-center">Дополнительные курсы и сертификации</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      "Продуктовый трекинг, ФРИИ (2025)",
+                      "Аттестация трекеров (Грейд В+), Школа стартапов Skolkovo (2023)",
+                      "VC analyst course, I2BF Global Ventures (2023)",
+                      "Product-Manager, Skillsetter (2021)",
+                      "Развитие производственных предприятий (2024)",
+                      "Курсы повышения квалификации в области управления"
+                    ].map((cert, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <Icon name="GraduationCap" size={16} className="text-[#1E3A8A]" />
+                        <span className="text-sm text-gray-700">{cert}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 
                 <div className="mt-8 pt-6 border-t border-gray-200">
