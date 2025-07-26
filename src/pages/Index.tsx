@@ -304,6 +304,17 @@ const Index = () => {
                       <Icon name="Languages" size={16} className="text-[#1E3A8A]" />
                       <span className="text-sm text-gray-600">Teaching conducted in Russian language</span>
                     </div>
+                    <div className="flex items-center space-x-2 mt-3">
+                      <Icon name="FileText" size={16} className="text-[#1E3A8A]" />
+                      <a 
+                        href="https://disk.yandex.ru/d/1nkbIutLpX17Vw" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm text-[#1E3A8A] hover:underline font-medium"
+                      >
+                        Просмотреть все сертификаты Open University
+                      </a>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
