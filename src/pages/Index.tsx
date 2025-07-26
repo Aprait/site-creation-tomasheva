@@ -222,12 +222,98 @@ const Index = () => {
             </Card>
           </div>
 
-          {/* Education */}
+          {/* Education Diplomas */}
           <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Дипломы и сертификаты
+              </h3>
+              <p className="text-lg text-gray-600">
+                Документы об образовании и профессиональной квалификации
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Russian Diploma */}
+              <Card className="animate-fade-in hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#1E3A8A] mb-2">
+                    Диплом МИМ ЛИНК
+                  </CardTitle>
+                  <CardDescription>
+                    Менеджмент · 17 июня 2011
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden border-2 border-gray-200">
+                    <img 
+                      src="https://cdn.poehali.dev/files/0f5e3233-e593-4677-acc3-b0fcf87f3395.JPG" 
+                      alt="Диплом МИМ ЛИНК по менеджменту"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Icon name="School" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm font-medium">Международный Институт Менеджмента ЛИНК</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Icon name="Award" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm text-gray-600">Профессиональная переподготовка</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Icon name="MapPin" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm text-gray-600">Жуковский, Россия</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Open University Diploma */}
+              <Card className="animate-fade-in hover:shadow-xl transition-all duration-300" style={{animationDelay: "0.2s"}}>
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#1E3A8A] mb-2">
+                    Professional Diploma in Management
+                  </CardTitle>
+                  <CardDescription>
+                    The Open University · 31st July 2009
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden border-2 border-gray-200">
+                    <img 
+                      src="https://cdn.poehali.dev/files/70e0e592-961a-43f5-9eec-40da806c5bf8.JPG" 
+                      alt="Professional Diploma in Management from The Open University"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Icon name="School" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm font-medium">The Open University</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Icon name="Award" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm text-gray-600">Professional Diploma</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Icon name="Globe" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm text-gray-600">United Kingdom</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Icon name="Languages" size={16} className="text-[#1E3A8A]" />
+                      <span className="text-sm text-gray-600">Teaching conducted in Russian language</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Additional Certifications */}
             <Card className="animate-fade-in" style={{animationDelay: "0.4s"}}>
               <CardHeader>
                 <CardTitle className="text-2xl text-[#1E3A8A] mb-4 text-center">
-                  Образование и ключевые сертификаты
+                  Дополнительные сертификаты и курсы
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -238,7 +324,7 @@ const Index = () => {
                     "Аттестация трекеров (Грейд В+), Школа стартапов Skolkovo (2023)",
                     "VC analyst course, I2BF Global Ventures (2023)",
                     "Product-Manager, Skillsetter (2021)",
-                    "Менеджмент, Международный Институт Менеджмента ЛИНК (2011)"
+                    "Курсы повышения квалификации в области управления"
                   ].map((cert, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <Icon name="GraduationCap" size={20} className="text-[#1E3A8A]" />
