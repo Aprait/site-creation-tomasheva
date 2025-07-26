@@ -51,7 +51,7 @@ const Index = () => {
             <div className="flex justify-center">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl animate-scale-in">
                 <img 
-                  src="/img/95d37511-d703-4eae-a8fa-5890f1e86db9.jpg" 
+                  src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
                   alt="Наталья Томашева - бизнес-эксперт"
                   className="w-full h-full object-cover"
                 />
