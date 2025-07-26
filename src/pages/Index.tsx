@@ -331,12 +331,12 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
                   {/* OKR Coach Certificate */}
                   <div className="group cursor-pointer">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
                       <img 
-                        src="https://cdn.poehali.dev/files/a3b125cf-9540-4e0a-8e79-dec4385113d3.png" 
+                        src="https://cdn.poehali.dev/files/8a607dea-b189-4762-aefe-04e54fcae4ff.png" 
                         alt="OKR Academy - Certified professional OKR Coach"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -356,7 +356,7 @@ const Index = () => {
                   <div className="group cursor-pointer">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
                       <img 
-                        src="https://cdn.poehali.dev/files/20693778-f274-4711-bb8d-d105c5edb8f7.png" 
+                        src="https://cdn.poehali.dev/files/7f755f85-080b-442f-bb61-ab3aa4e9ebdb.png" 
                         alt="Благодарность МФТИ за научное руководство ВКР"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -376,7 +376,7 @@ const Index = () => {
                   <div className="group cursor-pointer">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
                       <img 
-                        src="https://cdn.poehali.dev/files/dc2a3d68-0274-4b92-9127-cd53d1af5f5c.png" 
+                        src="https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png" 
                         alt="Рекомендательное письмо венчурного аналитика"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -396,7 +396,7 @@ const Index = () => {
                   <div className="group cursor-pointer">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
                       <img 
-                        src="https://cdn.poehali.dev/files/ef951a43-3618-4679-b6a4-fcb0945b9c27.png" 
+                        src="https://cdn.poehali.dev/files/705f4018-6841-4dd2-b9a8-2c91eda6768a.png" 
                         alt="Сертификат цифровой трансформации Минпромторг"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -416,7 +416,7 @@ const Index = () => {
                   <div className="group cursor-pointer">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden border-2 border-gray-200 group-hover:border-[#1E3A8A] transition-all duration-300">
                       <img 
-                        src="https://cdn.poehali.dev/files/1163c818-8ef0-4272-a91b-b47e334ea980.png" 
+                        src="https://cdn.poehali.dev/files/d3f5e358-3c69-4073-8074-6078db8f34f8.png" 
                         alt="Сертификат по управлению рисками проекта"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
