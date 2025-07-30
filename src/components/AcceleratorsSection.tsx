@@ -78,7 +78,7 @@ const AcceleratorsSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6 font-heading">
-                Экспертиза в экосистеме
+                Экспертиза в работе с бизнесами
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -113,8 +113,8 @@ const AcceleratorsSection = () => {
             
             <div className="text-center">
               <div className="bg-gradient-to-br from-brand-navy to-brand-blue rounded-2xl p-8 text-white">
-                <div className="text-4xl font-bold mb-2 font-heading">5+</div>
-                <div className="text-lg mb-4 font-body">лет в экосистеме</div>
+                <div className="text-4xl font-bold mb-2 font-heading">15+</div>
+                <div className="text-lg mb-4 font-body">лет в управлении и консалтинге</div>
                 <div className="h-px bg-white/20 mb-4"></div>
                 <div className="text-sm opacity-90 font-body">
                   Опыт работы в ведущих российских акселераторах и инновационных программах

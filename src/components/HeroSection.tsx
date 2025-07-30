@@ -38,12 +38,21 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/20 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in text-white">
+            <div className="flex justify-center lg:justify-start lg:order-2">
+              <div className="w-80 h-80 lg:w-80 lg:h-80 rounded-xl overflow-hidden shadow-2xl animate-scale-in ring-4 ring-white/20">
+                <img 
+                  src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
+                  alt="Наталья Томашева - бизнес-эксперт"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="animate-fade-in text-white lg:order-1">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight font-heading">
                 Наталья Томашева
               </h1>
               <p className="text-xl lg:text-2xl mb-8 leading-relaxed font-body opacity-90">
-                Эксперт по внедрению ИИ в бизнес-процессы, бизнес-трекер (грейд В+ Skolkovo), OKR-коуч, модератор и фасилитатор стратегических сессий
+                Эксперт по системному росту бизнеса и внедрению ИИ в бизнес-процессы, бизнес-трекер (грейд В+ Skolkovo), OKR-коуч, модератор и фасилитатор стратегических сессий
               </p>
               <Button 
                 size="lg" 
@@ -53,15 +62,6 @@ const HeroSection = () => {
                 Связаться в Telegram
                 <Icon name="MessageCircle" size={20} className="ml-2" />
               </Button>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl animate-scale-in ring-4 ring-white/20">
-                <img 
-                  src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
-                  alt="Наталья Томашева - бизнес-эксперт"
-                  className="w-full h-full object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ const ContactSection = () => {
   };
 
   const handleEmailClick = () => {
-    window.open('mailto:tomasheva.natalia@yandex.ru', '_blank');
+    window.open('mailto:n.tomasheva@foxmetod.ru', '_blank');
   };
 
   const handlePhoneClick = () => {
@@ -56,7 +56,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <div className="font-semibold text-gray-900 mb-1 font-heading">Email</div>
-                <div className="text-brand-navy font-medium font-body">tomasheva.natalia@yandex.ru</div>
+                <div className="text-brand-navy font-medium font-body">n.tomasheva@foxmetod.ru</div>
               </div>
             </div>
 

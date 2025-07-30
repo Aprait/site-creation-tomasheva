@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="text-center">
           <div className="mb-6">
             <h3 className="text-2xl font-bold mb-2 font-heading">Наталья Томашева</h3>
-            <p className="text-blue-200 font-body">Эксперт по внедрению ИИ в бизнес-процессы</p>
+            <p className="text-blue-200 font-body">Эксперт по системному росту бизнеса и внедрению ИИ в бизнес-процессы</p>
           </div>
           
           <div className="border-t border-blue-300/20 pt-6">
@@ -36,7 +36,7 @@ const Footer = () => {
                 Связаться в Telegram
               </a>
               <a 
-                href="mailto:tomasheva.natalia@yandex.ru" 
+                href="mailto:n.tomasheva@foxmetod.ru" 
                 className="hover:text-blue-200 transition-colors font-body underline"
               >
                 Email
