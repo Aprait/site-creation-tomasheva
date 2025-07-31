@@ -16,9 +16,25 @@ const certificates: Certificate[] = [
     id: 'okr-coach',
     title: 'Professional OKR Coach',
     description: 'Сертификат профессионального OKR-коуча',
-    imageUrl: 'https://cdn.poehali.dev/files/8a607dea-b189-4762-aefe-04e54fcae4ff.png',
+    imageUrl: 'https://cdn.poehali.dev/files/1ec8b698-d971-4e1b-a2bc-4204e12c0846.png',
     date: '2024',
-    organization: 'OKR Academy'
+    organization: 'OKR Standard'
+  },
+  {
+    id: 'director-development',
+    title: 'Директор по развитию',
+    description: 'Отработка практических навыков в объеме 16 учебных часов',
+    imageUrl: 'https://cdn.poehali.dev/files/2b6b1e8e-f8c9-40b8-86da-c2d18efc24dd.png',
+    date: '13-14 октября 2020',
+    organization: 'Стратегии устойчивого развития'
+  },
+  {
+    id: 'social-projects',
+    title: 'Методическая подготовка по социальным проектам',
+    description: 'Акселерационное сопровождение социальных проектов',
+    imageUrl: 'https://cdn.poehali.dev/files/727fcbd4-427d-4144-8a3b-23d9915d4de3.png',
+    date: '08 июня 2022',
+    organization: 'ИТ-Контракт'
   },
   {
     id: 'i2bf-analyst',
