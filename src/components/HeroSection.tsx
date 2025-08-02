@@ -48,6 +48,23 @@ const HeroSection = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
+            {/* Image */}
+            <div className="flex justify-center lg:justify-end lg:order-2">
+              <div className="relative">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl transform scale-105"></div>
+                
+                {/* Main Image */}
+                <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl modern-card border-4 border-white/20">
+                  <img 
+                    src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
+                    alt="Наталья Томашева - бизнес-эксперт"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Content */}
             <div className="modern-fade-in text-white lg:order-1">
               <div className="mb-6">
