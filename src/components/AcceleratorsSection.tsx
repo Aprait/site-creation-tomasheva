@@ -73,56 +73,7 @@ const AcceleratorsSection = () => {
             </div>
           ))}
         </div>
-        
-        <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6 font-heading">
-                Экспертиза в работе с бизнесами
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-brand-navy rounded-full flex items-center justify-center mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 font-heading">Трекинг команд</div>
-                    <div className="text-gray-600 font-body">Сопровождение 250+ команд в программах акселерации</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-brand-navy rounded-full flex items-center justify-center mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 font-heading">Экспертная оценка</div>
-                    <div className="text-gray-600 font-body">Участие в отборе и развитии перспективных проектов</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-brand-navy rounded-full flex items-center justify-center mt-1">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900 font-heading">Менторство</div>
-                    <div className="text-gray-600 font-body">Помощь стартапам в достижении ключевых метрик роста</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-brand-navy to-brand-blue rounded-2xl p-8 text-white">
-                <div className="text-4xl font-bold mb-2 font-heading">15+</div>
-                <div className="text-lg mb-4 font-body">лет в управлении и консалтинге</div>
-                <div className="h-px bg-white/20 mb-4"></div>
-                <div className="text-sm opacity-90 font-body">
-                  Опыт работы в ведущих российских акселераторах и инновационных программах
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
