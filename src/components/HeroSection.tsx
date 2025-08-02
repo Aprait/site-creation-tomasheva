@@ -46,12 +46,27 @@ const HeroSection = () => {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
             
-            {/* Content */}
-            <div className="modern-fade-in text-white lg:order-2">
+            {/* Image */}
+            <div className="flex-shrink-0 order-2 lg:order-1">
+              <div className="relative">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl transform scale-105"></div>
+                
+                {/* Main Image */}
+                <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl modern-card border-4 border-white/20">
+                  <img 
+                    src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
+                    alt="Наталья Томашева - бизнес-эксперт"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
 
-              
+            {/* Content */}
+            <div className="modern-fade-in text-white flex-1 order-1 lg:order-2">
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-heading tracking-tight">
                 <span className="block">Наталья</span>
                 <span className="block text-gradient-white">Томашёва</span>
@@ -61,8 +76,6 @@ const HeroSection = () => {
                 Эксперт по системному росту бизнеса и внедрению ИИ. 
                 <span className="text-white font-semibold">Более 280 команд за 5 лет, 21 млрд общий годовой оборот</span> клиентов.
               </p>
-              
-
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -82,23 +95,6 @@ const HeroSection = () => {
                   <Icon name="TrendingUp" size={20} className="mr-2" />
                   Смотреть кейсы
                 </Button>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className="flex justify-center lg:justify-start lg:order-1">
-              <div className="relative">
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl transform scale-105"></div>
-                
-                {/* Main Image */}
-                <div className="relative w-56 h-56 lg:w-64 lg:h-64 rounded-3xl overflow-hidden shadow-2xl modern-card border-4 border-white/20">
-                  <img 
-                    src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
-                    alt="Наталья Томашева - бизнес-эксперт"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
               </div>
             </div>
           </div>
