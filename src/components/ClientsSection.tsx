@@ -4,7 +4,7 @@ const ClientsSection = () => {
   const clients = [
     {
       name: "Уральские авиалинии",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ural_Airlines_logo.svg/240px-Ural_Airlines_logo.svg.png",
+      logo: "https://cdn.poehali.dev/files/ea385159-c001-430a-ab1e-bde567ffadd0.jpg",
       category: "Авиакомпания"
     },
     {
