@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Icon from '@/components/ui/icon';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
+  useEffect(() => {
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+    
+    accordionToggles.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling as HTMLElement;
+        const icon = button.querySelector('.accordion-icon') as HTMLElement;
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Cleanup function to remove event listeners
+    return () => {
+      accordionToggles.forEach(button => {
+        button.removeEventListener('click', () => {});
+      });
+    };
+  }, []);
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -26,110 +47,131 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Mobile Footer - Бутерброд */}
-        <div className="lg:hidden">
-          {/* Main Info - Always Visible */}
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-bold mb-2 font-heading text-white">
-              Наталья Томашева
-            </h3>
-            <p className="text-gray-400 font-body text-sm mb-4">
-              Эксперт по системному росту бизнеса и внедрению ИИ
-            </p>
-            
-            {/* Quick Contacts */}
-            <div className="flex justify-center space-x-6 mb-6">
-              <a 
-                href="tel:+79220227225" 
-                className="flex flex-col items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="Phone" size={20} className="mb-1 text-blue-400" />
-                <span className="text-xs font-body">Звонок</span>
-              </a>
-              <a 
-                href="mailto:n.tomasheva@foxmetod.ru" 
-                className="flex flex-col items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="Mail" size={20} className="mb-1 text-blue-400" />
-                <span className="text-xs font-body">Email</span>
-              </a>
-              <a 
-                href="https://t.me/natalyatomasheva" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex flex-col items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="MessageCircle" size={20} className="mb-1 text-blue-400" />
-                <span className="text-xs font-body">Telegram</span>
-              </a>
-            </div>
+        {/* ===== ДЕСКТОПНАЯ ВЕРСИЯ (4 колонки) ===== */}
+        {/* Скрыта по умолчанию, видна на экранах md и больше */}
+        <div className="hidden md:grid md:grid-cols-4 md:gap-8">
+          {/* Колонка 1: О бренде */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">Наталья Томашёва</h3>
+            <p className="text-gray-400 font-body mb-4">Бизнес-трекер, стратег. Превращаю хаос в систему.</p>
+            <p className="text-gray-400 font-body text-sm">Более 280 команд за 5 лет, 21 млрд общий годовой оборот клиентов.</p>
           </div>
-
-          {/* Compact Navigation */}
-          <div className="grid grid-cols-2 gap-4 text-center">
-            <div>
-              <h4 className="text-sm font-bold font-heading mb-2 text-white">Навигация</h4>
-              <div className="space-y-1 text-xs">
-                <a href="/about" className="block text-gray-400 hover:text-white transition-colors font-body">Обо мне</a>
-                <a href="/services" className="block text-gray-400 hover:text-white transition-colors font-body">Услуги</a>
-                <a href="/cases" className="block text-gray-400 hover:text-white transition-colors font-body">Кейсы</a>
-                <a href="/reviews" className="block text-gray-400 hover:text-white transition-colors font-body">Отзывы</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-sm font-bold font-heading mb-2 text-white">Быстрые ссылки</h4>
-              <div className="space-y-1 text-xs">
-                <a href="/contact" className="block text-gray-400 hover:text-white transition-colors font-body">Контакты</a>
-                <a href="/blog" className="block text-gray-400 hover:text-white transition-colors font-body">Блог</a>
-                <a href="#privacy" className="block text-gray-400 hover:text-white transition-colors font-body">Конфиденциальность</a>
-                <a href="#faq" className="block text-gray-400 hover:text-white transition-colors font-body">FAQ</a>
-              </div>
-            </div>
+          
+          {/* Колонка 2: Навигация */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">Навигация</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li><a href="/services" className="hover:text-white transition-colors font-body">Услуги</a></li>
+              <li><a href="/cases" className="hover:text-white transition-colors font-body">Кейсы</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors font-body">Блог</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors font-body">Обо мне</a></li>
+              <li><a href="/reviews" className="hover:text-white transition-colors font-body">Отзывы</a></li>
+            </ul>
+          </div>
+          
+          {/* Колонка 3: Контакты */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">Контакты</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <a href="mailto:n.tomasheva@foxmetod.ru" className="hover:text-white transition-colors font-body flex items-center">
+                  <Icon name="Mail" size={16} className="mr-2" />
+                  n.tomasheva@foxmetod.ru
+                </a>
+              </li>
+              <li>
+                <a href="tel:+79220227225" className="hover:text-white transition-colors font-body flex items-center">
+                  <Icon name="Phone" size={16} className="mr-2" />
+                  +7 922 022-72-25
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-body flex items-center">
+                  <Icon name="MessageCircle" size={16} className="mr-2" />
+                  Telegram
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Колонка 4: Призыв к действию */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">Готовы к росту?</h3>
+            <p className="text-gray-400 mb-4 font-body">Давайте обсудим ваши задачи.</p>
+            <Button 
+              onClick={() => window.location.href = '/contact'}
+              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            >
+              Записаться на консультацию
+            </Button>
           </div>
         </div>
 
-        {/* Desktop Footer - 4 Колонки */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6">
-          
-          {/* Company Info */}
+        {/* ===== МОБИЛЬНАЯ ВЕРСИЯ (Аккордеон) ===== */}
+        {/* Видна только на мобильных, скрыта на md и больше */}
+        <div className="md:hidden space-y-4">
+          {/* Аккордеон 1: Навигация */}
           <div>
-            <h3 className="text-lg font-bold mb-4 font-heading text-white">
-              Наталья Томашева
-            </h3>
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-4">
-              Эксперт по системному росту бизнеса и внедрению ИИ
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-2 text-sm">
-              <a 
-                href="tel:+79220227225" 
-                className="flex items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="Phone" size={16} className="mr-2 text-blue-400" />
-                <span className="font-body">+7 (922) 022-72-25</span>
-              </a>
-              <a 
-                href="mailto:n.tomasheva@foxmetod.ru" 
-                className="flex items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="Mail" size={16} className="mr-2 text-blue-400" />
-                <span className="font-body">Email</span>
-              </a>
-              <a 
-                href="https://t.me/natalyatomasheva" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center text-gray-400 hover:text-white transition-colors"
-              >
-                <Icon name="MessageCircle" size={16} className="mr-2 text-blue-400" />
-                <span className="font-body">Telegram</span>
-              </a>
+            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-white">
+              <span>Навигация</span>
+              <Icon name="ChevronDown" size={20} className="transition-transform accordion-icon" />
+            </button>
+            <div className="accordion-content hidden pt-2 pl-4">
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/services" className="hover:text-white transition-colors font-body">Услуги</a></li>
+                <li><a href="/cases" className="hover:text-white transition-colors font-body">Кейсы</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors font-body">Блог</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors font-body">Обо мне</a></li>
+                <li><a href="/reviews" className="hover:text-white transition-colors font-body">Отзывы</a></li>
+              </ul>
             </div>
+          </div>
+          
+          {/* Аккордеон 2: Контакты */}
+          <div>
+            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-white">
+              <span>Контакты</span>
+              <Icon name="ChevronDown" size={20} className="transition-transform accordion-icon" />
+            </button>
+            <div className="accordion-content hidden pt-2 pl-4">
+              <ul className="space-y-2 text-gray-300">
+                <li>
+                  <a href="mailto:n.tomasheva@foxmetod.ru" className="hover:text-white transition-colors font-body flex items-center">
+                    <Icon name="Mail" size={16} className="mr-2" />
+                    n.tomasheva@foxmetod.ru
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+79220227225" className="hover:text-white transition-colors font-body flex items-center">
+                    <Icon name="Phone" size={16} className="mr-2" />
+                    +7 922 022-72-25
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-body flex items-center">
+                    <Icon name="MessageCircle" size={16} className="mr-2" />
+                    Telegram
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Общая информация */}
+          <div className="pt-8 text-center">
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">Наталья Томашёва</h3>
+            <p className="text-gray-400 mb-4 font-body text-sm">Эксперт по системному росту бизнеса и внедрению ИИ</p>
+            <Button 
+              onClick={() => window.location.href = '/contact'}
+              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            >
+              Записаться на консультацию
+            </Button>
+          </div>
+        </div>
           </div>
 
           {/* Services */}

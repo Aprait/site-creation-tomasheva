@@ -36,7 +36,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 modern-gradient relative overflow-hidden">
+      <section className="pt-32 pb-40 modern-gradient relative overflow-hidden">
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/90 via-brand-secondary/80 to-brand-accent/90"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.3),rgba(255,255,255,0))]"></div>
@@ -45,7 +45,7 @@ const HeroSection = () => {
         <div className="absolute top-20 right-20 w-72 h-72 bg-brand-accent/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
           {/* Родительский Flex-контейнер */}
           <div className="md:flex md:items-center md:gap-12">
             
