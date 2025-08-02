@@ -19,17 +19,28 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
-				'body': ['Roboto', 'system-ui', 'sans-serif'],
-				sans: ['Roboto', 'system-ui', 'sans-serif']
+				'heading': ['Inter', 'system-ui', 'sans-serif'],
+				'body': ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Профессиональная цветовая схема
+				// Современная профессиональная палитра
 				'brand': {
-					'navy': '#1E3A8A', // Основной темно-синий
-					'blue': '#3B82F6', // Акцентный синий
-					'light': '#EFF6FF', // Светлый фон
-					'accent': '#F59E0B' // Акцентный цвет для кнопок
+					'primary': '#0F172A', // Глубокий темно-синий
+					'secondary': '#1E293B', // Средний темно-синий
+					'accent': '#3B82F6', // Яркий синий для акцентов
+					'success': '#10B981', // Зеленый для успеха
+					'warning': '#F59E0B', // Оранжевый для предупреждений
+					'light': '#F8FAFC', // Очень светлый серый
+					'muted': '#64748B', // Приглушенный серый
+					'navy': '#0F172A', // Обратная совместимость
+					'blue': '#3B82F6' // Обратная совместимость
+				},
+				// Градиенты для современного дизайна
+				'gradient': {
+					'primary': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+					'accent': 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
+					'success': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
