@@ -385,9 +385,8 @@ const About = () => {
                 </Button>
                 <Button 
                   size="lg"
-                  variant="outline"
                   onClick={() => window.location.href = '/contact'}
-                  className="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg font-semibold transition-all duration-300"
+                  className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg font-semibold transition-all duration-300"
                 >
                   Связаться со мной
                 </Button>

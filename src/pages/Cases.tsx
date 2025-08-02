@@ -154,9 +154,8 @@ const Cases = () => {
                 </Button>
                 <Button 
                   size="lg"
-                  variant="outline"
                   onClick={() => window.location.href = '/services'}
-                  className="border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg"
+                  className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg"
                 >
                   Изучить услуги
                 </Button>
