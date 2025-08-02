@@ -3,6 +3,8 @@ import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   useEffect(() => {
     const accordionToggles = document.querySelectorAll('.accordion-toggle');
     
@@ -23,28 +25,6 @@ const Footer = () => {
       });
     };
   }, []);
-  const currentYear = new Date().getFullYear();
-
-  const services = [
-    { name: 'Бизнес-трекинг', href: '/services' },
-    { name: 'Стратегические сессии', href: '/services' },
-    { name: 'Внедрение ИИ', href: '/services' },
-    { name: 'Консультации', href: '/contact' }
-  ];
-
-  const company = [
-    { name: 'Обо мне', href: '/about' },
-    { name: 'Кейсы', href: '/cases' },
-    { name: 'Отзывы', href: '/reviews' },
-    { name: 'Блог', href: '/blog' }
-  ];
-
-  const support = [
-    { name: 'Контакты', href: '/contact' },
-    { name: 'Политика конфиденциальности', href: '#privacy' },
-    { name: 'Условия использования', href: '#terms' },
-    { name: 'FAQ', href: '#faq' }
-  ];
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -172,67 +152,9 @@ const Footer = () => {
             </Button>
           </div>
         </div>
-          </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-bold font-heading mb-4 text-white">Услуги</h4>
-            <ul className="space-y-2 text-sm">
-              {services.map((item) => (
-                <li key={item.name}>
-                  <a 
-                    href={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors font-body"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-bold font-heading mb-4 text-white">Компания</h4>
-            <ul className="space-y-2 text-sm">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <a 
-                    href={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors font-body"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-bold font-heading mb-4 text-white">Поддержка</h4>
-            <ul className="space-y-2 text-sm">
-              {support.map((item) => (
-                <li key={item.name}>
-                  <a 
-                    href={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors font-body"
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-        </div>
-
-
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="bg-gray-950 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Общая нижняя часть футера */}
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="text-gray-400 text-xs font-body text-center md:text-left">
               <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 667322943328</p>
