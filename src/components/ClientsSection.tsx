@@ -9,52 +9,52 @@ const ClientsSection = () => {
     },
     {
       name: "МЕГАМАРТ",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/1e626a9d-9f39-4ce1-91bc-884876df0dbf.jpg",
       category: "Ритейл"
     },
     {
       name: "Мир детства",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/c4c43bc4-9820-4fb1-9070-90e19c09b129.jpg",
       category: "Детские товары"
     },
     {
       name: "ИНСИ",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/787054bc-414c-4234-a0fc-054cce6dcb84.jpg",
       category: "Технологии"
     },
     {
       name: "ТК ОЛМИ",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/dd797f96-b6fd-481b-8316-33e934ce7319.jpg",
       category: "Логистика"
     },
     {
       name: "Банзай",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/ba13414a-0404-46e1-942c-ec1d8ffade15.jpg",
       category: "Издательство"
     },
     {
       name: "Джанго Парк",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/56b46447-6b70-4bf9-978e-41a0559f2183.jpg",
       category: "Развлечения"
     },
     {
       name: "Дерзкий",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/23a744f5-75df-47f5-bd57-3aa1237bdf8f.jpg",
       category: "IT"
     },
     {
       name: "EctemOk",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/e873e486-0447-43b3-a559-ca1ae98792a6.jpg",
       category: "Технологии"
     },
     {
       name: "RedHolt",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/ec22a7d2-a539-44da-9870-35d7577c0fd3.jpg",
       category: "IT-услуги"
     },
     {
       name: "Wowee",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/c6c5f832-c879-456c-9af5-dd090206ede8.jpg",
       category: "Digital"
     }
   ];
