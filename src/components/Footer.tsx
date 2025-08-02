@@ -39,23 +39,23 @@ const Footer = () => {
               Контакты
             </h3>
             <div className="space-y-3">
-              <div className="text-gray-300 font-body text-lg font-bold">
+              <div className="text-gray-300 font-body text-xs font-bold">
                 Наталья Томашева
               </div>
-              <p className="text-gray-400 font-body text-sm mb-4">
+              <p className="text-gray-400 font-body text-xs mb-4">
                 Эксперт по системному росту бизнеса и внедрению ИИ
               </p>
               <div className="space-y-2">
                 <a 
                   href="tel:+79220227225" 
-                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body"
+                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
                   <Icon name="Phone" size={18} className="mr-3 text-blue-400" />
                   +7 922 022-72-25
                 </a>
                 <a 
                   href="mailto:n.tomasheva@foxmetod.ru" 
-                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body"
+                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
                   <Icon name="Mail" size={18} className="mr-3 text-blue-400" />
                   n.tomasheva@foxmetod.ru
@@ -64,7 +64,7 @@ const Footer = () => {
                   href="https://t.me/natalyatomasheva" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body"
+                  className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
                   <Icon name="MessageCircle" size={18} className="mr-3 text-blue-400" />
                   @natalyatomasheva
@@ -79,10 +79,10 @@ const Footer = () => {
               Услуги
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/services" className="hover:text-white transition-colors font-body">Бизнес-трекинг</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body">Стратегическое планирование</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body">Внедрение ИИ</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body">Консультации</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors font-body text-xs">Бизнес-трекинг</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors font-body text-xs">Стратегическое планирование</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors font-body text-xs">Внедрение ИИ</a></li>
+              <li><a href="/services" className="hover:text-white transition-colors font-body text-xs">Консультации</a></li>
             </ul>
           </div>
 
@@ -92,10 +92,10 @@ const Footer = () => {
               Компания
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/about" className="hover:text-white transition-colors font-body">Обо мне</a></li>
-              <li><a href="/cases" className="hover:text-white transition-colors font-body">Кейсы</a></li>
-              <li><a href="/reviews" className="hover:text-white transition-colors font-body">Отзывы</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors font-body">Блог</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors font-body text-xs">Обо мне</a></li>
+              <li><a href="/cases" className="hover:text-white transition-colors font-body text-xs">Кейсы</a></li>
+              <li><a href="/reviews" className="hover:text-white transition-colors font-body text-xs">Отзывы</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors font-body text-xs">Блог</a></li>
             </ul>
           </div>
 
@@ -105,10 +105,10 @@ const Footer = () => {
               Поддержка
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/contact" className="hover:text-white transition-colors font-body">Контакты</a></li>
-              <li><a href="#privacy" className="hover:text-white transition-colors font-body">Политика конфиденциальности</a></li>
-              <li><a href="#terms" className="hover:text-white transition-colors font-body">Условия использования</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors font-body">FAQ</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors font-body text-xs">Контакты</a></li>
+              <li><a href="#privacy" className="hover:text-white transition-colors font-body text-xs">Политика конфиденциальности</a></li>
+              <li><a href="#terms" className="hover:text-white transition-colors font-body text-xs">Условия использования</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors font-body text-xs">FAQ</a></li>
             </ul>
           </div>
         </div>
@@ -124,11 +124,11 @@ const Footer = () => {
             </button>
             <div className="accordion-content hidden pt-2 pl-4">
               <ul className="space-y-2 text-gray-300">
-                <li><a href="/services" className="hover:text-white transition-colors font-body">Услуги</a></li>
-                <li><a href="/cases" className="hover:text-white transition-colors font-body">Кейсы</a></li>
-                <li><a href="/blog" className="hover:text-white transition-colors font-body">Блог</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors font-body">Обо мне</a></li>
-                <li><a href="/reviews" className="hover:text-white transition-colors font-body">Отзывы</a></li>
+                <li><a href="/services" className="hover:text-white transition-colors font-body text-xs">Услуги</a></li>
+                <li><a href="/cases" className="hover:text-white transition-colors font-body text-xs">Кейсы</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors font-body text-xs">Блог</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors font-body text-xs">Обо мне</a></li>
+                <li><a href="/reviews" className="hover:text-white transition-colors font-body text-xs">Отзывы</a></li>
               </ul>
             </div>
           </div>
@@ -142,19 +142,19 @@ const Footer = () => {
             <div className="accordion-content hidden pt-2 pl-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="mailto:n.tomasheva@foxmetod.ru" className="hover:text-white transition-colors font-body flex items-center">
+                  <a href="mailto:n.tomasheva@foxmetod.ru" className="hover:text-white transition-colors font-body text-xs flex items-center">
                     <Icon name="Mail" size={16} className="mr-2" />
                     n.tomasheva@foxmetod.ru
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+79220227225" className="hover:text-white transition-colors font-body flex items-center">
+                  <a href="tel:+79220227225" className="hover:text-white transition-colors font-body text-xs flex items-center">
                     <Icon name="Phone" size={16} className="mr-2" />
                     +7 922 022-72-25
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-body flex items-center">
+                  <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-body text-xs flex items-center">
                     <Icon name="MessageCircle" size={16} className="mr-2" />
                     Telegram
                   </a>
@@ -166,10 +166,10 @@ const Footer = () => {
           {/* Общая информация */}
           <div className="pt-8 text-center">
             <h3 className="text-xl font-bold mb-4 font-heading text-white">Наталья Томашёва</h3>
-            <p className="text-gray-400 mb-4 font-body text-sm">Эксперт по системному росту бизнеса и внедрению ИИ</p>
+            <p className="text-gray-400 mb-4 font-body text-xs">Эксперт по системному росту бизнеса и внедрению ИИ</p>
             <Button 
               onClick={() => window.location.href = '/contact'}
-              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
+              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-xs leading-tight"
             >
               <span className="block">Записаться на</span>
               <span className="block">консультацию</span>
@@ -178,7 +178,7 @@ const Footer = () => {
         </div>
 
         {/* Общая нижняя часть футера */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="text-gray-400 text-xs font-body text-center md:text-left">
               <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 665800847625</p>
