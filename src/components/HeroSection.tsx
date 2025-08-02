@@ -50,10 +50,10 @@ const HeroSection = () => {
             </div>
             <div className="animate-fade-in text-white lg:order-1">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight font-heading">
-                Трансформирую ваш бизнес с помощью стратегии и искусственного интеллекта
+                Наталья Томашёва
               </h1>
               <p className="text-xl lg:text-2xl mb-8 leading-relaxed font-body opacity-90">
-                Помогаю собственникам и топ-менеджерам строить системные, прибыльные и готовые к будущему компании
+                Эксперт по системному росту бизнеса и внедрению ИИ в бизнес-процессы, бизнес-трекер (грейд В+ Skolkovo), OKR-коуч, модератор и фасилитатор стратегических сессий
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
