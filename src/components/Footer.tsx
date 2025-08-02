@@ -29,52 +29,49 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-4 gap-6">
           
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-3 font-heading text-white">
-                Наталья Томашева
-              </h3>
-              <p className="text-gray-400 font-body leading-relaxed">
-                Эксперт по системному росту бизнеса и внедрению ИИ в бизнес-процессы. 
-                Помогаю компаниям масштабироваться и автоматизировать процессы.
-              </p>
-            </div>
+          <div>
+            <h3 className="text-lg font-bold mb-4 font-heading text-white">
+              Наталья Томашева
+            </h3>
+            <p className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+              Эксперт по системному росту бизнеса и внедрению ИИ
+            </p>
             
-            {/* Social Links */}
-            <div className="space-y-3">
-              <h4 className="text-lg font-semibold font-heading mb-4">Контакты</h4>
-              <div className="space-y-3">
-                <a 
-                  href="https://t.me/natalyatomasheva" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-gray-400 hover:text-white transition-colors group"
-                >
-                  <Icon name="MessageCircle" size={20} className="mr-3 text-blue-400 group-hover:text-blue-300" />
-                  <span className="font-body">Telegram</span>
-                </a>
-                <a 
-                  href="mailto:n.tomasheva@foxmetod.ru" 
-                  className="flex items-center text-gray-400 hover:text-white transition-colors group"
-                >
-                  <Icon name="Mail" size={20} className="mr-3 text-blue-400 group-hover:text-blue-300" />
-                  <span className="font-body">n.tomasheva@foxmetod.ru</span>
-                </a>
-                <div className="flex items-center text-gray-400">
-                  <Icon name="MapPin" size={20} className="mr-3 text-blue-400" />
-                  <span className="font-body">Москва, Россия</span>
-                </div>
-              </div>
+            {/* Contact Info */}
+            <div className="space-y-2 text-sm">
+              <a 
+                href="tel:+79220227225" 
+                className="flex items-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Icon name="Phone" size={16} className="mr-2 text-blue-400" />
+                <span className="font-body">+7 (922) 022-72-25</span>
+              </a>
+              <a 
+                href="mailto:n.tomasheva@foxmetod.ru" 
+                className="flex items-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Icon name="Mail" size={16} className="mr-2 text-blue-400" />
+                <span className="font-body">Email</span>
+              </a>
+              <a 
+                href="https://t.me/natalyatomasheva" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-400 hover:text-white transition-colors"
+              >
+                <Icon name="MessageCircle" size={16} className="mr-2 text-blue-400" />
+                <span className="font-body">Telegram</span>
+              </a>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-6 text-white">Услуги</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-bold font-heading mb-4 text-white">Услуги</h4>
+            <ul className="space-y-2 text-sm">
               {services.map((item) => (
                 <li key={item.name}>
                   <a 
@@ -90,8 +87,8 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-6 text-white">Компания</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-bold font-heading mb-4 text-white">Компания</h4>
+            <ul className="space-y-2 text-sm">
               {company.map((item) => (
                 <li key={item.name}>
                   <a 
@@ -107,8 +104,8 @@ const Footer = () => {
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-6 text-white">Поддержка</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-bold font-heading mb-4 text-white">Поддержка</h4>
+            <ul className="space-y-2 text-sm">
               {support.map((item) => (
                 <li key={item.name}>
                   <a 
@@ -125,19 +122,19 @@ const Footer = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold mb-4 font-heading">
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-center">
+            <h3 className="text-xl font-bold mb-3 font-heading">
               Готовы масштабировать бизнес?
             </h3>
-            <p className="text-blue-100 mb-6 font-body max-w-2xl mx-auto">
-              Получите бесплатную консультацию и узнайте, как системный подход поможет вашему бизнесу
+            <p className="text-blue-100 mb-4 font-body text-sm">
+              Получите бесплатную консультацию по развитию вашего бизнеса
             </p>
             <a 
               href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
             >
-              <Icon name="MessageSquare" size={20} className="mr-2" />
+              <Icon name="MessageSquare" size={16} className="mr-2" />
               Получить консультацию
             </a>
           </div>
@@ -145,18 +142,17 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-950 py-6">
+      <div className="bg-gray-950 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm font-body text-center md:text-left">
-              <p className="mb-1">© {currentYear} Наталья Томашева. Все права защищены.</p>
-              <p>ИП Томашева Наталья Борисовна • ИНН: 667322943328 • ОГРНИП: 319665800095942</p>
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            <div className="text-gray-400 text-xs font-body text-center md:text-left">
+              <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 667322943328</p>
             </div>
             
-            <div className="flex items-center space-x-4 text-sm text-gray-400">
+            <div className="flex items-center space-x-2 text-xs text-gray-400">
               <span className="font-body">Создано с</span>
-              <Icon name="Heart" size={16} className="text-red-400" />
-              <span className="font-body">для роста вашего бизнеса</span>
+              <Icon name="Heart" size={12} className="text-red-400" />
+              <span className="font-body">для роста бизнеса</span>
             </div>
           </div>
         </div>
