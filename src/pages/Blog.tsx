@@ -23,7 +23,7 @@ const Blog = () => {
       categoryName: "Искусственный интеллект",
       date: "15 ноября 2024",
       readTime: "8 мин",
-      image: "/api/placeholder/400/250",
+      image: "/img/e08b06e3-cc0e-4a6d-bf5b-f82ee47546e7.jpg",
       featured: true
     },
     {
@@ -34,7 +34,7 @@ const Blog = () => {
       categoryName: "Управление",
       date: "8 ноября 2024",
       readTime: "6 мин",
-      image: "/api/placeholder/400/250",
+      image: "/img/d76b34d3-3109-4c8c-8498-213056484618.jpg",
       featured: true
     },
     {
@@ -45,7 +45,7 @@ const Blog = () => {
       categoryName: "Стратегия",
       date: "1 ноября 2024",
       readTime: "10 мин",
-      image: "/api/placeholder/400/250",
+      image: "/img/35228f44-5fa2-4290-802d-53db3cc8cf9d.jpg",
       featured: true
     },
     {
@@ -56,7 +56,7 @@ const Blog = () => {
       categoryName: "Управление",
       date: "25 октября 2024",
       readTime: "7 мин",
-      image: "/api/placeholder/400/250"
+      image: "/img/78e257d1-b7ad-44f2-9a4c-1e76a730206e.jpg"
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const Blog = () => {
       categoryName: "Стратегия",
       date: "18 октября 2024",
       readTime: "9 мин",
-      image: "/api/placeholder/400/250"
+      image: "/img/eb6c7e78-fbbf-4a32-b84a-8090fc123471.jpg"
     },
     {
       id: 6,
@@ -76,7 +76,7 @@ const Blog = () => {
       categoryName: "Кейсы",
       date: "11 октября 2024",
       readTime: "12 мин",
-      image: "/api/placeholder/400/250"
+      image: "/img/ef8d49ec-dde0-448e-a5a3-cea4b2118f10.jpg"
     }
   ];
 

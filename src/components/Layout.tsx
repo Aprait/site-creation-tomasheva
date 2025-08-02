@@ -53,14 +53,14 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 Кейсы
               </a>
               <a 
-                href="/achievements" 
+                href="/reviews" 
                 className={`transition-colors font-body ${
-                  currentPage === 'achievements' 
+                  currentPage === 'reviews' 
                     ? 'text-brand-navy font-medium' 
                     : 'text-gray-700 hover:text-brand-navy'
                 }`}
               >
-                Достижения
+                Отзывы
               </a>
               <a 
                 href="/blog" 
