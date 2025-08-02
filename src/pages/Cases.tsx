@@ -62,10 +62,10 @@ const Cases = () => {
           {/* Cases Grid */}
           <div className="space-y-12">
             {cases.map((caseItem, index) => (
-              <div key={caseItem.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div key={caseItem.id} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
                 
                 {/* Header */}
-                <div className={`bg-gradient-to-r ${caseItem.color} px-8 py-8 text-white`}>
+                <div className={`bg-gradient-to-r ${caseItem.color} border-t border-l border-r border-white/10 px-8 py-8 text-white`}>
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center">
                       <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
@@ -136,7 +136,7 @@ const Cases = () => {
 
           {/* CTA Section */}
           <section className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
               <h2 className="text-3xl font-bold mb-6 font-heading">
                 Хотите такие же результаты?
               </h2>

@@ -53,8 +53,8 @@ const Services = () => {
           {/* Services Grid */}
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className={`bg-gradient-to-r ${service.gradient} px-8 py-12 text-white`}>
+              <div key={index} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                <div className={`bg-gradient-to-r ${service.gradient} border-t border-l border-r border-white/10 px-8 py-12 text-white`}>
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mr-6">
                       <Icon name={service.icon as any} size={32} className="text-white" />
@@ -107,7 +107,7 @@ const Services = () => {
 
           {/* CTA Section */}
           <section className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
               <h2 className="text-3xl font-bold mb-6 font-heading">
                 Готовы начать трансформацию?
               </h2>

@@ -140,7 +140,7 @@ const Reviews = () => {
 
           {/* Stats Section */}
           <section className="mb-20">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
               <h2 className="text-3xl font-bold text-center mb-8 font-heading">
                 Статистика работы с клиентами
               </h2>
@@ -159,11 +159,11 @@ const Reviews = () => {
           <section className="mb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {reviews.map((review) => (
-                <div key={review.id} className="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                <div key={review.id} className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 card-hover">
                   
                   {/* Service Badge */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${review.color} text-white`}>
+                    <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${review.color} border border-white/20 text-white`}>
                       <Icon name={review.icon as any} size={16} className="mr-2" />
                       <span className="text-sm font-medium">{review.service}</span>
                     </div>
@@ -199,7 +199,7 @@ const Reviews = () => {
 
           {/* Process Section */}
           <section className="mb-20">
-            <div className="bg-brand-light rounded-2xl p-12">
+            <div className="bg-brand-light rounded-2xl border border-gray-200 p-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-heading">
                 Как я работаю с клиентами
               </h2>
@@ -238,7 +238,7 @@ const Reviews = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-12 text-white">
+            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
               <h2 className="text-3xl font-bold mb-6 font-heading">
                 Готовы стать следующим успешным кейсом?
               </h2>

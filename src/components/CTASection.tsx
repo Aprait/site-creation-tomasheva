@@ -39,9 +39,7 @@ const CTASection = () => {
               </a>
             </div>
             
-            <div className="mt-8 text-blue-100/80 text-sm">
-              <p>📞 +7 (922) 022-72-25 • 📧 n.tomasheva@foxmetod.ru</p>
-            </div>
+
           </div>
         </div>
       </div>

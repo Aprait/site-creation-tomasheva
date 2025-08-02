@@ -22,11 +22,15 @@ const About = () => {
   ];
 
   const certificates = [
-    { title: "Бизнес-трекинг Сколково", image: "/img/893867a2-53b0-4715-a3e3-902c3acf89cc.jpg", year: "2023" },
-    { title: "OKR Coach Certification", image: "/img/299736ab-0020-4b4b-ae51-38e68cf79204.jpg", year: "2022" },
-    { title: "Agile Project Management", image: "/img/392c3591-789c-44af-be49-7fbd09a23148.jpg", year: "2022" },
-    { title: "Strategic Planning Expert", image: "/img/6a8596f8-91f9-462b-8584-617a66b32e7a.jpg", year: "2021" },
-    { title: "Digital Transformation", image: "/img/0a303409-7b48-40e9-99fd-60567e73c983.jpg", year: "2021" }
+    { title: "Professional OKR Coach", image: "https://cdn.poehali.dev/files/8a607dea-b189-4762-aefe-04e54fcae4ff.png", year: "2024", organization: "OKR Academy" },
+    { title: "Трекер, Грейд В+", image: "/api/placeholder/400/300", year: "2023", organization: "Школа стартапов Skolkovo" },
+    { title: "Венчурный аналитик", image: "https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png", year: "2023", organization: "I2BF Global Ventures" },
+    { title: "Цифровая трансформация", image: "https://cdn.poehali.dev/files/705f4018-6841-4dd2-b9a8-2c91eda6768a.png", year: "2024", organization: "Минпромторг России" },
+    { title: "Управление рисками проекта", image: "https://cdn.poehali.dev/files/d3f5e358-3c69-4073-8074-6078db8f34f8.png", year: "2023", organization: "НАДПО" },
+    { title: "Продуктовый трекинг", image: "/api/placeholder/400/300", year: "2025", organization: "ФРИИ" },
+    { title: "Благодарственное письмо", image: "/api/placeholder/400/300", year: "2022", organization: "Форум «Сильные идеи для нового времени»" },
+    { title: "Член жюри Effie Russia", image: "/api/placeholder/400/300", year: "2019", organization: "Effie Awards" },
+    { title: "1-е место в питч-сессии", image: "/api/placeholder/400/300", year: "2022", organization: "«Россия – спортивная держава»" }
   ];
 
   const testimonials = [
@@ -105,7 +109,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* Strategic Architect */}
-              <div className="bg-white rounded-xl p-8 shadow-lg card-hover">
+              <div className="bg-white rounded-xl p-8 shadow-xl border border-gray-100 card-hover">
                 <div className="w-16 h-16 bg-brand-accent rounded-lg flex items-center justify-center mb-6">
                   <Icon name="Target" size={32} className="text-white" />
                 </div>
@@ -118,7 +122,7 @@ const About = () => {
               </div>
 
               {/* Growth Catalyst */}
-              <div className="bg-white rounded-xl p-8 shadow-lg card-hover">
+              <div className="bg-white rounded-xl p-8 shadow-xl border border-gray-100 card-hover">
                 <div className="w-16 h-16 bg-brand-accent rounded-lg flex items-center justify-center mb-6">
                   <Icon name="TrendingUp" size={32} className="text-white" />
                 </div>
@@ -131,7 +135,7 @@ const About = () => {
               </div>
 
               {/* AI Futurist */}
-              <div className="bg-white rounded-xl p-8 shadow-lg card-hover">
+              <div className="bg-white rounded-xl p-8 shadow-xl border border-gray-100 card-hover">
                 <div className="w-16 h-16 bg-brand-accent rounded-lg flex items-center justify-center mb-6">
                   <Icon name="Bot" size={32} className="text-white" />
                 </div>
@@ -188,19 +192,19 @@ const About = () => {
               Значимые достижения
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-brand-navy to-brand-blue rounded-xl p-8 text-white">
+              <div className="bg-gradient-to-br from-brand-navy to-brand-blue rounded-xl p-8 text-white shadow-xl border border-brand-blue/20">
                 <h3 className="text-2xl font-bold mb-4 font-heading">Рост оборота в 8 раз</h3>
                 <p className="font-body">Увеличила оборот компании более чем в 8 раз за период работы</p>
               </div>
-              <div className="bg-gradient-to-br from-brand-accent to-yellow-500 rounded-xl p-8 text-white">
+              <div className="bg-gradient-to-br from-brand-accent to-yellow-500 rounded-xl p-8 text-white shadow-xl border border-brand-accent/20">
                 <h3 className="text-2xl font-bold mb-4 font-heading">Открытие головного офиса</h3>
                 <p className="font-body">Открыла с нуля головной офис компании в г. Москва</p>
               </div>
-              <div className="bg-gradient-to-br from-brand-navy to-purple-600 rounded-xl p-8 text-white">
+              <div className="bg-gradient-to-br from-brand-navy to-purple-600 rounded-xl p-8 text-white shadow-xl border border-purple-600/20">
                 <h3 className="text-2xl font-bold mb-4 font-heading">Контракт на 500 млн ₽</h3>
                 <p className="font-body">Участвовала в заключении контракта с госкорпорацией на сумму более 500 млн рублей</p>
               </div>
-              <div className="bg-gradient-to-br from-green-500 to-brand-accent rounded-xl p-8 text-white">
+              <div className="bg-gradient-to-br from-green-500 to-brand-accent rounded-xl p-8 text-white shadow-xl border border-green-500/20">
                 <h3 className="text-2xl font-bold mb-4 font-heading">160 млн ₽ инвестиций</h3>
                 <p className="font-body">Привлекла венчурный фонд, готовый инвестировать 160 млн рублей</p>
               </div>
@@ -246,7 +250,7 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {certificates.map((cert, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                <div key={index} className="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden card-hover">
                   <div 
                     className="h-48 bg-gray-200 cursor-pointer"
                     onClick={() => openLightbox(cert.image)}
@@ -278,7 +282,7 @@ const About = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                  <div key={index} className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden card-hover">
                     <div 
                       className="h-48 bg-gray-200 cursor-pointer"
                       onClick={() => openLightbox(testimonial.image)}
@@ -368,7 +372,7 @@ const About = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="bg-brand-navy rounded-2xl p-12">
+            <div className="bg-brand-navy rounded-2xl p-12 shadow-xl border border-brand-navy/20">
               <h2 className="text-3xl font-bold text-white mb-6 font-heading">
                 Готовы изменить свой бизнес?
               </h2>
