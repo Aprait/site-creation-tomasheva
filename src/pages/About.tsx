@@ -22,15 +22,11 @@ const About = () => {
   ];
 
   const certificates = [
-    { title: "Бизнес-трекинг Сколково", image: "https://cdn.poehali.dev/files/5ecb1b99-0923-424c-8965-c102ba6ee705.png", year: "2023" },
-    { title: "OKR Coach Certification", image: "https://cdn.poehali.dev/files/70f090b4-512f-45e8-b05f-3f9ab570b632.png", year: "2022" },
-    { title: "Agile Project Management", image: "https://cdn.poehali.dev/files/bb124585-8ea7-438f-8bac-26a0db969ab2.png", year: "2022" },
-    { title: "Strategic Planning Expert", image: "https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png", year: "2021" },
-    { title: "Digital Transformation", image: "https://cdn.poehali.dev/files/5ecb1b99-0923-424c-8965-c102ba6ee705.png", year: "2021" },
-    { title: "AI Business Integration", image: "https://cdn.poehali.dev/files/70f090b4-512f-45e8-b05f-3f9ab570b632.png", year: "2023" },
-    { title: "Growth Hacking Specialist", image: "https://cdn.poehali.dev/files/bb124585-8ea7-438f-8bac-26a0db969ab2.png", year: "2020" },
-    { title: "CRM Implementation Expert", image: "https://cdn.poehali.dev/files/73f61a30-6242-4d34-8878-533b0bc5662e.png", year: "2019" },
-    { title: "Венчурный аналитик", image: "https://cdn.poehali.dev/files/5ecb1b99-0923-424c-8965-c102ba6ee705.png", year: "2023" }
+    { title: "Бизнес-трекинг Сколково", image: "/img/893867a2-53b0-4715-a3e3-902c3acf89cc.jpg", year: "2023" },
+    { title: "OKR Coach Certification", image: "/img/299736ab-0020-4b4b-ae51-38e68cf79204.jpg", year: "2022" },
+    { title: "Agile Project Management", image: "/img/392c3591-789c-44af-be49-7fbd09a23148.jpg", year: "2022" },
+    { title: "Strategic Planning Expert", image: "/img/6a8596f8-91f9-462b-8584-617a66b32e7a.jpg", year: "2021" },
+    { title: "Digital Transformation", image: "/img/0a303409-7b48-40e9-99fd-60567e73c983.jpg", year: "2021" }
   ];
 
   const testimonials = [
@@ -391,7 +387,7 @@ const About = () => {
                   size="lg"
                   variant="outline"
                   onClick={() => window.location.href = '/contact'}
-                  className="border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg"
+                  className="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg font-semibold transition-all duration-300"
                 >
                   Связаться со мной
                 </Button>
