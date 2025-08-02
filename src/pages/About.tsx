@@ -61,22 +61,31 @@ const About = () => {
 
   return (
     <Layout currentPage="about">
-      <div className="pt-8 pb-16">
+      <div className="pt-8 pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
-          <section className="mb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <section className="mb-24">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 text-brand-accent rounded-full font-medium mb-6">
+                <Icon name="User" size={16} className="mr-2" />
+                Обо мне
+              </div>
+              <h1 className="text-4xl lg:text-6xl font-bold text-brand-primary mb-6 font-heading tracking-tight">
+                Моя экспертиза
+              </h1>
+              <p className="text-xl text-brand-muted font-body max-w-3xl mx-auto leading-relaxed">
+                Комплексный подход к развитию вашего бизнеса от опытного эксперта
+              </p>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-heading">
-                  Обо мне
-                </h1>
-                <div className="space-y-6 text-lg font-body text-gray-600">
-                  <p>
-                    Более 20 лет я занимаюсь управлением компаниями, проектами, автоматизацией процессов и цифровой трансформацией. Как интерим-менеджер (операционный директор, директор по развитию) я более 10 лет помогала бизнесу расти изнутри.
+                <div className="space-y-6 text-lg font-body text-brand-muted leading-relaxed">
+                  <p className="text-xl">
+                    Более <span className="font-semibold text-brand-primary">20 лет</span> я занимаюсь управлением компаниями, проектами, автоматизацией процессов и цифровой трансформацией.
                   </p>
                   <p>
-                    С 2019 года я как бизнес-трекер и эксперт-наставник поработала с более чем 280 командами, чей общий годовой оборот превышает 21 миллиард рублей, и реализовала более 100 консалтинговых проектов в России и Узбекистане.
+                    С <span className="font-semibold text-brand-primary">2019 года</span> как бизнес-трекер поработала с <span className="font-semibold text-brand-accent">более 280 командами</span>, чей общий годовой оборот <span className="font-semibold text-brand-accent">превышает 21 млрд ₽</span>.
                   </p>
                 </div>
               </div>

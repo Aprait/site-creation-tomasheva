@@ -100,27 +100,7 @@ const ClientsSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 font-heading">
-              Результаты совместной работы
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-brand-navy mb-2 font-heading">15+</div>
-                <div className="text-sm text-gray-600 font-body">отраслей экономики</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-brand-navy mb-2 font-heading">98%</div>
-                <div className="text-sm text-gray-600 font-body">клиентов рекомендуют</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-brand-navy mb-2 font-heading">250+</div>
-                <div className="text-sm text-gray-600 font-body">успешных проектов</div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

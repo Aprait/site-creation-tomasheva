@@ -64,24 +64,10 @@ const HeroSection = () => {
               
               <p className="text-xl lg:text-2xl mb-8 leading-relaxed font-body text-white/90 max-w-2xl">
                 Эксперт по системному росту бизнеса и внедрению ИИ. 
-                <span className="text-white font-semibold"> Более 280 команд, 21 млрд ₽ общий оборот</span> клиентов.
+                <span className="text-white font-semibold">Более 280 команд за 5 лет, 21 млрд общий годовой оборот</span> клиентов.
               </p>
               
-              {/* Achievement Stats */}
-              <div className="grid grid-cols-3 gap-8 mb-10">
-                <div className="text-center lg:text-left">
-                  <div className="stats-number text-white">280+</div>
-                  <div className="text-white/70 font-body font-medium">Команд</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="stats-number text-white">21</div>
-                  <div className="text-white/70 font-body font-medium">Млрд ₽</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="stats-number text-white">15+</div>
-                  <div className="text-white/70 font-body font-medium">Лет</div>
-                </div>
-              </div>
+
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -118,16 +104,7 @@ const HeroSection = () => {
                     className="w-full h-full object-cover"
                   />
                   
-                  {/* Floating Badges */}
-                  <div className="absolute -top-4 -right-4 bg-brand-success/90 backdrop-blur-sm text-white px-4 py-2 rounded-xl font-semibold text-sm shadow-lg">
-                    <Icon name="Award" size={16} className="inline mr-1" />
-                    Эксперт года
-                  </div>
-                  
-                  <div className="absolute -bottom-4 -left-4 bg-brand-accent/90 backdrop-blur-sm text-white px-4 py-2 rounded-xl font-semibold text-sm shadow-lg">
-                    <Icon name="Users" size={16} className="inline mr-1" />
-                    280+ команд
-                  </div>
+
                 </div>
               </div>
             </div>

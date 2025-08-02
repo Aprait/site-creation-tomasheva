@@ -121,24 +121,7 @@ const Footer = () => {
 
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-center">
-            <h3 className="text-xl font-bold mb-3 font-heading">
-              Готовы масштабировать бизнес?
-            </h3>
-            <p className="text-blue-100 mb-4 font-body text-sm">
-              Получите бесплатную консультацию по развитию вашего бизнеса
-            </p>
-            <a 
-              href="/contact"
-              className="inline-flex items-center px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm"
-            >
-              <Icon name="MessageSquare" size={16} className="mr-2" />
-              Получить консультацию
-            </a>
-          </div>
-        </div>
+
       </div>
 
       {/* Bottom Bar */}
