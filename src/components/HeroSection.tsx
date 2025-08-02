@@ -46,7 +46,7 @@ const HeroSection = () => {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Content */}
             <div className="modern-fade-in text-white lg:order-1">
@@ -92,7 +92,7 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-3xl blur-2xl transform scale-105"></div>
                 
                 {/* Main Image */}
-                <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl modern-card border-4 border-white/20">
+                <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl modern-card border-4 border-white/20">
                   <img 
                     src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
                     alt="Наталья Томашева - бизнес-эксперт"
