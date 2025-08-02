@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleTelegramClick = () => {
     window.open('https://t.me/natalyatomasheva', '_blank');
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -16,6 +26,7 @@ const HeroSection = () => {
             <div className="text-xl font-bold text-brand-primary font-heading tracking-tight">
               Наталья Томашева
             </div>
+            {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               <a href="/about" className="text-gray-600 hover:text-brand-primary transition-colors font-body font-medium">Обо мне</a>
               <a href="/services" className="text-gray-600 hover:text-brand-primary transition-colors font-body font-medium">Услуги</a>
@@ -24,15 +35,90 @@ const HeroSection = () => {
               <a href="/blog" className="text-gray-600 hover:text-brand-primary transition-colors font-body font-medium">Блог</a>
               <a href="/contact" className="text-gray-600 hover:text-brand-primary transition-colors font-body font-medium">Контакты</a>
             </div>
+
+            {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="modern-button bg-brand-accent hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg"
+              className="hidden md:flex modern-button bg-brand-accent hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg"
             >
               <Icon name="MessageCircle" size={16} className="mr-2" />
               Связаться
             </Button>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              aria-label="Открыть меню"
+            >
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} className="text-brand-primary" />
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              <a 
+                href="/about" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Обо мне
+              </a>
+              <a 
+                href="/services" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Услуги
+              </a>
+              <a 
+                href="/cases" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Кейсы
+              </a>
+              <a 
+                href="/reviews" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Отзывы
+              </a>
+              <a 
+                href="/blog" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Блог
+              </a>
+              <a 
+                href="/contact" 
+                onClick={closeMobileMenu}
+                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              >
+                Контакты
+              </a>
+              
+              {/* Mobile CTA Button */}
+              <div className="pt-3 border-t border-gray-100">
+                <Button 
+                  onClick={() => {
+                    handleTelegramClick();
+                    closeMobileMenu();
+                  }}
+                  className="w-full bg-brand-accent hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg"
+                >
+                  <Icon name="MessageCircle" size={16} className="mr-2" />
+                  Связаться
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
