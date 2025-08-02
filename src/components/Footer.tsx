@@ -181,13 +181,13 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="text-gray-400 text-xs font-body text-center md:text-left">
-              <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 667322943328</p>
+              <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 665800847625</p>
             </div>
             
             <div className="flex items-center space-x-2 text-xs text-gray-400">
-              <span className="font-body">Создано с</span>
+              <span className="font-body text-xs">Создано с</span>
               <Icon name="Heart" size={12} className="text-red-400" />
-              <span className="font-body">для роста бизнеса</span>
+              <span className="font-body text-xs">для роста бизнеса</span>
             </div>
           </div>
         </div>
