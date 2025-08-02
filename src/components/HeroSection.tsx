@@ -17,11 +17,12 @@ const HeroSection = () => {
               Наталья Томашева
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Услуги</a>
-              <a href="#results" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Результаты</a>
-              <a href="#clients" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Клиенты</a>
-              <a href="#certificates" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Сертификаты</a>
-              <a href="#contacts" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Контакты</a>
+              <a href="/about" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Обо мне</a>
+              <a href="/services" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Услуги</a>
+              <a href="/cases" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Кейсы</a>
+              <a href="/achievements" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Достижения</a>
+              <a href="/blog" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Блог</a>
+              <a href="/contact" className="text-gray-700 hover:text-brand-navy transition-colors font-body">Контакты</a>
             </div>
             <Button 
               onClick={handleTelegramClick}
@@ -49,19 +50,28 @@ const HeroSection = () => {
             </div>
             <div className="animate-fade-in text-white lg:order-1">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight font-heading">
-                Наталья Томашева
+                Трансформирую ваш бизнес с помощью стратегии и искусственного интеллекта
               </h1>
               <p className="text-xl lg:text-2xl mb-8 leading-relaxed font-body opacity-90">
-                Эксперт по системному росту бизнеса и внедрению ИИ в бизнес-процессы, бизнес-трекер (грейд В+ Skolkovo), OKR-коуч, модератор и фасилитатор стратегических сессий
+                Помогаю собственникам и топ-менеджерам строить системные, прибыльные и готовые к будущему компании
               </p>
-              <Button 
-                size="lg" 
-                onClick={handleTelegramClick}
-                className="bg-brand-accent hover:bg-orange-500 text-white px-8 py-4 text-lg font-medium animate-scale-in border-0 shadow-lg"
-              >
-                Связаться в Telegram
-                <Icon name="MessageCircle" size={20} className="ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  onClick={() => window.location.href = '/contact'}
+                  className="bg-brand-accent hover:bg-orange-500 text-white px-8 py-4 text-lg font-medium animate-scale-in border-0 shadow-lg"
+                >
+                  Записаться на консультацию
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={() => window.location.href = '/cases'}
+                  className="border-white text-white hover:bg-white hover:text-brand-navy px-8 py-4 text-lg font-medium animate-scale-in"
+                >
+                  Смотреть кейсы
+                </Button>
+              </div>
             </div>
           </div>
         </div>

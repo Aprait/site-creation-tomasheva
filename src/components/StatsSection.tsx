@@ -4,36 +4,36 @@ import { Card, CardContent } from '@/components/ui/card';
 const StatsSection = () => {
   const stats = [
     { 
-      number: "250+", 
-      label: "Команд проведено через трекинг", 
-      period: "за 2021-2024 гг." 
+      number: ">20 лет", 
+      label: "опыта в управлении", 
+      period: "компаниями и проектами" 
     },
     { 
-      number: "21+ млрд ₽", 
-      label: "Годовой оборот компаний", 
-      period: "с которыми велась работа" 
+      number: ">280", 
+      label: "команд в портфеле", 
+      period: "работа как бизнес-трекера" 
+    },
+    { 
+      number: ">21 млрд ₽", 
+      label: "общий годовой оборот", 
+      period: "клиентов в портфеле" 
     },
     { 
       number: "160 млн ₽", 
-      label: "Привлечено венчурных инвестиций", 
-      period: "для IT-проекта" 
-    },
-    { 
-      number: "×8 раз", 
-      label: "Увеличен оборот компании", 
-      period: "на позиции коммерческого директора" 
+      label: "привлеченных инвестиций", 
+      period: "для клиента" 
     }
   ];
 
   return (
-    <section id="results" className="py-20 bg-gradient-to-b from-white to-brand-light">
+    <section id="results" className="py-20 bg-gradient-to-b from-brand-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
-            Мои результаты в цифрах
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-navy mb-4 font-heading">
+            Ключевые достижения в цифрах
           </h2>
-          <p className="text-xl text-gray-600 font-body">
-            Измеримые достижения в работе с командами и бизнесом
+          <p className="text-xl text-brand-gray font-body">
+            Конкретные результаты работы с бизнесом
           </p>
         </div>
         
@@ -41,17 +41,17 @@ const StatsSection = () => {
           {stats.map((stat, index) => (
             <Card 
               key={index} 
-              className="text-center border-2 hover:border-brand-navy transition-all duration-300 card-hover animate-fade-in bg-white shadow-lg" 
+              className="text-center border-2 hover:border-brand-orange transition-all duration-300 card-hover animate-fade-in bg-white shadow-lg" 
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <CardContent className="pt-8 pb-8">
-                <div className="stats-number text-brand-navy mb-4">
+                <div className="stats-number text-brand-orange mb-4">
                   {stat.number}
                 </div>
-                <div className="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                <div className="text-lg font-semibold text-brand-navy mb-2 font-heading">
                   {stat.label}
                 </div>
-                <div className="text-sm text-gray-600 font-body">
+                <div className="text-sm text-brand-gray font-body">
                   {stat.period}
                 </div>
               </CardContent>
@@ -60,9 +60,9 @@ const StatsSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 font-body max-w-3xl mx-auto">
-            Каждая цифра отражает конкретный результат работы с реальными компаниями. 
-            Мой подход основан на измеримых KPI и долгосрочном партнерстве.
+          <p className="text-lg text-brand-gray font-body max-w-3xl mx-auto">
+            Каждая цифра отражает реальные результаты в работе с компаниями разных масштабов. 
+            Моя экспертиза — это мост между классическим бизнесом и миром высоких технологий.
           </p>
         </div>
       </div>

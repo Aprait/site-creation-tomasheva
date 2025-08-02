@@ -10,15 +10,13 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-brand-white text-brand-gray">
       <HeroSection />
       <StatsSection />
       <ServicesSection />
+      {/* Блок отзывов будет добавлен позже */}
       <ClientsSection />
       <AcceleratorsSection />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <EducationSection />
-      </div>
       <ContactSection />
       <Footer />
     </div>

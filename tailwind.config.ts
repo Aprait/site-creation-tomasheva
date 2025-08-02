@@ -20,16 +20,17 @@ export default {
 		extend: {
 			fontFamily: {
 				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
-				'body': ['Roboto', 'system-ui', 'sans-serif'],
-				sans: ['Roboto', 'system-ui', 'sans-serif']
+				'body': ['PT Serif', 'Georgia', 'serif'],
+				sans: ['Montserrat', 'system-ui', 'sans-serif'],
+				serif: ['PT Serif', 'Georgia', 'serif']
 			},
 			colors: {
-				// Профессиональная цветовая схема
+				// Новая цветовая схема «Структурированный минимализм»
 				'brand': {
-					'navy': '#1E3A8A', // Основной темно-синий
-					'blue': '#3B82F6', // Акцентный синий
-					'light': '#EFF6FF', // Светлый фон
-					'accent': '#F59E0B' // Акцентный цвет для кнопок
+					'navy': '#001F3F', // Midnight Navy - основной
+					'orange': '#FF851B', // Catalyst Orange - акцентный
+					'white': '#F9F9F9', // Cloud White - фон
+					'gray': '#4A4A4A' // Steel Gray - текст
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
