@@ -89,8 +89,7 @@ const Cases = () => {
                     {/* Left Column - S.T */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading flex items-center">
-                          <span className="w-8 h-8 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">S</span>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
                           Ситуация
                         </h3>
                         <p className="text-gray-600 font-body leading-relaxed">
@@ -99,8 +98,7 @@ const Cases = () => {
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading flex items-center">
-                          <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">T</span>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
                           Задача
                         </h3>
                         <p className="text-gray-600 font-body leading-relaxed">
@@ -112,8 +110,7 @@ const Cases = () => {
                     {/* Right Column - A.R */}
                     <div className="space-y-6">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading flex items-center">
-                          <span className="w-8 h-8 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">A</span>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
                           Действия
                         </h3>
                         <p className="text-gray-600 font-body leading-relaxed">
@@ -122,8 +119,7 @@ const Cases = () => {
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading flex items-center">
-                          <span className="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">R</span>
+                        <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
                           Результат
                         </h3>
                         <p className="text-gray-600 font-body leading-relaxed">

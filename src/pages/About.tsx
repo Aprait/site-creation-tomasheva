@@ -303,12 +303,61 @@ const About = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
               Эксперт в ведущих акселераторах
             </h2>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-2xl font-bold text-gray-900">Сколково</div>
-              <div className="text-2xl font-bold text-gray-900">Growth Academy</div>
-              <div className="text-2xl font-bold text-gray-900">Университет 20.35</div>
-              <div className="text-2xl font-bold text-gray-900">Бизнес-Уикенд</div>
-              <div className="text-2xl font-bold text-gray-900">Школа молодого предпринимателя</div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                  <img 
+                    src="/api/placeholder/80/80" 
+                    alt="Сколково" 
+                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700 text-center">Сколково</span>
+              </div>
+              
+              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                  <img 
+                    src="/api/placeholder/80/80" 
+                    alt="Growth Academy" 
+                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700 text-center">Growth Academy</span>
+              </div>
+              
+              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                  <img 
+                    src="/api/placeholder/80/80" 
+                    alt="Университет 20.35" 
+                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700 text-center">Университет 20.35</span>
+              </div>
+              
+              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                  <img 
+                    src="/api/placeholder/80/80" 
+                    alt="Бизнес-Уикенд" 
+                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700 text-center">Бизнес-Уикенд</span>
+              </div>
+              
+              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
+                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
+                  <img 
+                    src="/api/placeholder/80/80" 
+                    alt="Школа молодого предпринимателя" 
+                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-700 text-center">Школа молодого предпринимателя</span>
+              </div>
             </div>
           </section>
 
