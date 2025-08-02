@@ -19,8 +19,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 214 100% 62%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -67,8 +67,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 214 100% 62%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -247,4 +247,27 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Высококонтрастные кнопки для лучшей видимости */
+.btn-primary {
+  @apply bg-brand-accent text-white hover:bg-brand-accent/90;
+}
+
+.btn-secondary {
+  @apply bg-white text-brand-accent border-2 border-brand-accent hover:bg-brand-accent hover:text-white;
+}
+
+.btn-dark {
+  @apply bg-brand-navy text-white hover:bg-brand-primary;
+}
+
+/* Принудительные стили для высокой контрастности */
+.force-contrast {
+  color: white !important;
+  background-color: var(--brand-accent) !important;
+}
+
+.force-contrast:hover {
+  background-color: var(--brand-primary) !important;
 }

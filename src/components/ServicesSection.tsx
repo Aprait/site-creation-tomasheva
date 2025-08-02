@@ -107,7 +107,7 @@ const ServicesSection = () => {
             <p className="text-brand-muted mb-6 font-body">
               Обсудим вашу задачу индивидуально — я помогу найти оптимальное решение
             </p>
-            <button className="modern-button bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-3 rounded-xl font-semibold">
+            <button className="modern-button bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
               <Icon name="MessageCircle" size={20} className="mr-2 inline" />
               Обсудить задачу
             </button>

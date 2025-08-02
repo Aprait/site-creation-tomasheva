@@ -379,7 +379,7 @@ const About = () => {
                 <Button 
                   size="lg"
                   onClick={() => window.location.href = '/cases'}
-                  className="bg-brand-accent hover:bg-orange-600 text-white px-8 py-4 text-lg"
+                  className="bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-4 text-lg font-semibold"
                 >
                   Изучить кейсы
                 </Button>
