@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import ConsultationModal from '@/components/ConsultationModal';
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   const handleTelegramClick = () => {
     window.open('https://t.me/natalyatomasheva', '_blank');
@@ -150,7 +152,7 @@ const HeroSection = () => {
               <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => setIsConsultationModalOpen(true)}
                   className="modern-button bg-white text-brand-primary hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl"
                 >
                   <Icon name="Calendar" size={20} className="mr-2" />
@@ -193,6 +195,12 @@ const HeroSection = () => {
           <Icon name="ChevronDown" size={24} />
         </div>
       </section>
+
+      {/* Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </>
   );
 };

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from '@/components/ui/icon';
+import ConsultationModal from '@/components/ConsultationModal';
 
 const CTASection = () => {
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,13 +23,13 @@ const CTASection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
+              <button 
+                onClick={() => setIsConsultationModalOpen(true)}
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
                 <Icon name="Calendar" size={20} className="mr-2" />
                 Записаться на консультацию
-              </a>
+              </button>
               
               <a 
                 href="https://t.me/natalyatomasheva"
@@ -43,6 +46,12 @@ const CTASection = () => {
           </div>
         </div>
       </div>
+
+      {/* Consultation Modal */}
+      <ConsultationModal 
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </section>
   );
 };
