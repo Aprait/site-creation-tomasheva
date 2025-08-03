@@ -64,48 +64,60 @@ const HeroSection = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-3">
-              <a 
-                href="/about" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              <button 
+                onClick={() => {
+                  navigate('/about');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Обо мне
-              </a>
-              <a 
-                href="/services" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              </button>
+              <button 
+                onClick={() => {
+                  navigate('/services');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Услуги
-              </a>
-              <a 
-                href="/cases" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              </button>
+              <button 
+                onClick={() => {
+                  navigate('/cases');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Кейсы
-              </a>
-              <a 
-                href="/reviews" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              </button>
+              <button 
+                onClick={() => {
+                  navigate('/reviews');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Отзывы
-              </a>
-              <a 
-                href="/blog" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              </button>
+              <button 
+                onClick={() => {
+                  navigate('/blog');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Блог
-              </a>
-              <a 
-                href="/contact" 
-                onClick={closeMobileMenu}
-                className="block py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+              </button>
+              <button 
+                onClick={() => {
+                  navigate('/contact');
+                  closeMobileMenu();
+                }}
+                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
               >
                 Контакты
-              </a>
+              </button>
               
               {/* Mobile CTA Button */}
               <div className="pt-3 border-t border-gray-100">
