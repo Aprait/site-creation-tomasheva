@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
 
 const About = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const education = [
     {
@@ -382,14 +384,14 @@ const About = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/cases'}
+                  onClick={() => navigate('/cases')}
                   className="bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-4 text-lg font-semibold"
                 >
                   Изучить кейсы
                 </Button>
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => navigate('/contact')}
                   className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg font-semibold transition-all duration-300"
                 >
                   Связаться со мной

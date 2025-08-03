@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -6,6 +7,7 @@ import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     contact: '',
@@ -198,7 +200,7 @@ const Contact = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/services'}
+                  onClick={() => navigate('/services')}
                   className="bg-brand-navy hover:bg-blue-900 text-white px-8 py-4 text-lg"
                 >
                   Посмотреть услуги
@@ -206,7 +208,7 @@ const Contact = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  onClick={() => window.location.href = '/cases'}
+                  onClick={() => navigate('/cases')}
                   className="border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white px-8 py-4 text-lg"
                 >
                   Изучить кейсы

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
+import ConsultationModal from '@/components/ConsultationModal';
 
 const Achievements = () => {
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   const education = [
     {
@@ -210,7 +214,7 @@ const Achievements = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => setIsConsultationModalOpen(true)}
                   className="bg-brand-navy hover:bg-blue-900 text-white px-8 py-4 text-lg"
                 >
                   Начать сотрудничество
@@ -218,7 +222,7 @@ const Achievements = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  onClick={() => window.location.href = '/about'}
+                  onClick={() => navigate('/about')}
                   className="border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white px-8 py-4 text-lg"
                 >
                   Узнать больше обо мне
@@ -251,6 +255,11 @@ const Achievements = () => {
           </div>
         </div>
       )}
+      
+      <ConsultationModal
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </Layout>
   );
 };

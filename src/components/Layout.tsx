@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Footer from '@/components/Footer';
@@ -29,13 +30,13 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <a href="/" className="text-xl font-bold text-brand-primary font-heading tracking-tight hover:text-brand-accent transition-colors">
+            <Link to="/" className="text-xl font-bold text-brand-primary font-heading tracking-tight hover:text-brand-accent transition-colors">
               Наталья Томашева
-            </a>
+            </Link>
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              <a 
-                href="/about" 
+              <Link 
+                to="/about" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'about' 
                     ? 'text-brand-accent font-semibold' 
@@ -43,9 +44,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Обо мне
-              </a>
-              <a 
-                href="/services" 
+              </Link>
+              <Link 
+                to="/services" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'services' 
                     ? 'text-brand-accent font-semibold' 
@@ -53,9 +54,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Услуги
-              </a>
-              <a 
-                href="/cases" 
+              </Link>
+              <Link 
+                to="/cases" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'cases' 
                     ? 'text-brand-accent font-semibold' 
@@ -63,9 +64,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Кейсы
-              </a>
-              <a 
-                href="/reviews" 
+              </Link>
+              <Link 
+                to="/reviews" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'reviews' 
                     ? 'text-brand-accent font-semibold' 
@@ -73,9 +74,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Отзывы
-              </a>
-              <a 
-                href="/blog" 
+              </Link>
+              <Link 
+                to="/blog" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'blog' 
                     ? 'text-brand-accent font-semibold' 
@@ -83,9 +84,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Блог
-              </a>
-              <a 
-                href="/contact" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className={`transition-colors font-body font-medium ${
                   currentPage === 'contact' 
                     ? 'text-brand-accent font-semibold' 
@@ -93,7 +94,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Контакты
-              </a>
+              </Link>
             </div>
 
             {/* Desktop CTA Button */}
@@ -120,8 +121,8 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-3">
-              <a 
-                href="/about" 
+              <Link 
+                to="/about" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'about' 
@@ -130,9 +131,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Обо мне
-              </a>
-              <a 
-                href="/services" 
+              </Link>
+              <Link 
+                to="/services" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'services' 
@@ -141,9 +142,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Услуги
-              </a>
-              <a 
-                href="/cases" 
+              </Link>
+              <Link 
+                to="/cases" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'cases' 
@@ -152,9 +153,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Кейсы
-              </a>
-              <a 
-                href="/reviews" 
+              </Link>
+              <Link 
+                to="/reviews" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'reviews' 
@@ -163,9 +164,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Отзывы
-              </a>
-              <a 
-                href="/blog" 
+              </Link>
+              <Link 
+                to="/blog" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'blog' 
@@ -174,9 +175,9 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Блог
-              </a>
-              <a 
-                href="/contact" 
+              </Link>
+              <Link 
+                to="/contact" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
                   currentPage === 'contact' 
@@ -185,7 +186,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                 }`}
               >
                 Контакты
-              </a>
+              </Link>
               
               {/* Mobile CTA Button */}
               <div className="pt-3 border-t border-gray-100">

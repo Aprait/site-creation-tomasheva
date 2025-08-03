@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import ConsultationModal from '@/components/ConsultationModal';
@@ -6,6 +7,7 @@ import ConsultationModal from '@/components/ConsultationModal';
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleTelegramClick = () => {
     window.open('https://t.me/natalyatomasheva', '_blank');
@@ -161,7 +163,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  onClick={() => window.location.href = '/cases'}
+                  onClick={() => navigate('/cases')}
                   className="modern-button border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl"
                 >
                   <Icon name="TrendingUp" size={20} className="mr-2" />

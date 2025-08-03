@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 
@@ -79,10 +80,10 @@ const Footer = () => {
               Услуги
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/services" className="hover:text-white transition-colors font-body text-sm">Бизнес-трекинг</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body text-sm">Стратегическое планирование</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body text-sm">Внедрение ИИ</a></li>
-              <li><a href="/services" className="hover:text-white transition-colors font-body text-sm">Консультации</a></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Бизнес-трекинг</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Стратегическое планирование</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Внедрение ИИ</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Консультации</Link></li>
             </ul>
           </div>
 
@@ -92,10 +93,10 @@ const Footer = () => {
               Эксперт
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/about" className="hover:text-white transition-colors font-body text-sm">Обо мне</a></li>
-              <li><a href="/cases" className="hover:text-white transition-colors font-body text-sm">Кейсы</a></li>
-              <li><a href="/reviews" className="hover:text-white transition-colors font-body text-sm">Отзывы</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors font-body text-sm">Блог</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors font-body text-sm">Обо мне</Link></li>
+              <li><Link to="/cases" className="hover:text-white transition-colors font-body text-sm">Кейсы</Link></li>
+              <li><Link to="/reviews" className="hover:text-white transition-colors font-body text-sm">Отзывы</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors font-body text-sm">Блог</Link></li>
             </ul>
           </div>
 
@@ -105,7 +106,7 @@ const Footer = () => {
               Поддержка
             </h3>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="/contact" className="hover:text-white transition-colors font-body text-sm">Контакты</a></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors font-body text-sm">Контакты</Link></li>
               <li><a href="#privacy" className="hover:text-white transition-colors font-body text-sm">Политика конфиденциальности</a></li>
               <li><a href="#terms" className="hover:text-white transition-colors font-body text-sm">Условия использования</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors font-body text-sm">FAQ</a></li>
@@ -124,11 +125,11 @@ const Footer = () => {
             </button>
             <div className="accordion-content hidden pt-2 pl-4">
               <ul className="space-y-2 text-gray-300">
-                <li><a href="/services" className="hover:text-white transition-colors font-body text-sm">Услуги</a></li>
-                <li><a href="/cases" className="hover:text-white transition-colors font-body text-sm">Кейсы</a></li>
-                <li><a href="/blog" className="hover:text-white transition-colors font-body text-sm">Блог</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors font-body text-sm">Обо мне</a></li>
-                <li><a href="/reviews" className="hover:text-white transition-colors font-body text-sm">Отзывы</a></li>
+                <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Услуги</Link></li>
+                <li><Link to="/cases" className="hover:text-white transition-colors font-body text-sm">Кейсы</Link></li>
+                <li><Link to="/blog" className="hover:text-white transition-colors font-body text-sm">Блог</Link></li>
+                <li><Link to="/about" className="hover:text-white transition-colors font-body text-sm">Обо мне</Link></li>
+                <li><Link to="/reviews" className="hover:text-white transition-colors font-body text-sm">Отзывы</Link></li>
               </ul>
             </div>
           </div>
@@ -167,13 +168,14 @@ const Footer = () => {
           <div className="pt-8 text-center">
             <h3 className="text-xl font-bold mb-4 font-heading text-white">Наталья Томашёва</h3>
             <p className="text-gray-400 mb-4 font-body text-sm">Эксперт по системному росту бизнеса и внедрению ИИ</p>
-            <Button 
-              onClick={() => window.location.href = '/contact'}
-              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
-            >
+            <Link to="/contact">
+              <Button 
+                className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
+              >
               <span className="block">Записаться на</span>
               <span className="block">консультацию</span>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
 

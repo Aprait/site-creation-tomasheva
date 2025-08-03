@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
+import ConsultationModal from '@/components/ConsultationModal';
 
 const Cases = () => {
+  const navigate = useNavigate();
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+  
   const cases = [
     {
       id: 1,
@@ -147,14 +152,14 @@ const Cases = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => setIsConsultationModalOpen(true)}
                   className="bg-brand-accent hover:bg-orange-500 text-white px-8 py-4 text-lg"
                 >
                   Обсудить ваш проект
                 </Button>
                 <Button 
                   size="lg"
-                  onClick={() => window.location.href = '/services'}
+                  onClick={() => navigate('/services')}
                   className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg"
                 >
                   Изучить услуги
@@ -165,6 +170,11 @@ const Cases = () => {
 
         </div>
       </div>
+      
+      <ConsultationModal
+        isOpen={isConsultationModalOpen}
+        onClose={() => setIsConsultationModalOpen(false)}
+      />
     </Layout>
   );
 };
