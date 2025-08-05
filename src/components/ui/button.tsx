@@ -5,24 +5,24 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-brand-accent text-white shadow-sm hover:bg-brand-accent/90 hover:shadow-md",
+        default: "bg-brand-primary text-dark-bg font-semibold hover:bg-brand-primary-dark shadow-[0_0_20px_rgba(0,245,160,0.3)] hover:shadow-[0_0_30px_rgba(0,245,160,0.5)]",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 hover:shadow-md",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-slate-200 bg-transparent hover:bg-slate-50 hover:border-slate-300",
+          "border-2 border-text-tertiary text-text-primary hover:border-text-secondary bg-transparent",
         secondary:
-          "bg-slate-100 text-slate-900 hover:bg-slate-200",
-        ghost: "hover:bg-slate-100 hover:text-slate-900",
-        link: "text-brand-accent underline-offset-4 hover:underline",
+          "bg-dark-surface text-text-primary hover:bg-dark-elevated border border-dark-border",
+        ghost: "hover:bg-dark-surface hover:text-text-primary",
+        link: "text-brand-primary underline-offset-4 hover:underline hover:text-brand-primary-light",
       },
       size: {
-        default: "h-11 px-6 py-2.5",
-        sm: "h-9 rounded-lg px-4 text-xs",
-        lg: "h-12 rounded-xl px-8 text-base",
+        default: "h-12 px-8 py-3",
+        sm: "h-10 rounded-md px-6 text-sm",
+        lg: "h-14 rounded-lg px-10 text-base",
         icon: "h-10 w-10",
       },
     },
