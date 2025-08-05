@@ -26,41 +26,39 @@ const StatsSection = () => {
   ];
 
   return (
-    <section id="results" className="py-20 bg-gradient-to-b from-white to-brand-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
+    <section id="results" className="py-32 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6 font-heading tracking-tight">
             Мои результаты в цифрах
           </h2>
-          <p className="text-xl text-gray-600 font-body">
+          <p className="text-2xl text-slate-600 font-body max-w-3xl mx-auto">
             Измеримые достижения в работе с командами и бизнесом
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <Card 
+            <div
               key={index} 
-              className="text-center border-2 hover:border-brand-navy transition-all duration-300 card-hover animate-fade-in bg-white shadow-lg" 
+              className="text-center p-8 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 hover:shadow-lg transition-all duration-300 animate-fade-in" 
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <CardContent className="pt-8 pb-8">
-                <div className="stats-number text-brand-navy mb-4">
-                  {stat.number}
-                </div>
-                <div className="text-lg font-semibold text-gray-900 mb-2 font-heading">
-                  {stat.label}
-                </div>
-                <div className="text-sm text-gray-600 font-body">
-                  {stat.period}
-                </div>
-              </CardContent>
-            </Card>
+              <div className="text-5xl font-bold text-brand-accent mb-4">
+                {stat.number}
+              </div>
+              <div className="text-lg font-medium text-slate-900 mb-2">
+                {stat.label}
+              </div>
+              <div className="text-sm text-slate-500">
+                {stat.period}
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 font-body max-w-3xl mx-auto">
+        <div className="mt-20 text-center">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Каждая цифра отражает конкретный результат работы с реальными компаниями. 
             Мой подход основан на измеримых KPI и долгосрочном партнерстве.
           </p>
