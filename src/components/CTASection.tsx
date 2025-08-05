@@ -1,48 +1,48 @@
 import React, { useState } from 'react';
 import Icon from '@/components/ui/icon';
+import { Button } from '@/components/ui/button';
 import ConsultationModal from '@/components/ConsultationModal';
 
 const CTASection = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+    <section className="section-padding bg-dark-surface relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="bg-gradient-to-r from-brand-primary/20 to-brand-primary-dark/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden border border-brand-primary/30">
           {/* Decorative Elements */}
-          <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-48 h-48 bg-brand-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
           
-          <div className="relative">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 font-heading">
+          <div className="relative z-10">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-text-primary">
               Готовы масштабировать бизнес?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 font-body max-w-2xl mx-auto">
+            <p className="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">
               Получите бесплатную консультацию по развитию вашего бизнеса. 
               Обсудим конкретные задачи и найдем решения для роста.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button 
+                size="lg"
                 onClick={() => setIsConsultationModalOpen(true)}
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group"
               >
-                <Icon name="Calendar" size={20} className="mr-2" />
+                <Icon name="Calendar" size={20} />
                 Записаться на консультацию
-              </button>
+                <Icon name="ArrowRight" size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
+              </Button>
               
-              <a 
-                href="https://t.me/natalyatomasheva"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 font-semibold rounded-xl hover:bg-white/20 transition-all duration-300"
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
               >
-                <Icon name="MessageCircle" size={20} className="mr-2" />
+                <Icon name="MessageCircle" size={20} />
                 Написать в Telegram
-              </a>
+              </Button>
             </div>
-            
-
           </div>
         </div>
       </div>
