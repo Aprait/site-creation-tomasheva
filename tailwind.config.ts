@@ -24,39 +24,23 @@ export default {
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Dark theme colors
-				'dark': {
-					'bg': '#121212',
-					'surface': '#1E1E1E',
-					'elevated': '#2A2A2A',
-					'border': '#3A3A3A',
-				},
-				'light': {
-					'bg': '#F3F3F3',
-					'surface': '#FFFFFF',
-					'elevated': '#FAFAFA',
-				},
+				// Современная профессиональная палитра
 				'brand': {
-					'primary': '#00F5A0',
-					'primary-dark': '#00D489',
-					'primary-light': '#4DFFC5',
-					'secondary': '#121212',
-					'success': '#00F5A0',
-					'warning': '#FFB800',
-					'danger': '#FF3838',
+					'primary': '#0F172A', // Глубокий темно-синий
+					'secondary': '#1E293B', // Средний темно-синий
+					'accent': '#3B82F6', // Яркий синий для акцентов
+					'success': '#10B981', // Зеленый для успеха
+					'warning': '#F59E0B', // Оранжевый для предупреждений
+					'light': '#F8FAFC', // Очень светлый серый
+					'muted': '#64748B', // Приглушенный серый
+					'navy': '#0F172A', // Обратная совместимость
+					'blue': '#3B82F6' // Обратная совместимость
 				},
-				'text': {
-					'primary': '#FFFFFF',
-					'secondary': '#A0A0A0',
-					'tertiary': '#707070',
-					'dark': '#121212',
-				},
-				// Gradients for modern design
+				// Градиенты для современного дизайна
 				'gradient': {
-					'primary': 'linear-gradient(135deg, #00F5A0 0%, #00D489 100%)',
-					'dark': 'linear-gradient(135deg, #1E1E1E 0%, #121212 100%)',
-					'surface': 'linear-gradient(135deg, #2A2A2A 0%, #1E1E1E 100%)',
-					'glow': 'radial-gradient(ellipse at center, #00F5A0 0%, transparent 70%)'
+					'primary': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
+					'accent': 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
+					'success': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

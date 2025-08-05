@@ -1,118 +1,115 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const ServicesSection = () => {
-  const navigate = useNavigate();
-  
   const services = [
+    {
+      icon: "Target",
+      title: "Бизнес-трекинг и OKR-коучинг",
+      description: "Диагностика, поиск точек роста бизнеса, сопровождение в течение 3-12 месяцев до результата."
+    },
     {
       icon: "Brain",
       title: "Внедрение ИИ в бизнес",
-      description: "Интеграция ChatGPT, Claude, Midjourney и других инструментов в рабочие процессы. Автоматизация рутинных задач.",
-      features: ["Аудит процессов", "Подбор инструментов", "Обучение команды"],
-      color: "from-brand-primary/20 to-brand-primary/5"
+      description: "Автоматизация CRM, аналитика для отделов продаж и контроля качества, оптимизация операционных задач."
     },
     {
-      icon: "Target",
-      title: "Системный трекинг",
-      description: "90-дневные спринты для достижения амбициозных целей. Еженедельные встречи и поддержка.",
-      features: ["Целеполагание", "KPI и метрики", "Accountability"],
-      color: "from-blue-500/20 to-blue-500/5"
+      icon: "TrendingUp",
+      title: "Разработка стратегий",
+      description: "Разработка маркетинговой стратегии, стратегии продвижения, продаж и цифровой трансформации."
     },
     {
       icon: "Users",
-      title: "Корпоративное обучение",
-      description: "Тренинги и мастер-классы для топ-менеджмента по использованию ИИ для роста бизнеса.",
-      features: ["Живые воркшопы", "Кейсы из практики", "Сертификация"],
-      color: "from-purple-500/20 to-purple-500/5"
+      title: "Стратегические сессии",
+      description: "Проведение и фасилитация стратегических сессий для компаний России и СНГ."
+    },
+    {
+      icon: "Rocket",
+      title: "Запуск и масштабирование стартапов",
+      description: "Полный цикл поддержки от идеи до масштабирования, включая формирование УТП и анализ метрик."
+    },
+    {
+      icon: "Award",
+      title: "Индивидуальные консультации",
+      description: "Комплексная диагностика и советы по развитию вашего бизнеса от эксперта."
     }
   ];
 
+  const gradientColors = [
+    "from-blue-500 to-indigo-600",
+    "from-green-500 to-emerald-600", 
+    "from-purple-500 to-violet-600",
+    "from-orange-500 to-red-600",
+    "from-pink-500 to-rose-600",
+    "from-cyan-500 to-blue-600"
+  ];
+
   return (
-    <section className="section-padding bg-dark-bg relative">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-brand-primary font-semibold text-sm uppercase tracking-wider mb-4">
-            Услуги
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
-            Как я помогаю бизнесу расти
+    <section id="services" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 text-brand-accent rounded-full font-medium mb-6">
+            <Icon name="Sparkles" size={16} className="mr-2" />
+            Мои услуги
+          </div>
+          <h2 className="text-4xl lg:text-6xl font-bold text-brand-primary mb-6 font-heading tracking-tight">
+            Чем я могу быть полезна
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Три ключевых направления для системного развития вашей компании
+          <p className="text-xl text-brand-muted font-body max-w-3xl mx-auto leading-relaxed">
+            Ключевые направления моей экспертной деятельности для развития вашего бизнеса
           </p>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative"
+            <Card 
+              key={index} 
+              className="modern-card border-0 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden" 
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="h-full dark-card rounded-2xl p-8 transition-all duration-300 hover:translate-y-[-4px]">
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="w-16 h-16 rounded-xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors">
-                    <Icon name={service.icon} size={32} className="text-brand-primary" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-text-primary mb-4">
-                    {service.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-text-secondary mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <ul className="space-y-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-text-secondary">
-                        <Icon name="Check" size={20} className="text-brand-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Learn More Link */}
-                  <button 
-                    onClick={() => navigate('/services')}
-                    className="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all"
-                  >
-                    Подробнее
-                    <Icon name="ArrowRight" size={20} />
-                  </button>
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-navy to-brand-blue rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <Icon name={service.icon} size={28} className="text-white" />
                 </div>
-              </div>
-            </div>
+                <CardTitle className="text-xl font-semibold text-gray-900 font-heading">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 leading-relaxed font-body">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
-
-        {/* Bottom Image */}
-        <div className="mt-20 relative rounded-3xl overflow-hidden h-96 group">
-          <img 
-            src="/img/04686068-a05d-4593-8932-f311393704b2.jpg" 
-            alt="Abstract 3D composition"
-            className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 right-0 p-12">
-            <h3 className="text-3xl font-bold text-text-primary mb-4">
-              Готовы трансформировать ваш бизнес?
+        
+        <div className="mt-16 text-center">
+          <p className="text-lg text-gray-600 font-body mb-8 max-w-4xl mx-auto">
+            Каждое направление подкреплено многолетним опытом работы с компаниями разного масштаба — 
+            от стартапов до крупных корпораций с оборотом свыше 20 млрд рублей.
+          </p>
+          <div className="inline-flex items-center px-6 py-3 bg-brand-light rounded-lg">
+            <Icon name="CheckCircle" size={20} className="text-brand-navy mr-2" />
+            <span className="text-brand-navy font-medium font-body">
+              Индивидуальный подход к каждому проекту
+            </span>
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="mt-20 text-center">
+          <div className="max-w-4xl mx-auto p-8 bg-white modern-shadow-lg rounded-3xl border border-gray-100">
+            <h3 className="text-2xl font-bold text-brand-primary mb-4 font-heading">
+              Не нашли подходящее решение?
             </h3>
-            <p className="text-xl text-text-secondary mb-6 max-w-2xl">
-              Начните с бесплатной консультации, где мы определим точки роста и составим план внедрения ИИ
+            <p className="text-brand-muted mb-6 font-body">
+              Обсудим вашу задачу индивидуально — я помогу найти оптимальное решение
             </p>
-            <button className="primary-button px-8 py-4 rounded-lg font-semibold text-lg">
-              Получить консультацию
+            <button className="modern-button bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
+              <Icon name="MessageCircle" size={20} className="mr-2 inline" />
+              Обсудить задачу
             </button>
           </div>
         </div>

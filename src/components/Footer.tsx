@@ -28,7 +28,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-dark-surface text-text-primary pt-16 pb-8 border-t border-dark-border">
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ===== ДЕСКТОПНАЯ ВЕРСИЯ (4 колонки) ===== */}
@@ -36,14 +36,14 @@ const Footer = () => {
         <div className="hidden md:grid md:grid-cols-4 md:gap-6 lg:gap-8">
           {/* Колонка 1: Контакты */}
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4 font-heading text-text-primary">
+            <h3 className="text-xl font-bold mb-4 font-heading text-white">
               Контакты
             </h3>
             <div className="space-y-3">
-              <div className="text-text-primary font-body text-sm font-bold">
+              <div className="text-gray-300 font-body text-sm font-bold">
                 Наталья Томашева
               </div>
-              <p className="text-text-secondary font-body text-sm mb-4">
+              <p className="text-gray-400 font-body text-sm mb-4">
                 Эксперт по системному росту бизнеса и внедрению ИИ
               </p>
               <div className="space-y-2">
@@ -51,14 +51,14 @@ const Footer = () => {
                   href="tel:+79220227225" 
                   className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
-                  <Icon name="Phone" size={18} className="mr-3 text-brand-primary" />
+                  <Icon name="Phone" size={18} className="mr-3 text-blue-400" />
                   +7 922 022-72-25
                 </a>
                 <a 
                   href="mailto:n.tomasheva@foxmetod.ru" 
                   className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
-                  <Icon name="Mail" size={18} className="mr-3 text-brand-primary" />
+                  <Icon name="Mail" size={18} className="mr-3 text-blue-400" />
                   n.tomasheva@foxmetod.ru
                 </a>
                 <a 
@@ -67,7 +67,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-400 hover:text-white transition-colors font-body text-xs"
                 >
-                  <Icon name="MessageCircle" size={18} className="mr-3 text-brand-primary" />
+                  <Icon name="MessageCircle" size={18} className="mr-3 text-blue-400" />
                   @natalyatomasheva
                 </a>
               </div>
@@ -79,11 +79,11 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 font-heading text-white">
               Услуги
             </h3>
-            <ul className="space-y-2 text-text-secondary">
-              <li><Link to="/services" className="hover:text-brand-primary transition-colors font-body text-sm">Бизнес-трекинг</Link></li>
-              <li><Link to="/services" className="hover:text-brand-primary transition-colors font-body text-sm">Стратегическое планирование</Link></li>
-              <li><Link to="/services" className="hover:text-brand-primary transition-colors font-body text-sm">Внедрение ИИ</Link></li>
-              <li><Link to="/services" className="hover:text-brand-primary transition-colors font-body text-sm">Консультации</Link></li>
+            <ul className="space-y-2 text-gray-300">
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Бизнес-трекинг</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Стратегическое планирование</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Внедрение ИИ</Link></li>
+              <li><Link to="/services" className="hover:text-white transition-colors font-body text-sm">Консультации</Link></li>
             </ul>
           </div>
 
@@ -180,15 +180,15 @@ const Footer = () => {
         </div>
 
         {/* Общая нижняя часть футера */}
-        <div className="border-t border-dark-border mt-12 pt-6 text-center">
+        <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-            <div className="text-text-tertiary text-xs font-body text-center md:text-left">
+            <div className="text-gray-400 text-xs font-body text-center md:text-left">
               <p>© {currentYear} Наталья Томашева • ИП Томашева Н.Б. • ИНН: 665800847625</p>
             </div>
             
-            <div className="flex items-center space-x-2 text-xs text-text-tertiary">
+            <div className="flex items-center space-x-2 text-xs text-gray-400">
               <span className="font-body text-xs">Создано с</span>
-              <Icon name="Heart" size={12} className="text-brand-primary" />
+              <Icon name="Heart" size={12} className="text-red-400" />
               <span className="font-body text-xs">для роста бизнеса</span>
             </div>
           </div>
