@@ -124,7 +124,7 @@ const CertificateGrid = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-brand-light rounded-lg">
+          <div className="inline-flex items-center px-6 py-3 bg-gray-100 rounded-lg">
             <Icon name="Award" size={20} className="text-brand-navy mr-2" />
             <span className="text-brand-navy font-medium font-body">
               Постоянное повышение квалификации и профессиональное развитие

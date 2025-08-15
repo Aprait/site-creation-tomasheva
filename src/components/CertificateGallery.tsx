@@ -74,7 +74,7 @@ const CertificateGallery = () => {
       case 'Рекомендация':
         return 'bg-purple-100 text-purple-800 hover:bg-purple-200';
       case 'Сертификат':
-        return 'bg-orange-100 text-orange-800 hover:bg-orange-200';
+        return 'bg-gray-100 text-gray-800 hover:bg-gray-200';
       case 'Вебинар':
         return 'bg-indigo-100 text-indigo-800 hover:bg-indigo-200';
       default:

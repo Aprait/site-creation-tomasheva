@@ -6,11 +6,11 @@ const EducationDiplomasSection = () => {
     {
       id: 'link-management',
       title: 'Международный Институт Менеджмента ЛИНК',
-      subtitle: 'Факультет менеджмента',
+      subtitle: 'Менеджер по специальности «Менеджмент организации»',
       description: 'Диплом о высшем образовании',
-      imageUrl: '/api/placeholder/400/300',
-      year: '2008',
-      degree: 'Магистр менеджмента'
+      imageUrl: 'https://cdn.poehali.dev/files/fb0f3b05-946e-42a3-a475-acd84429a673.jpg',
+      year: '2011',
+      degree: 'Менеджер'
     },
     {
       id: 'ou-business',
@@ -43,7 +43,7 @@ const EducationDiplomasSection = () => {
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-48 h-32 bg-gray-100 rounded-xl overflow-hidden shadow-md">
+                  <div className="w-48 h-auto bg-gray-100 rounded-xl overflow-hidden shadow-md">
                     <img
                       src={diploma.imageUrl}
                       alt={diploma.title}
@@ -70,7 +70,7 @@ const EducationDiplomasSection = () => {
                     {diploma.description}
                   </p>
                   
-                  <div className="inline-flex items-center px-4 py-2 bg-brand-light rounded-lg">
+                  <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-lg">
                     <Icon name="Award" size={16} className="text-brand-navy mr-2" />
                     <span className="text-brand-navy font-medium text-sm font-body">
                       {diploma.degree}

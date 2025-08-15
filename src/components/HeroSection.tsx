@@ -140,7 +140,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-32 bg-gradient-to-br from-brand-light to-white relative overflow-hidden">
+      <section className="pt-40 pb-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
@@ -153,12 +153,11 @@ const HeroSection = () => {
             <div className="text-center md:text-left md:w-3/5">
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
                 <span className="block text-brand-primary">Наталья</span>
-                <span className="block text-gradient">Томашёва</span>
+                <span className="block text-brand-primary">Томашёва</span>
               </h1>
               
               <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
-                Эксперт по системному росту бизнеса и внедрению ИИ. 
-                <span className="text-brand-primary font-semibold">Более 280 команд за 5 лет, 21 млрд общий годовой оборот</span> клиентов.
+                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний.
               </p>
               
               <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-6">
@@ -203,7 +202,7 @@ const HeroSection = () => {
                   {/* Info */}
                   <div className="text-center">
                     <h3 className="font-bold text-xl text-brand-primary mb-2">Наталья Томашёва</h3>
-                    <p className="text-gray-600 mb-4">Эксперт по системному росту</p>
+                    
                     
                     {/* Stats */}
                     <div className="flex justify-center gap-6 text-sm">
@@ -213,7 +212,7 @@ const HeroSection = () => {
                       </div>
                       <div className="border-l border-gray-200"></div>
                       <div>
-                        <div className="font-bold text-brand-accent text-lg">5 лет</div>
+                        <div className="font-bold text-brand-accent text-lg">20 лет</div>
                         <div className="text-gray-500">опыта</div>
                       </div>
                     </div>

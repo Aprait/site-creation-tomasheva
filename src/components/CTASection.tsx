@@ -7,7 +7,7 @@ const CTASection = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   return (
-    <section className="section-padding bg-dark-surface relative overflow-hidden">
+    <section className="section-padding bg-dark-surface relative overflow-hidden mb-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="bg-gradient-to-r from-brand-primary/20 to-brand-primary-dark/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden border border-brand-primary/30">
           {/* Decorative Elements */}

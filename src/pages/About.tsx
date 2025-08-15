@@ -11,9 +11,9 @@ const About = () => {
   const education = [
     {
       title: "Международный Институт Менеджмента ЛИНК",
-      subtitle: "Факультет менеджмента",
-      image: "/api/placeholder/400/300",
-      year: "2008"
+      subtitle: "Менеджер по специальности «Менеджмент организации»",
+      image: "https://cdn.poehali.dev/files/fb0f3b05-946e-42a3-a475-acd84429a673.jpg",
+      year: "2011"
     },
     {
       title: "Школа Бизнеса Открытого Британского Университета",
@@ -222,7 +222,7 @@ const About = () => {
               {education.map((edu, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                   <div 
-                    className="h-48 bg-gray-200 cursor-pointer"
+                    className="h-auto bg-gray-200 cursor-pointer"
                     onClick={() => openLightbox(edu.image)}
                   >
                     <img 
@@ -252,7 +252,7 @@ const About = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {certificates.map((cert, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden card-hover">
+                <div key={index} className="bg-gray-50 rounded-lg shadow-xl border border-gray-100 overflow-hidden card-hover">
                   <div 
                     className="h-48 bg-gray-200 cursor-pointer"
                     onClick={() => openLightbox(cert.image)}
@@ -284,7 +284,7 @@ const About = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden card-hover">
+                  <div key={index} className="bg-gray-50 rounded-xl shadow-xl border border-gray-100 overflow-hidden card-hover">
                     <div 
                       className="h-48 bg-gray-200 cursor-pointer"
                       onClick={() => openLightbox(testimonial.image)}
