@@ -16,10 +16,10 @@ const EducationDiplomasSection = () => {
       id: 'ou-business',
       title: 'Школа Бизнеса Открытого Британского Университета',
       subtitle: 'OU Business School',
-      description: 'Диплом MBA',
-      imageUrl: '/api/placeholder/400/300',
-      year: '2010',
-      degree: 'Master of Business Administration'
+      description: 'Professional Diploma in Management',
+      imageUrl: 'https://cdn.poehali.dev/files/b44d02e9-fc85-4ed6-b11d-7e135d04a478.JPG',
+      year: '2009',
+      degree: 'Professional Diploma in Management'
     }
   ];
 

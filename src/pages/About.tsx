@@ -17,9 +17,9 @@ const About = () => {
     },
     {
       title: "Школа Бизнеса Открытого Британского Университета",
-      subtitle: "OU Business School",
-      image: "/api/placeholder/400/300",
-      year: "2010"
+      subtitle: "Professional Diploma in Management",
+      image: "https://cdn.poehali.dev/files/b44d02e9-fc85-4ed6-b11d-7e135d04a478.JPG",
+      year: "2009"
     }
   ];
 
