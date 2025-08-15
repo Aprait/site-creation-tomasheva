@@ -5,57 +5,92 @@ const ClientsSection = () => {
     {
       name: "Уральские авиалинии",
       logo: "https://cdn.poehali.dev/files/ea385159-c001-430a-ab1e-bde567ffadd0.jpg",
-      category: "Авиакомпания"
+      category: "Авиакомпания",
+      website: ""
     },
     {
-      name: "МЕГАМАРТ",
-      logo: "/img/1e626a9d-9f39-4ce1-91bc-884876df0dbf.jpg",
-      category: "Ритейл"
+      name: "FLE",
+      logo: "/img/Flex Service.png",
+      category: "Сервис",
+      website: "https://fle.kz"
     },
     {
-      name: "Мир детства",
-      logo: "/img/c4c43bc4-9820-4fb1-9070-90e19c09b129.jpg",
-      category: "Детские товары"
+      name: "Tynda Music",
+      logo: "/img/Tynda Music.png",
+      category: "Музыка",
+      website: "https://tyndamusic.com"
+    },
+    {
+      name: "Sakkuрам",
+      logo: "/img/Саккурам.png",
+      category: "Продукты",
+      website: "https://sakkuram.ru"
+    },
+    {
+      name: "В Восторге",
+      logo: "/img/63c4833f-753b-48b2-ac7e-06d212560d2e.jpg",
+      category: "Праздники",
+      website: "https://vvostorge-deti.ru"
+    },
+    {
+      name: "Театр «НитьЯ»",
+      logo: "/img/Нитья.png",
+      category: "Театр",
+      website: "https://teatrnitya.ru"
+    },
+    {
+      name: "PAPA MOSCOW",
+      logo: "/img/PAPA Moscow.png",
+      category: "HoReCa",
+      website: "https://papamoscow.ru"
+    },
+    {
+      name: "Endeavour Kazakhstan",
+      logo: "/img/Endeavour.png",
+      category: "Одежда",
+      website: "https://endeavour.kz"
     },
     {
       name: "ИНСИ",
-      logo: "/img/787054bc-414c-4234-a0fc-054cce6dcb84.jpg",
-      category: "Технологии"
-    },
-    {
-      name: "ТК ОЛМИ",
-      logo: "/img/dd797f96-b6fd-481b-8316-33e934ce7319.jpg",
-      category: "Логистика"
+      logo: "/img/ИНСИ.jpg",
+      category: "Строительство",
+      website: "https://insi-dom.ru"
     },
     {
       name: "Банзай",
-      logo: "/img/ba13414a-0404-46e1-942c-ec1d8ffade15.jpg",
-      category: "Издательство"
+      logo: "/img/Банзай.png",
+      category: "Медиа",
+      website: ""
     },
     {
       name: "Джанго Парк",
-      logo: "/img/56b46447-6b70-4bf9-978e-41a0559f2183.jpg",
-      category: "Развлечения"
+      logo: "/img/Джанго.png",
+      category: "Развлечения",
+      website: "https://jango-park.ru"
     },
     {
       name: "Дерзкий",
-      logo: "/img/23a744f5-75df-47f5-bd57-3aa1237bdf8f.jpg",
-      category: "IT"
-    },
-    {
-      name: "EctemOk",
-      logo: "/img/e873e486-0447-43b3-a559-ca1ae98792a6.jpg",
-      category: "Технологии"
+      logo: "/img/Дерзкий.png",
+      category: "Производство",
+      website: "https://derzky.moscow"
     },
     {
       name: "RedHolt",
-      logo: "/img/ec22a7d2-a539-44da-9870-35d7577c0fd3.jpg",
-      category: "IT-услуги"
+      logo: "/img/RedHolt.jpg",
+      category: "Логистика",
+      website: "https://redholt.ru"
     },
     {
       name: "Wowee",
-      logo: "/img/c6c5f832-c879-456c-9af5-dd090206ede8.jpg",
-      category: "Digital"
+      logo: "/img/wowee.svg",
+      category: "Косметика",
+      website: "https://wowee.ru"
+    },
+    {
+      name: "EctemOk (OKK)",
+      logo: "/img/EctemOK.png",
+      category: "IT",
+      website: "https://okk.ectem.ru"
     }
   ];
 
@@ -80,22 +115,32 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover animate-fade-in border border-gray-100"
+              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover animate-fade-in border border-gray-100 group"
               style={{animationDelay: `${index * 0.05}s`}}
             >
               <div className="w-20 h-20 flex items-center justify-center mb-4 bg-gray-50 rounded-lg overflow-hidden">
                 <img 
                   src={client.logo} 
                   alt={`Логотип ${client.name}`}
-                  className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
               <h3 className="text-sm font-semibold text-gray-900 text-center mb-1 font-heading">
                 {client.name}
               </h3>
-              <p className="text-xs text-gray-500 text-center font-body">
+              <p className="text-xs text-gray-500 text-center font-body mb-2">
                 {client.category}
               </p>
+              {client.website && (
+                <a 
+                  href={client.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs text-brand-primary hover:text-brand-accent transition-colors font-body opacity-0 group-hover:opacity-100"
+                >
+                  Перейти на сайт →
+                </a>
+              )}
             </div>
           ))}
         </div>
