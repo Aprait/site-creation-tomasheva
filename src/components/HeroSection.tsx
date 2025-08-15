@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import ConsultationModal from '@/components/ConsultationModal';
+import Logo from '@/components/Logo';
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,9 +28,7 @@ const HeroSection = () => {
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex justify-between items-center h-24">
-            <div className="text-2xl font-bold text-brand-primary font-heading tracking-tight">
-              Наталья Томашёва
-            </div>
+            <Logo />
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-10">
               <a href="/about" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Обо мне</a>
