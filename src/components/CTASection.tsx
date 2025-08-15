@@ -7,42 +7,35 @@ const CTASection = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   return (
-    <section className="section-padding bg-dark-surface relative overflow-hidden mb-20">
+    <section className="py-16 mb-20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="bg-gradient-to-r from-brand-primary/20 to-brand-primary-dark/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden border border-brand-primary/30">
-          {/* Decorative Elements */}
-          <div className="absolute top-0 left-0 w-48 h-48 bg-brand-primary/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl"></div>
+        <div className="bg-brand-navy rounded-2xl p-12 shadow-xl border border-brand-navy/20 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6 font-heading">
+            Готовы масштабировать бизнес?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 font-body max-w-2xl mx-auto">
+            Получите бесплатную консультацию по развитию вашего бизнеса. 
+            Обсудим конкретные задачи и найдем решения для роста.
+          </p>
           
-          <div className="relative z-10">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-text-primary">
-              Готовы масштабировать бизнес?
-            </h2>
-            <p className="text-xl text-text-secondary mb-10 max-w-2xl mx-auto">
-              Получите бесплатную консультацию по развитию вашего бизнеса. 
-              Обсудим конкретные задачи и найдем решения для роста.
-            </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button 
+              size="lg"
+              onClick={() => setIsConsultationModalOpen(true)}
+              className="bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-4 text-lg font-semibold"
+            >
+              <Icon name="Calendar" size={20} />
+              Записаться на консультацию
+            </Button>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg"
-                onClick={() => setIsConsultationModalOpen(true)}
-                className="group"
-              >
-                <Icon name="Calendar" size={20} />
-                Записаться на консультацию
-                <Icon name="ArrowRight" size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
-              >
-                <Icon name="MessageCircle" size={20} />
-                Написать в Telegram
-              </Button>
-            </div>
+            <Button
+              size="lg"
+              onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
+              className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg font-semibold transition-all duration-300"
+            >
+              <Icon name="MessageCircle" size={20} />
+              Написать в Telegram
+            </Button>
           </div>
         </div>
       </div>

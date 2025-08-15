@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Layout from '@/components/Layout';
+import SharedEducationSection from '@/components/SharedEducationSection';
+import SharedCertificatesSection from '@/components/SharedCertificatesSection';
+import SharedAcceleratorsSection from '@/components/SharedAcceleratorsSection';
 
 const About = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -214,163 +217,13 @@ const About = () => {
           </section>
 
           {/* Education Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
-              Образование
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {education.map((edu, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                  <div 
-                    className="h-auto bg-gray-200 cursor-pointer"
-                    onClick={() => openLightbox(edu.image)}
-                  >
-                    <img 
-                      src={edu.image} 
-                      alt={edu.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-gray-900 font-heading">{edu.title}</h3>
-                      <span className="text-sm text-brand-blue font-medium bg-blue-50 px-2 py-1 rounded">
-                        {edu.year}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 font-body">{edu.subtitle}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <SharedEducationSection />
 
           {/* Certificates Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
-              Сертификаты и благодарности
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {certificates.map((cert, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg shadow-xl border border-gray-100 overflow-hidden card-hover">
-                  <div 
-                    className="h-48 bg-gray-200 cursor-pointer"
-                    onClick={() => openLightbox(cert.image)}
-                  >
-                    <img 
-                      src={cert.image} 
-                      alt={cert.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-sm font-bold text-gray-900 font-heading line-clamp-2">
-                        {cert.title}
-                      </h3>
-                      <span className="text-xs text-brand-blue font-medium bg-blue-50 px-2 py-1 rounded ml-2 flex-shrink-0">
-                        {cert.year}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Testimonials */}
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center font-heading">
-                Благодарности от клиентов
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-gray-50 rounded-xl shadow-xl border border-gray-100 overflow-hidden card-hover">
-                    <div 
-                      className="h-48 bg-gray-200 cursor-pointer"
-                      onClick={() => openLightbox(testimonial.image)}
-                    >
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">
-                        {testimonial.title}
-                      </h3>
-                      <p className="text-gray-600 font-body text-sm">
-                        {testimonial.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+          <SharedCertificatesSection />
 
           {/* Accelerators Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
-              Эксперт в ведущих акселераторах
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
-                    alt="Сколково" 
-                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-sm font-medium text-gray-700 text-center">Сколково</span>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
-                    alt="Growth Academy" 
-                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-sm font-medium text-gray-700 text-center">Growth Academy</span>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
-                    alt="Университет 20.35" 
-                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-sm font-medium text-gray-700 text-center">Университет 20.35</span>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
-                    alt="Бизнес-Уикенд" 
-                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-sm font-medium text-gray-700 text-center">Бизнес-Уикенд</span>
-              </div>
-              
-              <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg card-hover border border-gray-100">
-                <div className="w-20 h-20 bg-gray-100 rounded-lg mb-3 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
-                    alt="Школа молодого предпринимателя" 
-                    className="w-16 h-16 object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <span className="text-sm font-medium text-gray-700 text-center">Школа молодого предпринимателя</span>
-              </div>
-            </div>
-          </section>
+          <SharedAcceleratorsSection />
 
           {/* CTA Section */}
           <section className="text-center">
