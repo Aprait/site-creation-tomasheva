@@ -17,7 +17,7 @@ const Reviews = () => {
       author: "Михаил Петров",
       position: "Владелец IT-компании",
       company: "ТехноСофт",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/93e5f930-0379-48d3-9e07-decb138dbe69.jpg",
       rating: 5,
       icon: "Target",
       color: "from-blue-500 to-indigo-600"
@@ -29,7 +29,7 @@ const Reviews = () => {
       author: "Елена Смирнова",
       position: "Генеральный директор",
       company: "ПромИнвест Холдинг",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/780b8c99-b329-4784-bc40-1e0479436874.jpg",
       rating: 5,
       icon: "Users",
       color: "from-green-500 to-emerald-600"
@@ -41,7 +41,7 @@ const Reviews = () => {
       author: "Андрей Козлов",
       position: "Руководитель e-commerce проекта",
       company: "МаркетПлейс",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/0b08bdf0-e3ba-4ad1-be3a-18458e7ccd08.jpg",
       rating: 5,
       icon: "Bot",
       color: "from-purple-500 to-violet-600"
@@ -53,7 +53,7 @@ const Reviews = () => {
       author: "Олег Васильев",
       position: "Основатель стартапа",
       company: "FoodTech Solutions",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/8eedc949-8ae8-4d24-b24f-72ed8f49822e.jpg",
       rating: 5,
       icon: "TrendingUp",
       color: "from-orange-500 to-red-600"
@@ -65,7 +65,7 @@ const Reviews = () => {
       author: "Мария Федорова",
       position: "Директор по развитию",
       company: "ГлобалТрейд",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/65f43a10-fa9e-4726-874f-ee118cd50344.jpg",
       rating: 5,
       icon: "Globe",
       color: "from-teal-500 to-cyan-600"
@@ -77,7 +77,7 @@ const Reviews = () => {
       author: "Дмитрий Новиков",
       position: "Руководитель отдела продаж",
       company: "СейлсПро",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/975e84a9-d79d-4001-b2e0-574d0e617895.jpg",
       rating: 5,
       icon: "Brain",
       color: "from-indigo-500 to-purple-600"
@@ -89,7 +89,7 @@ const Reviews = () => {
       author: "Светлана Королева",
       position: "Владелица медицинского центра",
       company: "МедиСервис+",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/63c4833f-753b-48b2-ac7e-06d212560d2e.jpg",
       rating: 5,
       icon: "Shield",
       color: "from-pink-500 to-rose-600"
@@ -101,7 +101,7 @@ const Reviews = () => {
       author: "Алексей Морозов",
       position: "Управляющий партнер",
       company: "БизнесГрупп",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/326d5b38-f064-4c51-aba8-b7f11089f97c.jpg",
       rating: 5,
       icon: "Network",
       color: "from-emerald-500 to-green-600"
@@ -113,7 +113,7 @@ const Reviews = () => {
       author: "Виктор Кузнецов",
       position: "Логистический директор",
       company: "ЛогиПро",
-      avatar: "/api/placeholder/80/80",
+      avatar: "/img/fb8b4bbf-ee04-4cfe-bdb0-271d72a74712.jpg",
       rating: 5,
       icon: "Package",
       color: "from-amber-500 to-orange-600"
