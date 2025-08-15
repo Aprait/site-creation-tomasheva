@@ -19,27 +19,27 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Современная профессиональная палитра
+				// Оригинальная цветовая палитра
 				'brand': {
-					'primary': '#0F172A', // Глубокий темно-синий
-					'secondary': '#1E293B', // Средний темно-синий
-					'accent': '#3B82F6', // Яркий синий для акцентов
+					'primary': '#1e4a8b', // Глубокий синий
+					'secondary': '#2e5aa6', // Средний синий
+					'accent': '#f58b54', // Оранжевый акцент
 					'success': '#10B981', // Зеленый для успеха
 					'warning': '#F59E0B', // Оранжевый для предупреждений
-					'light': '#F8FAFC', // Очень светлый серый
+					'light': '#fef6f3', // Светлый персиковый
 					'muted': '#64748B', // Приглушенный серый
-					'navy': '#0F172A', // Обратная совместимость
-					'blue': '#3B82F6' // Обратная совместимость
+					'navy': '#1e4a8b', // Темно-синий
+					'blue': '#1e4a8b' // Синий
 				},
-				// Градиенты для современного дизайна
+				// Градиенты
 				'gradient': {
-					'primary': 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
-					'accent': 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
+					'primary': 'linear-gradient(135deg, #1e4a8b 0%, #2e5aa6 100%)',
+					'accent': 'linear-gradient(135deg, #f58b54 0%, #ff9f6e 100%)',
 					'success': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
 				},
 				border: 'hsl(var(--border))',

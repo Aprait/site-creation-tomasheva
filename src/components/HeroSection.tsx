@@ -24,26 +24,26 @@ const HeroSection = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-b border-slate-100 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex justify-between items-center h-24">
-            <div className="text-2xl font-semibold text-slate-900 font-heading tracking-tight">
-              Наталья Томашева
+            <div className="text-2xl font-bold text-brand-primary font-heading tracking-tight">
+              Наталья Томашёва
             </div>
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-10">
-              <a href="/about" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Обо мне</a>
-              <a href="/services" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Услуги</a>
-              <a href="/cases" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Кейсы</a>
-              <a href="/reviews" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Отзывы</a>
-              <a href="/blog" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Блог</a>
-              <a href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">Контакты</a>
+              <a href="/about" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Обо мне</a>
+              <a href="/services" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Услуги</a>
+              <a href="/cases" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Кейсы</a>
+              <a href="/reviews" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Отзывы</a>
+              <a href="/blog" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Блог</a>
+              <a href="/contact" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Контакты</a>
             </div>
 
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex modern-button"
+              className="hidden md:flex bg-brand-accent hover:bg-orange-500 text-white"
               variant="default"
               size="default"
             >
@@ -140,10 +140,10 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-32 bg-white relative overflow-hidden">
-        {/* Minimalist Decorative Elements */}
-        <div className="absolute top-40 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/5 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-slate-100/50 to-transparent rounded-full blur-3xl"></div>
+      <section className="pt-40 pb-32 bg-gradient-to-br from-brand-light to-white relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}
@@ -151,21 +151,21 @@ const HeroSection = () => {
             
             {/* Левая колонка (Текст) */}
             <div className="text-center md:text-left md:w-3/5">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight text-slate-900">
-                <span className="block">Наталья</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
+                <span className="block text-brand-primary">Наталья</span>
                 <span className="block text-gradient">Томашёва</span>
               </h1>
               
-              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-slate-600 max-w-2xl">
+              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
                 Эксперт по системному росту бизнеса и внедрению ИИ. 
-                <span className="text-slate-900 font-semibold">Более 280 команд за 5 лет, 21 млрд общий годовой оборот</span> клиентов.
+                <span className="text-brand-primary font-semibold">Более 280 команд за 5 лет, 21 млрд общий годовой оборот</span> клиентов.
               </p>
               
               <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-6">
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="shadow-sm hover:shadow-lg transition-all"
+                  className="bg-brand-accent hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   <Icon name="Calendar" size={20} />
                   Записаться на консультацию
@@ -183,18 +183,41 @@ const HeroSection = () => {
             </div>
 
             {/* Правая колонка (Фото) */}
-            <div className="mt-8 md:mt-0 md:w-2/5 flex justify-center">
-              <div className="relative">
-                {/* Subtle Shadow */}
-                <div className="absolute inset-0 bg-slate-200/30 rounded-3xl blur-2xl transform scale-110 -z-10"></div>
+            <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
+              <div className="relative group">
+                {/* Background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/20 to-brand-primary/20 rounded-2xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
                 
-                {/* Main Image */}
-                <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                  <img 
-                    src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
-                    alt="Наталья Томашева - бизнес-эксперт"
-                    className="w-full h-full object-cover"
-                  />
+                {/* Card */}
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden mb-6">
+                    <img 
+                      src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
+                      alt="Наталья Томашева - бизнес-эксперт"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Info */}
+                  <div className="text-center">
+                    <h3 className="font-bold text-xl text-brand-primary mb-2">Наталья Томашёва</h3>
+                    <p className="text-gray-600 mb-4">Эксперт по системному росту</p>
+                    
+                    {/* Stats */}
+                    <div className="flex justify-center gap-6 text-sm">
+                      <div>
+                        <div className="font-bold text-brand-accent text-lg">280+</div>
+                        <div className="text-gray-500">команд</div>
+                      </div>
+                      <div className="border-l border-gray-200"></div>
+                      <div>
+                        <div className="font-bold text-brand-accent text-lg">5 лет</div>
+                        <div className="text-gray-500">опыта</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -110,9 +110,8 @@
   h4,
   h5,
   h6 {
-    font-family: "Inter", system-ui, sans-serif;
-    font-feature-settings: "cv11", "ss01";
-    font-variation-settings: "opsz" 32;
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-weight: 700;
     letter-spacing: -0.025em;
   }
 }
@@ -141,7 +140,7 @@
 }
 
 .accent-gradient {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #f58b54 0%, #ff9f6e 100%);
 }
 
 .success-gradient {
@@ -149,7 +148,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1e4a8b 0%, #f58b54 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -245,6 +244,16 @@
   background-clip: text;
 }
 
+/* Card hover effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(30, 74, 139, 0.15);
+}
+
 /* Высококонтрастные кнопки для лучшей видимости */
 .btn-primary {
   @apply bg-brand-accent text-white hover:bg-brand-accent/90;
@@ -261,9 +270,9 @@
 /* Принудительные стили для высокой контрастности */
 .force-contrast {
   color: white !important;
-  background-color: var(--brand-accent) !important;
+  background-color: #f58b54 !important;
 }
 
 .force-contrast:hover {
-  background-color: var(--brand-primary) !important;
+  background-color: #ff9f6e !important;
 }
