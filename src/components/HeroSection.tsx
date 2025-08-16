@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import ConsultationModal from '@/components/ConsultationModal';
 import Logo from '@/components/Logo';
+import { navigationLinks } from '@/constants/navigation';
 
 const HeroSection = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,12 +32,15 @@ const HeroSection = () => {
             <Logo />
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-10">
-              <a href="/about" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Обо мне</a>
-              <a href="/services" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Услуги</a>
-              <a href="/cases" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Кейсы</a>
-              <a href="/reviews" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Отзывы</a>
-              <a href="/blog" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Блог</a>
-              <a href="/contact" className="text-gray-600 hover:text-brand-primary transition-colors font-medium">Контакты</a>
+              {navigationLinks.map((link) => (
+                <a 
+                  key={link.pageName}
+                  href={link.to} 
+                  className="text-gray-600 hover:text-brand-primary transition-colors font-medium"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
 
             {/* Desktop CTA Button */}
@@ -65,60 +69,18 @@ const HeroSection = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-3">
-              <button 
-                onClick={() => {
-                  navigate('/about');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Обо мне
-              </button>
-              <button 
-                onClick={() => {
-                  navigate('/services');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Услуги
-              </button>
-              <button 
-                onClick={() => {
-                  navigate('/cases');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Кейсы
-              </button>
-              <button 
-                onClick={() => {
-                  navigate('/reviews');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Отзывы
-              </button>
-              <button 
-                onClick={() => {
-                  navigate('/blog');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Блог
-              </button>
-              <button 
-                onClick={() => {
-                  navigate('/contact');
-                  closeMobileMenu();
-                }}
-                className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
-              >
-                Контакты
-              </button>
+              {navigationLinks.map((link) => (
+                <button 
+                  key={link.pageName}
+                  onClick={() => {
+                    navigate(link.to);
+                    closeMobileMenu();
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+                >
+                  {link.label}
+                </button>
+              ))}
               
               {/* Mobile CTA Button */}
               <div className="pt-3 border-t border-gray-100">
