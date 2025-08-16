@@ -14,7 +14,7 @@ const AcceleratorsSection = () => {
     },
     {
       name: "DU LAB ИТМО",
-      logo: "/img/ДУ Лаб ИТМО.png",
+      logo: "https://cdn.poehali.dev/files/247d191b-df07-415f-8b9f-c1f44c67d0e2.png",
       role: "Тимлид"
     },
     {
