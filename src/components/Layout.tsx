@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import Footer from '@/components/Footer';
 import Logo from '@/components/Logo';
+import NavLink from '@/components/NavLink';
+import { navigationLinks } from '@/constants/navigation';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -34,68 +36,19 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             <Link to="/">
               <Logo />
             </Link>
+            
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              <Link 
-                to="/foxmetod" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'foxmetod' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                FOXMetoD
-              </Link>
-              <Link 
-                to="/services" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'services' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                Услуги
-              </Link>
-              <Link 
-                to="/cases" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'cases' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                Кейсы
-              </Link>
-              <Link 
-                to="/reviews" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'reviews' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                Отзывы
-              </Link>
-              <Link 
-                to="/blog" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'blog' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                Блог
-              </Link>
-              <Link 
-                to="/contact" 
-                className={`transition-colors font-body font-medium ${
-                  currentPage === 'contact' 
-                    ? 'text-brand-accent font-semibold' 
-                    : 'text-gray-600 hover:text-brand-primary'
-                }`}
-              >
-                Контакты
-              </Link>
+              {navigationLinks.map((link) => (
+                <NavLink 
+                  key={link.pageName}
+                  to={link.to}
+                  currentPage={currentPage}
+                  pageName={link.pageName}
+                >
+                  {link.label}
+                </NavLink>
+              ))}
             </div>
 
             {/* Desktop CTA Button */}
@@ -122,72 +75,18 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-3">
-              <Link 
-                to="/foxmetod" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'foxmetod' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                FOXMetoD
-              </Link>
-              <Link 
-                to="/services" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'services' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                Услуги
-              </Link>
-              <Link 
-                to="/cases" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'cases' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                Кейсы
-              </Link>
-              <Link 
-                to="/reviews" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'reviews' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                Отзывы
-              </Link>
-              <Link 
-                to="/blog" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'blog' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                Блог
-              </Link>
-              <Link 
-                to="/contact" 
-                onClick={closeMobileMenu}
-                className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'contact' 
-                    ? 'bg-brand-accent text-white font-semibold' 
-                    : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
-                }`}
-              >
-                Контакты
-              </Link>
+              {navigationLinks.map((link) => (
+                <NavLink 
+                  key={link.pageName}
+                  to={link.to}
+                  currentPage={currentPage}
+                  pageName={link.pageName}
+                  onClick={closeMobileMenu}
+                  isMobile
+                >
+                  {link.label}
+                </NavLink>
+              ))}
               
               {/* Mobile CTA Button */}
               <div className="pt-3 border-t border-gray-100">
