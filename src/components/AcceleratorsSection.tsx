@@ -4,32 +4,32 @@ const AcceleratorsSection = () => {
   const accelerators = [
     {
       name: "Школа стартапов Skolkovo",
-      logo: "/img/9c21003f-6957-4194-a458-24e57a74b11c.jpg",
+      logo: "/img/Сколково.png",
       role: "Трекер (грейд В+)"
     },
     {
       name: "Форум «Сильные идеи для нового времени»",
-      logo: "/img/ff2b092a-bcfc-480b-95ee-677ee5435647.jpg",
+      logo: "/img/Сильные идеи для нового времени.jpg",
       role: "Эксперт"
     },
     {
       name: "DU LAB ИТМО",
-      logo: "/img/51467ce7-dcf9-4d47-b852-8c9c3271fa3b.jpg",
+      logo: "/img/ДУ Лаб ИТМО.png",
       role: "Тимлид"
     },
     {
       name: "ТехноВызов",
-      logo: "/img/eeff3de2-cdc7-404b-ab06-1fc1fb7cd3e3.jpg",
+      logo: "/img/Техновызов.png",
       role: "Трекер"
     },
     {
       name: "Архипелаг 2121",
-      logo: "/img/503fe85a-cf46-4094-bea0-d6ca02a8bbed.jpg",
+      logo: "/img/Архипелаг 2121.png",
       role: "Эксперт"
     },
     {
       name: "Университет 20.35",
-      logo: "/img/f77e1d43-6efb-4063-9606-f2bf3414df20.jpg",
+      logo: "/img/Университет 2035.png",
       role: "Эксперт"
     }
   ];
