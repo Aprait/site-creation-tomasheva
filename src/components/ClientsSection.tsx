@@ -21,14 +21,14 @@ const ClientsSection = () => {
       website: "https://tyndamusic.com"
     },
     {
-      name: "Sakkuрам",
+      name: "Саккурам",
       logo: "/img/Саккурам.png",
       category: "Продукты",
       website: "https://sakkuram.ru"
     },
     {
       name: "В Восторге",
-      logo: "/img/63c4833f-753b-48b2-ac7e-06d212560d2e.jpg",
+      logo: "https://cdn.poehali.dev/files/c7798e8f-c5e0-4eaf-9b02-46e1e5c7ecc1.png",
       category: "Праздники",
       website: "https://vvostorge-deti.ru"
     },
