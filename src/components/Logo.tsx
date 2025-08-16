@@ -11,7 +11,7 @@ const Logo: React.FC = () => {
         <img 
           src="https://cdn.poehali.dev/files/15bb5918-f96b-4585-8e38-7b13aa8ec889.png"
           alt="Наталья Томашева"
-          className="h-16 w-auto transition-all duration-500 ease-out
+          className="h-20 md:h-24 lg:h-28 w-auto transition-all duration-500 ease-out
                      group-hover:scale-110 
                      group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]
                      group-hover:brightness-110"

@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="flex justify-between items-center h-24">
+          <div className="flex justify-between items-center h-32 md:h-36">
             <Logo />
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-10">
@@ -139,7 +139,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-40 pb-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section className="pt-48 md:pt-56 pb-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
