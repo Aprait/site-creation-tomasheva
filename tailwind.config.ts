@@ -19,70 +19,33 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Manrope', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Официальная цветовая палитра FOXMetoD
+				// Современная яркая цветовая палитра
 				'brand': {
-					'primary': '#E8551B', // Оранжевый (основной акцент)
-					'secondary': '#19374A', // Темно-синий (вторичный)
-					'accent': '#E8551B', // Оранжевый акцент
-					'success': '#4CAF50', // Зеленый
-					'warning': '#FFC107', // Предупреждение
-					'light': '#F8F9FA', // Светлый фон
-					'dark': '#19374A', // Темно-синий
-					'muted': '#6C757D', // Приглушенный серый
-					'navy': '#19374A', // Темно-синий
-					'blue': '#19374A', // Темно-синий
-					'orange': '#E8551B', // Оранжевый
-					'gray': {
-						'50': '#F8F9FA',
-						'100': '#E9ECEF',
-						'200': '#DEE2E6',
-						'300': '#CED4DA',
-						'400': '#ADB5BD',
-						'500': '#6C757D',
-						'600': '#495057',
-						'700': '#343A40',
-						'800': '#212529',
-						'900': '#19374A'
-					}
-				},
-				// Новые цвета для дизайн-системы
-				'bg': {
-					DEFAULT: '#FFFFFF',
-					'secondary': '#F9FAFB',
-					'tertiary': '#F3F4F6'
-				},
-				'ink': {
-					DEFAULT: '#111827',
-					'secondary': '#374151',
-					'tertiary': '#6B7280',
-					'quaternary': '#9CA3AF'
-				},
-				'line': {
-					DEFAULT: '#E5E7EB',
-					'secondary': '#D1D5DB'
-				},
-				'card': '#FFFFFF',
-				'accent': {
-					DEFAULT: '#E8551B',
-					'hover': '#DC4A14',
-					'light': 'rgba(232, 85, 27, 0.1)',
-					'lighter': 'rgba(232, 85, 27, 0.05)',
-					'ink': 'rgba(232, 85, 27, 0.88)',
-					'10': 'rgba(232, 85, 27, 0.10)',
-					'06': 'rgba(232, 85, 27, 0.06)'
+					'primary': '#FF6B35', // Яркий оранжевый
+					'secondary': '#004E89', // Глубокий синий
+					'accent': '#F71735', // Яркий красный акцент
+					'success': '#06D6A0', // Яркий мятный
+					'warning': '#FFB700', // Золотистый
+					'light': '#FAFAFA', // Очень светлый серый
+					'dark': '#1A1A2E', // Темно-синий
+					'muted': '#6C757D', // Нейтральный серый
+					'navy': '#16213E', // Темно-синий
+					'blue': '#0F3460', // Глубокий синий
+					'orange': '#FF6B35', // Яркий оранжевый
+					'coral': '#FF4C29' // Коралловый
 				},
 				// Градиенты
 				'gradient': {
-					'primary': 'linear-gradient(135deg, #E8551B 0%, #F57739 100%)',
-					'secondary': 'linear-gradient(135deg, #19374A 0%, #2C4F68 100%)',
-					'accent': 'linear-gradient(135deg, #E8551B 0%, #FF7043 100%)',
-					'success': 'linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%)',
-					'warm': 'linear-gradient(135deg, #E8551B 0%, #FFC107 100%)'
+					'primary': 'linear-gradient(135deg, #FF6B35 0%, #F71735 100%)',
+					'secondary': 'linear-gradient(135deg, #004E89 0%, #1A1A2E 100%)',
+					'accent': 'linear-gradient(135deg, #F71735 0%, #FF4C29 100%)',
+					'success': 'linear-gradient(135deg, #06D6A0 0%, #00B388 100%)',
+					'warm': 'linear-gradient(135deg, #FF6B35 0%, #FFB700 100%)'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
