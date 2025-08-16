@@ -18,10 +18,10 @@ const NavLink = ({ to, children, currentPage, pageName, onClick, isMobile = fals
       <Link 
         to={to} 
         onClick={onClick}
-        className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
+        className={`block py-3 px-4 rounded-xl transition-all duration-200 font-medium ${
           isActive 
-            ? 'bg-brand-accent text-white font-semibold' 
-            : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
+            ? 'bg-accent-light text-accent font-semibold' 
+            : 'text-ink-secondary hover:bg-bg-secondary hover:text-ink'
         }`}
       >
         {children}
@@ -32,10 +32,10 @@ const NavLink = ({ to, children, currentPage, pageName, onClick, isMobile = fals
   return (
     <Link 
       to={to} 
-      className={`transition-colors font-body font-medium ${
+      className={`px-4 py-2 rounded-lg transition-all duration-200 font-medium ${
         isActive 
-          ? 'text-brand-accent font-semibold' 
-          : 'text-gray-600 hover:text-brand-primary'
+          ? 'text-accent bg-accent-lighter' 
+          : 'text-ink-secondary hover:text-ink hover:bg-bg-secondary'
       }`}
     >
       {children}

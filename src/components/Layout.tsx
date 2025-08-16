@@ -28,17 +28,17 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-brand-primary">
+    <div className="min-h-screen bg-white text-ink">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-lg border-b border-gray-100 z-50">
-        <div className="container-width">
-          <div className="flex justify-between items-center h-20">
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-line z-50">
+        <div className="container">
+          <div className="flex justify-between items-center h-16 md:h-20">
             <Link to="/">
               <Logo />
             </Link>
             
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden lg:flex items-center space-x-2">
               {navigationLinks.map((link) => (
                 <NavLink 
                   key={link.pageName}
@@ -54,7 +54,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300"
+              className="hidden lg:flex"
               variant="default"
               size="default"
             >
@@ -65,18 +65,18 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-bg-secondary transition-colors"
               aria-label="Открыть меню"
             >
-              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} className="text-brand-primary" />
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} className="text-ink" />
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
-            <div className="px-4 py-4 space-y-3">
+          <div className="lg:hidden bg-white border-t border-line shadow-lg">
+            <div className="container py-4 space-y-2">
               {navigationLinks.map((link) => (
                 <NavLink 
                   key={link.pageName}
@@ -97,7 +97,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-modern"
+                  className="w-full"
                 >
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   Связаться
@@ -109,7 +109,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-16">
+      <main className="pt-16 md:pt-20">
         {children}
       </main>
 
