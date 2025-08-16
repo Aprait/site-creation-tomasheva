@@ -12,31 +12,52 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '1rem',
+				md: '1.25rem',
+				lg: '1.5rem',
+			},
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1200px'
 			}
 		},
 		extend: {
+			screens: {
+				xs: '420px',
+			},
 			fontFamily: {
 				'heading': ['Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Официальная цветовая палитра FOXMetoD
+				// Основные цвета дизайн-системы
+				'bg': 'var(--bg)',
+				'ink': 'var(--ink)',
+				'muted-ink': 'var(--muted-ink)',
+				'line': 'var(--line)',
+				'card': 'var(--card)',
+				
+				// Акцентные цвета (дозированно!)
+				'accent': 'var(--accent)',
+				'accent-ink': 'var(--accent-ink)',
+				'accent-10': 'var(--accent-10)',
+				'accent-06': 'var(--accent-06)',
+				
+				// Legacy brand colors
 				'brand': {
-					'primary': '#E8551B', // Оранжевый (основной акцент)
-					'secondary': '#19374A', // Темно-синий (вторичный)
-					'accent': '#E8551B', // Оранжевый акцент
-					'success': '#4CAF50', // Зеленый
-					'warning': '#FFC107', // Предупреждение
-					'light': '#F8F9FA', // Светлый фон
-					'dark': '#19374A', // Темно-синий
-					'muted': '#6C757D', // Приглушенный серый
-					'navy': '#19374A', // Темно-синий
-					'blue': '#19374A', // Темно-синий
-					'orange': '#E8551B', // Оранжевый
+					'primary': '#E8551B',
+					'secondary': '#19374A',
+					'accent': '#E8551B',
+					'success': '#4CAF50',
+					'warning': '#FFC107',
+					'light': '#F8F9FA',
+					'dark': '#19374A',
+					'muted': '#6C757D',
+					'navy': '#19374A',
+					'blue': '#19374A',
+					'orange': '#E8551B',
 					'gray': {
 						'50': '#F8F9FA',
 						'100': '#E9ECEF',
@@ -103,9 +124,31 @@ export default {
 				}
 			},
 			borderRadius: {
+				xl: 'var(--radius)',
+				'2xl': 'calc(var(--radius) + 8px)',
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'card': 'var(--shadow-card)',
+				'card-hover': '0 10px 28px rgba(2,6,23,0.08)',
+			},
+			transitionDuration: {
+				'fast': '150ms',
+				'base': '200ms',
+			},
+			transitionTimingFunction: {
+				'gentle': 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
+				'128': '32rem',
+			},
+			fontSize: {
+				'4.5xl': ['2.75rem', { lineHeight: '1.1' }],
+				'5.5xl': ['3.5rem', { lineHeight: '1' }],
 			},
 			keyframes: {
 				'accordion-down': {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -14,6 +14,16 @@ interface LayoutProps {
 
 const Layout = ({ children, currentPage = '' }: LayoutProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleTelegramClick = () => {
     window.open('https://t.me/natalyatomasheva', '_blank');
@@ -28,79 +38,95 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-brand-primary">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-lg border-b border-gray-100 z-50">
-        <div className="container-width">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/">
+    <div className="min-h-screen bg-bg text-ink">
+      {/* Navigation - воздушная и легкая */}
+      <nav className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-base",
+        isScrolled ? "bg-white/95 backdrop-blur-lg border-b border-line shadow-sm" : "bg-transparent"
+      )}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 md:h-20">
+            <Link to="/" className="relative z-10">
               <Logo />
             </Link>
             
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden lg:flex items-center space-x-1">
               {navigationLinks.map((link) => (
-                <NavLink 
+                <Link
                   key={link.pageName}
                   to={link.to}
-                  currentPage={currentPage}
-                  pageName={link.pageName}
+                  className={cn(
+                    "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-fast",
+                    currentPage === link.pageName 
+                      ? "text-accent bg-accent-06" 
+                      : "text-muted-ink hover:text-ink hover:bg-accent-06"
+                  )}
                 >
                   {link.label}
-                </NavLink>
+                </Link>
               ))}
             </div>
 
             {/* Desktop CTA Button */}
-            <Button 
-              onClick={handleTelegramClick}
-              className="hidden md:flex bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300"
-              variant="default"
-              size="default"
-            >
-              <Icon name="Send" size={18} />
-              Связаться
-            </Button>
+            <div className="hidden lg:flex items-center">
+              <Button 
+                onClick={handleTelegramClick}
+                variant="default"
+                size="default"
+                className="ml-6"
+              >
+                <Icon name="Send" size={18} />
+                Связаться
+              </Button>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2.5 rounded-xl hover:bg-accent-06 transition-colors"
               aria-label="Открыть меню"
             >
-              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={24} className="text-brand-primary" />
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={22} className="text-ink" />
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - воздушное выпадающее меню */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
-            <div className="px-4 py-4 space-y-3">
-              {navigationLinks.map((link) => (
-                <NavLink 
-                  key={link.pageName}
-                  to={link.to}
-                  currentPage={currentPage}
-                  pageName={link.pageName}
-                  onClick={closeMobileMenu}
-                  isMobile
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+          <div className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-line">
+            <div className="container mx-auto px-4 py-4">
+              <div className="space-y-1">
+                {navigationLinks.map((link) => (
+                  <Link
+                    key={link.pageName}
+                    to={link.to}
+                    onClick={closeMobileMenu}
+                    className={cn(
+                      "block px-4 py-3 rounded-xl text-base font-medium transition-all duration-fast",
+                      currentPage === link.pageName 
+                        ? "text-accent bg-accent-06" 
+                        : "text-muted-ink hover:text-ink hover:bg-accent-06"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               
               {/* Mobile CTA Button */}
-              <div className="pt-3 border-t border-gray-100">
+              <div className="mt-4 pt-4 border-t border-line">
                 <Button 
                   onClick={() => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-modern"
+                  variant="default"
+                  size="default"
+                  className="w-full"
                 >
-                  <Icon name="MessageCircle" size={16} className="mr-2" />
-                  Связаться
+                  <Icon name="Send" size={18} />
+                  Связаться в Telegram
                 </Button>
               </div>
             </div>
@@ -109,7 +135,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-16">
+      <main className="pt-16 md:pt-20">
         {children}
       </main>
 
@@ -118,5 +144,10 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
     </div>
   );
 };
+
+// Утилита cn для объединения классов (временно здесь)
+function cn(...classes: (string | boolean | undefined)[]) {
+  return classes.filter(Boolean).join(' ');
+}
 
 export default Layout;
