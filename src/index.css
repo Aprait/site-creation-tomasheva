@@ -166,7 +166,7 @@
   }
 
   a:hover {
-    @apply text-accent-hover;
+    color: var(--accent-hover);
   }
 
   /* Фокус для доступности */
