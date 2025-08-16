@@ -4,32 +4,32 @@ const AcceleratorsSection = () => {
   const accelerators = [
     {
       name: "Школа стартапов Skolkovo",
-      logo: "https://cdn.poehali.dev/files/69e445ac-b6ca-4147-ae70-7c249bf8befe.jpg",
+      logo: "/img/skolkovo.png",
       role: "Трекер (грейд В+)"
     },
     {
       name: "Форум «Сильные идеи для нового времени»",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/silnye-idei.png",
       role: "Эксперт"
     },
     {
-      name: "Growth Academy",
-      logo: "/api/placeholder/120/60",
+      name: "DU LAB ИТМО",
+      logo: "/img/du-lab-itmo.png",
       role: "Тимлид"
     },
     {
       name: "ТехноВызов",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/technovyzov.png",
       role: "Трекер"
     },
     {
       name: "Архипелаг 2121",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/arhipelag.png",
       role: "Эксперт"
     },
     {
       name: "Университет 20.35",
-      logo: "/api/placeholder/120/60",
+      logo: "/img/universitet-2035.png",
       role: "Эксперт"
     }
   ];
@@ -58,7 +58,7 @@ const AcceleratorsSection = () => {
                   <img 
                     src={accelerator.logo} 
                     alt={`Логотип ${accelerator.name}`}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 font-heading leading-tight">
