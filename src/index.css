@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,9 +6,11 @@
 
 @layer base {
   :root {
-    --brand-blue: #0039a3;
+    --brand-blue: #004e89;
+    --brand-orange: #ff6b35;
+    --brand-red: #f71735;
     --background: 0 0% 100%;
-    --foreground: 221 39% 11%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
     --card-foreground: 221 39% 11%;
@@ -16,7 +18,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 221 39% 11%;
 
-    --primary: 221 83% 53%;
+    --primary: 17 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 98%;
@@ -25,7 +27,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 221 83% 53%;
+    --accent: 351 84% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -111,9 +113,10 @@
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", system-ui, sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.025em;
+    font-family: "Manrope", system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 }
 
@@ -183,12 +186,16 @@
 }
 
 .stats-number {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 3rem;
+  font-family: "Manrope", system-ui, sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   font-feature-settings: "tnum";
+  background: linear-gradient(135deg, #ff6b35 0%, #f71735 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @media (min-width: 768px) {
@@ -278,15 +285,51 @@
   background-color: #ff9f6e !important;
 }
 
-/* Оранжевые кнопки с черным текстом */
+/* Яркие кнопки с белым текстом */
+.bg-brand-primary {
+  @apply text-white !important;
+}
+
 .bg-brand-accent {
-  @apply text-gray-900 !important;
+  @apply text-white !important;
 }
 
 .bg-orange-500 {
-  @apply text-gray-900 !important;
+  @apply text-white !important;
 }
 
 .bg-orange-600 {
-  @apply text-gray-900 !important;
+  @apply text-white !important;
+}
+
+/* Новые стили для современного дизайна */
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff6b35 0%, #f71735 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-modern {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-modern-lg {
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.15);
+}
+
+.border-gradient {
+  position: relative;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #ff6b35 0%, #f71735 100%) border-box;
+  border: 2px solid transparent;
 }

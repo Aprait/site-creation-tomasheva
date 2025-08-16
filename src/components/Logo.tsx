@@ -1,14 +1,33 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Logo: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="flex items-center">
-      <div className="bg-white rounded-lg p-2 sm:p-3 md:p-4 shadow-sm">
-        <img 
-          src="https://cdn.poehali.dev/files/e08d2af8-2c4e-435a-b415-8afd0f1bbec6.png"
-          alt="Наталья Томашева"
-          className="h-12 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
-        />
+    <div 
+      className="flex items-center cursor-pointer group"
+      onClick={() => navigate('/')}
+    >
+      <div className="flex items-center gap-3">
+        {/* Logo Icon */}
+        <div className="relative">
+          <img 
+            src="/img/4335c4bc-d9d5-4ee6-a3b3-47a16e54cbc7.jpg"
+            alt="FOXMetoD"
+            className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300"
+          />
+        </div>
+        
+        {/* Text */}
+        <div className="flex flex-col">
+          <span className="text-xl md:text-2xl font-bold text-gray-900 leading-none">
+            FOXMetoD
+          </span>
+          <span className="text-xs md:text-sm text-gray-600 leading-none">
+            Консалтинговое агентство
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -19,28 +19,33 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+				'heading': ['Manrope', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Оригинальная цветовая палитра
+				// Современная яркая цветовая палитра
 				'brand': {
-					'primary': '#1e4a8b', // Глубокий синий
-					'secondary': '#2e5aa6', // Средний синий
-					'accent': '#f58b54', // Оранжевый акцент
-					'success': '#10B981', // Зеленый для успеха
-					'warning': '#F59E0B', // Оранжевый для предупреждений
-					'light': '#fef6f3', // Светлый персиковый
-					'muted': '#64748B', // Приглушенный серый
-					'navy': '#1e4a8b', // Темно-синий
-					'blue': '#0039A3' // Синий
+					'primary': '#FF6B35', // Яркий оранжевый
+					'secondary': '#004E89', // Глубокий синий
+					'accent': '#F71735', // Яркий красный акцент
+					'success': '#06D6A0', // Яркий мятный
+					'warning': '#FFB700', // Золотистый
+					'light': '#FAFAFA', // Очень светлый серый
+					'dark': '#1A1A2E', // Темно-синий
+					'muted': '#6C757D', // Нейтральный серый
+					'navy': '#16213E', // Темно-синий
+					'blue': '#0F3460', // Глубокий синий
+					'orange': '#FF6B35', // Яркий оранжевый
+					'coral': '#FF4C29' // Коралловый
 				},
 				// Градиенты
 				'gradient': {
-					'primary': 'linear-gradient(135deg, #1e4a8b 0%, #2e5aa6 100%)',
-					'accent': 'linear-gradient(135deg, #f58b54 0%, #ff9f6e 100%)',
-					'success': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
+					'primary': 'linear-gradient(135deg, #FF6B35 0%, #F71735 100%)',
+					'secondary': 'linear-gradient(135deg, #004E89 0%, #1A1A2E 100%)',
+					'accent': 'linear-gradient(135deg, #F71735 0%, #FF4C29 100%)',
+					'success': 'linear-gradient(135deg, #06D6A0 0%, #00B388 100%)',
+					'warm': 'linear-gradient(135deg, #FF6B35 0%, #FFB700 100%)'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

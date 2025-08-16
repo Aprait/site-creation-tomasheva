@@ -30,8 +30,8 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-white text-brand-primary">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-lg border-b border-gray-100 z-50">
+        <div className="container-width">
           <div className="flex justify-between items-center h-20">
             <Link to="/">
               <Logo />
@@ -54,9 +54,11 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex modern-button bg-brand-accent hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg"
+              className="hidden md:flex bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300"
+              variant="default"
+              size="default"
             >
-              <Icon name="MessageCircle" size={16} className="mr-2" />
+              <Icon name="Send" size={18} />
               Связаться
             </Button>
 
@@ -95,7 +97,7 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-brand-accent hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg"
+                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-modern"
                 >
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   Связаться
