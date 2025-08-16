@@ -4,32 +4,32 @@ const AcceleratorsSection = () => {
   const accelerators = [
     {
       name: "Школа стартапов Skolkovo",
-      logo: "/img/skolkovo.png",
+      logo: "/img/9c21003f-6957-4194-a458-24e57a74b11c.jpg",
       role: "Трекер (грейд В+)"
     },
     {
       name: "Форум «Сильные идеи для нового времени»",
-      logo: "/img/silnye-idei.png",
+      logo: "/img/ff2b092a-bcfc-480b-95ee-677ee5435647.jpg",
       role: "Эксперт"
     },
     {
       name: "DU LAB ИТМО",
-      logo: "/img/du-lab-itmo.png",
+      logo: "/img/51467ce7-dcf9-4d47-b852-8c9c3271fa3b.jpg",
       role: "Тимлид"
     },
     {
       name: "ТехноВызов",
-      logo: "/img/technovyzov.png",
+      logo: "/img/eeff3de2-cdc7-404b-ab06-1fc1fb7cd3e3.jpg",
       role: "Трекер"
     },
     {
       name: "Архипелаг 2121",
-      logo: "/img/arhipelag.png",
+      logo: "/img/503fe85a-cf46-4094-bea0-d6ca02a8bbed.jpg",
       role: "Эксперт"
     },
     {
       name: "Университет 20.35",
-      logo: "/img/universitet-2035.png",
+      logo: "/img/f77e1d43-6efb-4063-9606-f2bf3414df20.jpg",
       role: "Эксперт"
     }
   ];
@@ -54,11 +54,11 @@ const AcceleratorsSection = () => {
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-24 h-24 mb-6 bg-gray-50 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-32 h-32 mb-6 bg-white rounded-xl flex items-center justify-center overflow-hidden p-4 border border-gray-100">
                   <img 
                     src={accelerator.logo} 
                     alt={`Логотип ${accelerator.name}`}
-                    className="max-w-full max-h-full object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 font-heading leading-tight">
