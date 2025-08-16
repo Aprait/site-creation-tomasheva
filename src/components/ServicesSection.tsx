@@ -1,6 +1,6 @@
 import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
-import { Button } from '@/components/ui/button';
 
 const ServicesSection = () => {
   const services = [
@@ -36,68 +36,81 @@ const ServicesSection = () => {
     }
   ];
 
+  const gradientColors = [
+    "from-blue-500 to-indigo-600",
+    "from-green-500 to-emerald-600", 
+    "from-purple-500 to-violet-600",
+    "from-orange-500 to-red-600",
+    "from-pink-500 to-rose-600",
+    "from-cyan-500 to-blue-600"
+  ];
+
   return (
-    <section id="services" className="section-padding bg-accent-06">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-accent-10 text-accent-ink rounded-full text-sm font-medium mb-6">
+    <section id="services" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 text-brand-accent rounded-full font-medium mb-6">
             <Icon name="Sparkles" size={16} className="mr-2" />
             Мои услуги
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
+          <h2 className="text-4xl lg:text-6xl font-bold text-brand-primary mb-6 font-heading tracking-tight">
             Чем я могу быть полезна
           </h2>
-          <p className="text-lg text-muted-ink max-w-3xl mx-auto">
+          <p className="text-xl text-brand-muted font-body max-w-3xl mx-auto leading-relaxed">
             Ключевые направления моей экспертной деятельности для развития вашего бизнеса
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
           {services.map((service, index) => (
-            <div key={index} className="card h-full">
-              <div className="w-12 h-12 bg-accent-06 rounded-xl flex items-center justify-center mb-4">
-                <Icon name={service.icon} size={24} className="text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold text-ink mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-ink leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            <Card 
+              key={index} 
+              className="modern-card border-0 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden" 
+              style={{animationDelay: `${index * 0.1}s`}}
+            >
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-navy to-brand-blue rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                  <Icon name={service.icon} size={28} className="text-white" />
+                </div>
+                <CardTitle className="text-xl font-semibold text-gray-900 font-heading">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 leading-relaxed font-body">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
           ))}
         </div>
         
-        <div className="mt-12 md:mt-16 text-center">
-          <p className="text-base md:text-lg text-muted-ink mb-8 max-w-4xl mx-auto">
+        <div className="mt-16 text-center">
+          <p className="text-lg text-gray-600 font-body mb-8 max-w-4xl mx-auto">
             Каждое направление подкреплено многолетним опытом работы с компаниями разного масштаба — 
             от стартапов до крупных корпораций с оборотом свыше 20 млрд рублей.
           </p>
-          <div className="inline-flex items-center px-4 py-2 bg-accent-06 rounded-xl">
-            <Icon name="CheckCircle" size={20} className="text-accent mr-2" />
-            <span className="text-ink font-medium">
+          <div className="inline-flex items-center px-6 py-3 bg-brand-light rounded-lg">
+            <Icon name="CheckCircle" size={20} className="text-brand-navy mr-2" />
+            <span className="text-brand-navy font-medium font-body">
               Индивидуальный подход к каждому проекту
             </span>
           </div>
         </div>
         
         {/* Call to Action */}
-        <div className="mt-12 md:mt-16 max-w-3xl mx-auto">
-          <div className="card text-center">
-            <h3 className="text-2xl font-bold text-ink mb-4">
+        <div className="mt-20 text-center">
+          <div className="max-w-4xl mx-auto p-8 bg-white modern-shadow-lg rounded-3xl border border-gray-100">
+            <h3 className="text-2xl font-bold text-brand-primary mb-4 font-heading">
               Не нашли подходящее решение?
             </h3>
-            <p className="text-muted-ink mb-6">
+            <p className="text-brand-muted mb-6 font-body">
               Обсудим вашу задачу индивидуально — я помогу найти оптимальное решение
             </p>
-            <Button 
-              variant="default"
-              size="lg"
-              onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
-            >
-              <Icon name="MessageCircle" size={20} />
+            <button className="modern-button bg-brand-accent hover:bg-brand-accent/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
+              <Icon name="MessageCircle" size={20} className="mr-2 inline" />
               Обсудить задачу
-            </Button>
+            </button>
           </div>
         </div>
       </div>

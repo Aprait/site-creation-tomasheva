@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const StatsSection = () => {
   const stats = [
@@ -25,38 +26,39 @@ const StatsSection = () => {
   ];
 
   return (
-    <section id="results" className="section-padding bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4">
+    <section id="results" className="py-32 bg-gradient-to-b from-white to-brand-light">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold text-brand-primary mb-6 font-heading tracking-tight">
             Мои результаты в цифрах
           </h2>
-          <p className="text-lg text-muted-ink max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-600 font-body max-w-3xl mx-auto">
             Измеримые достижения в работе с командами и бизнесом
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index} 
-              className="card text-center"
+              className="text-center p-8 rounded-2xl bg-white border-2 border-gray-100 hover:border-brand-accent hover:shadow-xl transition-all duration-300 animate-fade-in card-hover" 
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-3">
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-accent mb-4 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
                 {stat.number}
               </div>
-              <div className="text-sm font-medium text-ink mb-2">
+              <div className="text-sm md:text-base font-medium text-slate-900 mb-2">
                 {stat.label}
               </div>
-              <div className="text-sm text-muted-ink">
+              <div className="text-xs md:text-sm text-slate-500">
                 {stat.period}
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-12 md:mt-16 text-center">
-          <p className="text-base md:text-lg text-muted-ink max-w-3xl mx-auto leading-relaxed">
+        <div className="mt-20 text-center">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Каждая цифра отражает конкретный результат работы с реальными компаниями. 
             Мой подход основан на измеримых KPI и долгосрочном партнерстве.
           </p>

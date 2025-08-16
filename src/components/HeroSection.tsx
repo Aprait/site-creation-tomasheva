@@ -25,19 +25,18 @@ const HeroSection = () => {
 
   return (
     <>
-      {/* Navigation - воздушная с тонкой линией */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-line z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-lg border-b border-gray-100 z-50">
+        <div className="container-width">
+          <div className="flex justify-between items-center h-20">
             <Logo />
-            
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-10">
               {navigationLinks.map((link) => (
                 <a 
                   key={link.pageName}
                   href={link.to} 
-                  className="px-4 py-2 rounded-xl text-sm font-medium text-muted-ink hover:text-ink hover:bg-accent-06 transition-all duration-fast"
+                  className="text-gray-700 hover:text-brand-primary transition-colors font-medium"
                 >
                   {link.label}
                 </a>
@@ -47,7 +46,7 @@ const HeroSection = () => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden lg:flex"
+              className="hidden md:flex bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300"
               variant="default"
               size="default"
             >
@@ -58,46 +57,42 @@ const HeroSection = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden p-2.5 rounded-xl hover:bg-accent-06 transition-colors"
+              className="md:hidden p-2.5 rounded-xl hover:bg-slate-100 transition-colors"
               aria-label="Открыть меню"
             >
-              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={22} className="text-ink" />
+              <Icon name={isMobileMenuOpen ? "X" : "Menu"} size={22} className="text-slate-700" />
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-line">
-            <div className="container mx-auto px-4 py-4">
-              <div className="space-y-1">
-                {navigationLinks.map((link) => (
-                  <button 
-                    key={link.pageName}
-                    onClick={() => {
-                      navigate(link.to);
-                      closeMobileMenu();
-                    }}
-                    className="block w-full text-left px-4 py-3 rounded-xl text-base font-medium text-muted-ink hover:text-ink hover:bg-accent-06 transition-all duration-fast"
-                  >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
+          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+            <div className="px-4 py-4 space-y-3">
+              {navigationLinks.map((link) => (
+                <button 
+                  key={link.pageName}
+                  onClick={() => {
+                    navigate(link.to);
+                    closeMobileMenu();
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-lg transition-colors font-body font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-primary"
+                >
+                  {link.label}
+                </button>
+              ))}
               
               {/* Mobile CTA Button */}
-              <div className="mt-4 pt-4 border-t border-line">
+              <div className="pt-3 border-t border-gray-100">
                 <Button 
                   onClick={() => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full"
-                  variant="default"
-                  size="default"
+                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-modern"
                 >
-                  <Icon name="Send" size={18} />
-                  Связаться в Telegram
+                  <Icon name="MessageCircle" size={16} className="mr-2" />
+                  Связаться
                 </Button>
               </div>
             </div>
@@ -105,42 +100,41 @@ const HeroSection = () => {
         )}
       </nav>
 
-      {/* Hero Section - воздушная верстка с большими отступами */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24 bg-white relative overflow-hidden">
-        {/* Легкие декоративные элементы */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-06 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-06 rounded-full blur-3xl opacity-30"></div>
+      {/* Hero Section */}
+      <section className="pt-32 md:pt-40 pb-20 md:pb-32 bg-white relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-secondary/5 to-transparent rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container-width relative">
+          {/* Родительский Flex-контейнер */}
+          <div className="md:flex md:items-center md:gap-16">
             
-            {/* Левая колонка - Текст */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-4.5xl md:text-5xl lg:text-5.5xl font-bold leading-tight tracking-tight text-ink mb-6">
-                <span className="block">Наталья</span>
-                <span className="block text-accent">Томашёва</span>
+            {/* Левая колонка (Текст) */}
+            <div className="text-center md:text-left md:w-3/5">
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
+                <span className="block gradient-text">Наталья</span>
+                <span className="block gradient-text">Томашёва</span>
               </h1>
               
-              <p className="text-lg md:text-xl leading-relaxed text-muted-ink mb-8 max-w-2xl">
-                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний. 
-                Основатель Консалтингового агентства FOXMetoD
+              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
+                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний. Основатель Консалтингового агентства FOXMetoD
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-6">
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  variant="default"
-                  className="shadow-sm"
+                  className="bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300 px-8"
                 >
                   <Icon name="Calendar" size={20} />
                   Записаться на консультацию
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="secondary"
+                  variant="outline"
                   onClick={() => navigate('/cases')}
-                  className="shadow-sm"
+                  className="border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300 px-8"
                 >
                   <Icon name="TrendingUp" size={20} />
                   Смотреть кейсы
@@ -148,35 +142,39 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Правая колонка - Карточка с фото */}
-            <div className="flex justify-center">
-              <div className="relative group max-w-sm">
-                {/* Карточка */}
-                <div className="card p-6 md:p-8">
-                  {/* Фото */}
-                  <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-6">
+            {/* Правая колонка (Фото) */}
+            <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
+              <div className="relative group">
+                {/* Background glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 rounded-3xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                
+                {/* Card */}
+                <div className="bg-white rounded-3xl shadow-modern-lg p-8 transform hover:scale-105 transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden mb-6">
                     <img 
                       src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
                       alt="Наталья Томашева - бизнес-эксперт"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-secondary/20 to-transparent"></div>
                   </div>
                   
-                  {/* Информация */}
+                  {/* Info */}
                   <div className="text-center">
-                    <h3 className="font-bold text-xl text-ink mb-4">Наталья Томашёва</h3>
+                    <h3 className="font-bold text-2xl gradient-text mb-4">Наталья Томашёва</h3>
                     
-                    {/* Статистика */}
-                    <div className="flex justify-center gap-8">
+                    
+                    {/* Stats */}
+                    <div className="flex justify-center gap-8 text-sm">
                       <div>
-                        <div className="text-3xl font-bold text-accent mb-1">280+</div>
-                        <div className="text-sm text-muted-ink">команд</div>
+                        <div className="stats-number text-3xl">280+</div>
+                        <div className="text-gray-600 font-medium">команд</div>
                       </div>
-                      <div className="w-px bg-line"></div>
+                      <div className="border-l border-gray-200"></div>
                       <div>
-                        <div className="text-3xl font-bold text-accent mb-1">20</div>
-                        <div className="text-sm text-muted-ink">лет опыта</div>
+                        <div className="stats-number text-3xl">20</div>
+                        <div className="text-gray-600 font-medium">лет опыта</div>
                       </div>
                     </div>
                   </div>
@@ -187,13 +185,13 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Индикатор скролла */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-ink animate-bounce">
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 animate-bounce">
           <Icon name="ChevronDown" size={28} />
         </div>
       </section>
 
-      {/* Модальное окно консультации */}
+      {/* Consultation Modal */}
       <ConsultationModal 
         isOpen={isConsultationModalOpen}
         onClose={() => setIsConsultationModalOpen(false)}
