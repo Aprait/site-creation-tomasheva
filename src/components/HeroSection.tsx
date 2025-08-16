@@ -26,9 +26,9 @@ const HeroSection = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white backdrop-blur-lg border-b border-gray-100 z-50">
-        <div className="container-width">
-          <div className="flex justify-between items-center h-20">
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm z-50">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="flex justify-between items-center h-32 md:h-36">
             <Logo />
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-10">
@@ -36,7 +36,7 @@ const HeroSection = () => {
                 <a 
                   key={link.pageName}
                   href={link.to} 
-                  className="text-gray-700 hover:text-brand-primary transition-colors font-medium"
+                  className="text-gray-600 hover:text-brand-primary transition-colors font-medium"
                 >
                   {link.label}
                 </a>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300"
+              className="hidden md:flex bg-brand-accent hover:bg-orange-500 text-white"
               variant="default"
               size="default"
             >
@@ -89,7 +89,7 @@ const HeroSection = () => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-3 px-4 rounded-lg shadow-modern"
+                  className="w-full bg-brand-accent hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg"
                 >
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   Связаться
@@ -101,20 +101,20 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-20 md:pb-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      <section className="pt-48 md:pt-56 pb-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
         
-        <div className="container-width relative">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}
           <div className="md:flex md:items-center md:gap-16">
             
             {/* Левая колонка (Текст) */}
             <div className="text-center md:text-left md:w-3/5">
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
-                <span className="block gradient-text">Наталья</span>
-                <span className="block gradient-text">Томашёва</span>
+                <span className="block text-brand-primary">Наталья</span>
+                <span className="block text-brand-primary">Томашёва</span>
               </h1>
               
               <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
@@ -125,7 +125,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-brand-primary hover:bg-brand-primary/90 text-white shadow-modern hover:shadow-modern-lg transition-all duration-300 px-8"
+                  className="bg-brand-accent hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   <Icon name="Calendar" size={20} />
                   Записаться на консультацию
@@ -134,7 +134,7 @@ const HeroSection = () => {
                   size="lg" 
                   variant="outline"
                   onClick={() => navigate('/cases')}
-                  className="border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-300 px-8"
+                  className="hover:bg-slate-50 transition-all"
                 >
                   <Icon name="TrendingUp" size={20} />
                   Смотреть кейсы
@@ -146,10 +146,10 @@ const HeroSection = () => {
             <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
               <div className="relative group">
                 {/* Background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 rounded-3xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/20 to-brand-primary/20 rounded-2xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
                 
                 {/* Card */}
-                <div className="bg-white rounded-3xl shadow-modern-lg p-8 transform hover:scale-105 transition-all duration-300">
+                <div className="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
                   {/* Image */}
                   <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden mb-6">
                     <img 
@@ -162,19 +162,19 @@ const HeroSection = () => {
                   
                   {/* Info */}
                   <div className="text-center">
-                    <h3 className="font-bold text-2xl gradient-text mb-4">Наталья Томашёва</h3>
+                    <h3 className="font-bold text-xl text-brand-primary mb-2">Наталья Томашёва</h3>
                     
                     
                     {/* Stats */}
-                    <div className="flex justify-center gap-8 text-sm">
+                    <div className="flex justify-center gap-6 text-sm">
                       <div>
-                        <div className="stats-number text-3xl">280+</div>
-                        <div className="text-gray-600 font-medium">команд</div>
+                        <div className="font-bold text-brand-accent text-lg">280+</div>
+                        <div className="text-gray-500">команд</div>
                       </div>
                       <div className="border-l border-gray-200"></div>
                       <div>
-                        <div className="stats-number text-3xl">20</div>
-                        <div className="text-gray-600 font-medium">лет опыта</div>
+                        <div className="font-bold text-brand-accent text-lg">20 лет</div>
+                        <div className="text-gray-500">опыта</div>
                       </div>
                     </div>
                   </div>

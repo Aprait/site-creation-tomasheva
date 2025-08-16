@@ -140,25 +140,23 @@ const FOXMetoD = () => {
     <Layout currentPage="foxmetod">
       <div className="min-h-screen bg-white">
         {/* Блок 1: Первый экран */}
-        <section className="relative section-padding bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+        <section className="relative py-24 md:py-32 bg-gradient-to-br from-brand-primary via-blue-900 to-brand-navy overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-primary/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl" />
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-accent/20 rounded-full blur-3xl" />
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl" />
           </div>
           
-          <div className="relative container-width text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold mb-6 leading-tight">
-              <span className="gradient-text">Превращаем ваш бизнес в систему,</span>
-              <br/>
-              <span className="text-gray-900">которая работает без вас</span>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+              Превращаем ваш бизнес в систему, которая работает без вас
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
               Обретите свободу для стратегического роста, пока ваша команда слаженно достигает результатов
             </p>
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold px-8 py-6 text-lg rounded-lg shadow-modern hover:shadow-modern-lg transition-all duration-300"
+              className="bg-brand-accent hover:bg-orange-500 text-gray-900 font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
             >
               Получить план систематизации
             </Button>
@@ -166,17 +164,17 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 2: Проблема */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-width">
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
               Для собственников, которые устали быть главным ресурсом своего бизнеса
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {painPoints.map((point, index) => (
-                <div key={index} className="bg-white rounded-2xl p-6 shadow-modern hover:shadow-modern-lg transition-all border border-gray-100">
-                  <div className="w-14 h-14 bg-gradient-to-br from-brand-accent/10 to-brand-primary/10 rounded-xl flex items-center justify-center mb-4">
-                    <Icon name={point.icon} size={28} className="text-brand-accent" />
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+                  <div className="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={point.icon} size={28} className="text-red-600" />
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     {point.text}
@@ -188,7 +186,7 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 3: Решение */}
-        <section className="section-padding bg-white">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-8">
               Ваша свобода — через работающую систему
@@ -201,20 +199,20 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 4: Продукты */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-width">
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
               Как мы построим вашу систему
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               {products.map((product, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-modern hover:shadow-modern-lg transition-all border border-gray-100">
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl flex items-center justify-center mr-4">
-                      <span className="text-white font-bold text-xl">{index + 1}</span>
+                    <div className="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mr-4">
+                      <span className="text-brand-accent font-bold text-xl">{index + 1}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">
+                    <h3 className="text-xl font-bold text-brand-primary">
                       {product.title}
                     </h3>
                   </div>
@@ -222,7 +220,7 @@ const FOXMetoD = () => {
                   <ul className="space-y-3">
                     {product.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <Icon name="Check" size={20} className="text-brand-success mr-3 mt-0.5 flex-shrink-0" />
+                        <Icon name="Check" size={20} className="text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -234,16 +232,16 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 5: Дополнительные компетенции */}
-        <section className="section-padding bg-white">
-          <div className="container-width">
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
               Решаем и другие ключевые задачи бизнеса
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {additionalServices.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">
+                <div key={index} className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-lg font-bold text-brand-primary mb-4">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
@@ -260,15 +258,15 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 6: Команда */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-width">
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
               Гарантия результата — наша команда экспертов-практиков
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-modern hover:shadow-modern-lg transition-all text-center border border-gray-100">
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg text-center">
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gray-200 overflow-hidden">
                     {member.photo ? (
                       <img 
@@ -282,7 +280,7 @@ const FOXMetoD = () => {
                       </div>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold gradient-text mb-2">
+                  <h3 className="text-xl font-bold text-brand-primary mb-2">
                     {member.name}
                   </h3>
                   <p className="text-gray-600 mb-4">
@@ -298,7 +296,7 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 7: Призыв к действию */}
-        <section id="contact-form" className="section-padding bg-gradient-to-br from-gray-900 to-gray-800">
+        <section id="contact-form" className="py-20 bg-gradient-to-br from-brand-primary via-blue-900 to-brand-navy">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
@@ -310,7 +308,7 @@ const FOXMetoD = () => {
               </p>
             </div>
             
-            <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-modern-lg">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-2xl">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -361,7 +359,7 @@ const FOXMetoD = () => {
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold py-4 text-lg rounded-lg shadow-modern hover:shadow-modern-lg transition-all duration-300"
+                  className="w-full bg-brand-accent hover:bg-orange-500 text-gray-900 font-semibold py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
                 >
                   Начать систематизацию
                 </Button>
