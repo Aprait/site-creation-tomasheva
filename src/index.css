@@ -277,3 +277,16 @@
 .force-contrast:hover {
   background-color: #ff9f6e !important;
 }
+
+/* Оранжевые кнопки с черным текстом */
+.bg-brand-accent {
+  @apply text-gray-900 !important;
+}
+
+.bg-orange-500 {
+  @apply text-gray-900 !important;
+}
+
+.bg-orange-600 {
+  @apply text-gray-900 !important;
+}
