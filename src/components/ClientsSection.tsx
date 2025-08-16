@@ -122,7 +122,7 @@ const ClientsSection = () => {
                 <img 
                   src={client.logo} 
                   alt={`Логотип ${client.name}`}
-                  className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
               <h3 className="text-sm font-semibold text-gray-900 text-center mb-1 font-heading">
@@ -136,7 +136,7 @@ const ClientsSection = () => {
                   href={client.website} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-xs text-brand-primary hover:text-brand-accent transition-colors font-body opacity-0 group-hover:opacity-100"
+                  className="text-xs text-brand-primary hover:text-brand-accent transition-colors font-body"
                 >
                   Перейти на сайт →
                 </a>

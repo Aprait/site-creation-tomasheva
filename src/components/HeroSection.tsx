@@ -156,7 +156,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
-                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний.
+                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний. Основатель Консалтингового агентства FOXMetoD
               </p>
               
               <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-6">

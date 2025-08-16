@@ -44,13 +44,13 @@ const StatsSection = () => {
               className="text-center p-8 rounded-2xl bg-white border-2 border-gray-100 hover:border-brand-accent hover:shadow-xl transition-all duration-300 animate-fade-in card-hover" 
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-brand-accent mb-4 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-accent mb-4 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
                 {stat.number}
               </div>
-              <div className="text-base md:text-lg font-medium text-slate-900 mb-2">
+              <div className="text-sm md:text-base font-medium text-slate-900 mb-2">
                 {stat.label}
               </div>
-              <div className="text-sm md:text-base text-slate-500">
+              <div className="text-xs md:text-sm text-slate-500">
                 {stat.period}
               </div>
             </div>
