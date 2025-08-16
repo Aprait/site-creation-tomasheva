@@ -10,22 +10,20 @@ const Logo: React.FC = () => {
       onClick={() => navigate('/')}
     >
       <div className="flex items-center gap-3">
-        {/* Logo Icon */}
+        {/* Logo Icon with initials NT */}
         <div className="relative">
-          <img 
-            src="/img/4335c4bc-d9d5-4ee6-a3b3-47a16e54cbc7.jpg"
-            alt="FOXMetoD"
-            className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300"
-          />
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-brand-primary rounded-lg flex items-center justify-center group-hover:shadow-md transition-all duration-300">
+            <span className="text-white font-bold text-xl md:text-2xl font-heading">НТ</span>
+          </div>
         </div>
         
         {/* Text */}
         <div className="flex flex-col">
-          <span className="text-xl md:text-2xl font-bold text-gray-900 leading-none">
-            FOXMetoD
+          <span className="text-lg md:text-xl font-bold text-brand-secondary leading-none">
+            Наталья
           </span>
-          <span className="text-xs md:text-sm text-gray-600 leading-none">
-            Консалтинговое агентство
+          <span className="text-lg md:text-xl font-bold text-brand-secondary leading-none">
+            Томашёва
           </span>
         </div>
       </div>

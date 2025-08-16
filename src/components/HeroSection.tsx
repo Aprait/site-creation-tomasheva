@@ -101,10 +101,10 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 md:pt-40 pb-20 md:pb-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      <section className="pt-32 md:pt-40 pb-20 md:pb-32 bg-white relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-secondary/5 to-transparent rounded-full blur-3xl"></div>
         
         <div className="container-width relative">
           {/* Родительский Flex-контейнер */}
@@ -146,7 +146,7 @@ const HeroSection = () => {
             <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
               <div className="relative group">
                 {/* Background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 rounded-3xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-brand-secondary/10 rounded-3xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
                 
                 {/* Card */}
                 <div className="bg-white rounded-3xl shadow-modern-lg p-8 transform hover:scale-105 transition-all duration-300">
@@ -157,7 +157,7 @@ const HeroSection = () => {
                       alt="Наталья Томашева - бизнес-эксперт"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-secondary/20 to-transparent"></div>
                   </div>
                   
                   {/* Info */}

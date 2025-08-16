@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,9 +6,9 @@
 
 @layer base {
   :root {
-    --brand-blue: #004e89;
-    --brand-orange: #ff6b35;
-    --brand-red: #f71735;
+    --brand-blue: #19374a;
+    --brand-orange: #e8551b;
+    --brand-red: #e8551b;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -18,7 +18,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 221 39% 11%;
 
-    --primary: 17 100% 60%;
+    --primary: 18 81% 51%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 98%;
@@ -27,7 +27,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 351 84% 58%;
+    --accent: 18 81% 51%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -113,10 +113,10 @@
   h4,
   h5,
   h6 {
-    font-family: "Manrope", system-ui, sans-serif;
-    font-weight: 800;
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 }
 
@@ -186,16 +186,13 @@
 }
 
 .stats-number {
-  font-family: "Manrope", system-ui, sans-serif;
-  font-weight: 900;
-  font-size: 3.5rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   font-feature-settings: "tnum";
-  background: linear-gradient(135deg, #ff6b35 0%, #f71735 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #e8551b;
 }
 
 @media (min-width: 768px) {
@@ -285,8 +282,12 @@
   background-color: #ff9f6e !important;
 }
 
-/* Яркие кнопки с белым текстом */
+/* Кнопки с белым текстом */
 .bg-brand-primary {
+  @apply text-white !important;
+}
+
+.bg-brand-secondary {
   @apply text-white !important;
 }
 
@@ -312,24 +313,22 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ff6b35 0%, #f71735 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #e8551b;
+  font-weight: 700;
 }
 
 .shadow-modern {
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.08);
 }
 
 .shadow-modern-lg {
-  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.12);
 }
 
 .border-gradient {
   position: relative;
   background:
     linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #ff6b35 0%, #f71735 100%) border-box;
+    linear-gradient(135deg, #e8551b 0%, #f57739 100%) border-box;
   border: 2px solid transparent;
 }
