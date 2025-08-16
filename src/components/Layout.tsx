@@ -37,14 +37,14 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               <Link 
-                to="/about" 
+                to="/foxmetod" 
                 className={`transition-colors font-body font-medium ${
-                  currentPage === 'about' 
+                  currentPage === 'foxmetod' 
                     ? 'text-brand-accent font-semibold' 
                     : 'text-gray-600 hover:text-brand-primary'
                 }`}
               >
-                Обо мне
+                FOXMetoD
               </Link>
               <Link 
                 to="/services" 
@@ -123,15 +123,15 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
           <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-3">
               <Link 
-                to="/about" 
+                to="/foxmetod" 
                 onClick={closeMobileMenu}
                 className={`block py-3 px-4 rounded-lg transition-colors font-body font-medium ${
-                  currentPage === 'about' 
+                  currentPage === 'foxmetod' 
                     ? 'bg-brand-accent text-white font-semibold' 
                     : 'text-gray-600 hover:bg-gray-50 hover:text-brand-primary'
                 }`}
               >
-                Обо мне
+                FOXMetoD
               </Link>
               <Link 
                 to="/services" 

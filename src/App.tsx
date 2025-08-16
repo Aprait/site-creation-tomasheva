@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import About from "./pages/About";
+import FOXMetoD from "./pages/FOXMetoD";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Cases from "./pages/Cases";
@@ -23,7 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/foxmetod" element={<FOXMetoD />} />
           <Route path="/services" element={<Services />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/reviews" element={<Reviews />} />
