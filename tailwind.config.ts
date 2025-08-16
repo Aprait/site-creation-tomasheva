@@ -50,6 +50,32 @@ export default {
 						'900': '#19374A'
 					}
 				},
+				// Новые цвета для дизайн-системы
+				'bg': {
+					DEFAULT: '#FFFFFF',
+					'secondary': '#F9FAFB',
+					'tertiary': '#F3F4F6'
+				},
+				'ink': {
+					DEFAULT: '#111827',
+					'secondary': '#374151',
+					'tertiary': '#6B7280',
+					'quaternary': '#9CA3AF'
+				},
+				'line': {
+					DEFAULT: '#E5E7EB',
+					'secondary': '#D1D5DB'
+				},
+				'card': '#FFFFFF',
+				'accent': {
+					DEFAULT: '#E8551B',
+					'hover': '#DC4A14',
+					'light': 'rgba(232, 85, 27, 0.1)',
+					'lighter': 'rgba(232, 85, 27, 0.05)',
+					'ink': 'rgba(232, 85, 27, 0.88)',
+					'10': 'rgba(232, 85, 27, 0.10)',
+					'06': 'rgba(232, 85, 27, 0.06)'
+				},
 				// Градиенты
 				'gradient': {
 					'primary': 'linear-gradient(135deg, #E8551B 0%, #F57739 100%)',
