@@ -34,7 +34,7 @@ const NavLink = ({ to, children, currentPage, pageName, onClick, isMobile = fals
       to={to} 
       className={`transition-colors font-body font-medium ${
         isActive 
-          ? 'text-brand-accent font-semibold' 
+          ? 'text-accent font-semibold' 
           : 'text-gray-600 hover:text-brand-primary'
       }`}
     >

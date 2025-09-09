@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import ConsultationModal from '@/components/ConsultationModal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   useEffect(() => {
     const accordionToggles = document.querySelectorAll('.accordion-toggle');
@@ -28,6 +30,7 @@ const Footer = () => {
   }, []);
 
   return (
+    <>
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -168,14 +171,13 @@ const Footer = () => {
           <div className="pt-8 text-center">
             <h3 className="text-xl font-bold mb-4 font-heading text-white">Наталья Томашёва</h3>
             <p className="text-gray-400 mb-4 font-body text-sm">Эксперт по системному росту бизнеса и внедрению ИИ</p>
-            <Link to="/contact">
-              <Button 
-                className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
-              >
+            <Button 
+              onClick={() => setIsConsultationModalOpen(true)}
+              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
+            >
               <span className="block">Записаться на</span>
               <span className="block">консультацию</span>
-              </Button>
-            </Link>
+            </Button>
           </div>
         </div>
 
@@ -195,6 +197,13 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    
+    {/* Consultation Modal */}
+    <ConsultationModal 
+      isOpen={isConsultationModalOpen}
+      onClose={() => setIsConsultationModalOpen(false)}
+    />
+    </>
   );
 };
 
