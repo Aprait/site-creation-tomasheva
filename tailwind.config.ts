@@ -19,22 +19,46 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Montserrat', 'system-ui', 'sans-serif'],
+				'heading': ['Inter', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
 				sans: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Оригинальная цветовая палитра
+				// Новые цвета в стиле foxmetod
+				'bg': {
+					DEFAULT: '#FFFFFF',
+					'secondary': '#FAFAFA',
+					'tertiary': '#F5F5F5',
+					'accent': '#FFF7ED'
+				},
+				'ink': {
+					DEFAULT: '#0A0A0A',
+					'secondary': '#404040',
+					'tertiary': '#6B6B6B',
+					'quaternary': '#9CA3AF'
+				},
+				'line': {
+					DEFAULT: '#E5E5E5',
+					'secondary': '#D4D4D4'
+				},
+				'card': '#FFFFFF',
+				'accent': {
+					DEFAULT: '#EA580C',
+					'hover': '#DC2626',
+					'light': 'rgba(234, 88, 12, 0.1)',
+					'lighter': 'rgba(234, 88, 12, 0.05)'
+				},
+				// Legacy цвета для совместимости
 				'brand': {
-					'primary': '#1e4a8b', // Глубокий синий
-					'secondary': '#2e5aa6', // Средний синий
-					'accent': '#f58b54', // Оранжевый акцент
-					'success': '#10B981', // Зеленый для успеха
-					'warning': '#F59E0B', // Оранжевый для предупреждений
-					'light': '#fef6f3', // Светлый персиковый
-					'muted': '#64748B', // Приглушенный серый
-					'navy': '#1e4a8b', // Темно-синий
-					'blue': '#0039A3' // Синий
+					'primary': '#0A0A0A',
+					'secondary': '#404040',
+					'accent': '#EA580C',
+					'success': '#10B981',
+					'warning': '#F59E0B',
+					'light': '#FFF7ED',
+					'muted': '#6B6B6B',
+					'navy': '#0A0A0A',
+					'blue': '#0A0A0A'
 				},
 				// Градиенты
 				'gradient': {

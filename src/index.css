@@ -1,94 +1,88 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Дизайн-система foxmetod */
   :root {
-    --brand-blue: #0039a3;
+    /* Основные цвета */
+    --bg: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f5f5f5;
+    --bg-accent: #fff7ed;
+
+    --ink: #0a0a0a;
+    --ink-secondary: #404040;
+    --ink-tertiary: #6b6b6b;
+    --ink-quaternary: #9ca3af;
+
+    --line: #e5e5e5;
+    --line-secondary: #d4d4d4;
+
+    /* Акцентные цвета */
+    --accent: #ea580c;
+    --accent-hover: #dc2626;
+    --accent-light: rgba(234, 88, 12, 0.1);
+    --accent-lighter: rgba(234, 88, 12, 0.05);
+
+    /* Дополнительные цвета */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* Размеры и параметры */
+    --radius-sm: 8px;
+    --radius: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-sm:
+      0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    --shadow:
+      0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg:
+      0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 16px -2px rgba(0, 0, 0, 0.06);
+    --shadow-xl:
+      0 24px 48px -8px rgba(0, 0, 0, 0.16), 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+
+    --container: 1280px;
+    --container-sm: 1024px;
+
+    /* Legacy переменные для совместимости */
+    --brand-blue: #19374a;
+    --brand-orange: #ea580c;
+    --brand-red: #ea580c;
+    --brand-accent: #ea580c;
+    --brand-navy: #19374a;
+    --brand-primary: #19374a;
     --background: 0 0% 100%;
-    --foreground: 221 39% 11%;
-
+    --foreground: 0 0% 4%;
     --card: 0 0% 100%;
-    --card-foreground: 221 39% 11%;
-
+    --card-foreground: 0 0% 4%;
     --popover: 0 0% 100%;
-    --popover-foreground: 221 39% 11%;
-
-    --primary: 221 83% 53%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 18 82% 49%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 221 39% 11%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 16% 47%;
-
-    --accent: 221 83% 53%;
-    --accent-foreground: 0 0% 100%;
-
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
-
-    --radius: 0.75rem;
-
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 18 82% 49%;
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 214 100% 62%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -98,103 +92,351 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: "Inter", system-ui, sans-serif;
-    font-feature-settings: "cv11", "ss01";
-    font-variation-settings: "opsz" 32;
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
+  body {
+    @apply bg-white text-ink;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+
+  /* Типографика в стиле foxmetod */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: "Montserrat", system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-7xl;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+    font-weight: 600;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+    font-weight: 600;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.7;
+    color: var(--ink-secondary);
+  }
+
+  /* Ссылки */
+  a {
+    @apply text-accent transition-colors duration-200;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  /* Фокус для доступности */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@layer components {
+  /* Контейнеры */
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: var(--container);
+  }
+
+  .container-sm {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: var(--container-sm);
+  }
+
+  /* Секции с отступами в стиле foxmetod */
+  .section {
+    @apply py-20 md:py-32 lg:py-40;
+  }
+
+  .section-sm {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  /* Карточки в стиле foxmetod */
+  .card {
+    @apply bg-white rounded-3xl p-8 md:p-10 border border-line/50;
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.02),
+      0 0 0 1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card:hover {
+    box-shadow:
+      0 12px 24px -4px rgba(0, 0, 0, 0.08),
+      0 0 0 1px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+  }
+
+  .card-compact {
+    @apply p-4 md:p-6;
+  }
+
+  /* Кнопки в стиле foxmetod */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-semibold rounded-2xl px-7 h-12 transition-all duration-300;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-hover active:scale-[0.97];
+    box-shadow:
+      0 1px 2px 0 rgba(234, 88, 12, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-primary:hover {
+    box-shadow:
+      0 8px 16px -4px rgba(234, 88, 12, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-secondary {
+    @apply bg-white text-ink border border-line/80 hover:bg-bg-secondary hover:border-line active:scale-[0.97];
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  }
+
+  .btn-ghost {
+    @apply text-ink hover:bg-bg-secondary active:scale-[0.97];
+  }
+
+  .btn-sm {
+    @apply h-10 px-5 text-sm;
+  }
+
+  .btn-lg {
+    @apply h-14 px-10 text-base font-semibold;
+  }
+
+  /* Заголовки секций */
+  .section-header {
+    @apply text-center mb-16 md:mb-20;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-ink mb-6;
+    letter-spacing: -0.03em;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-ink-tertiary max-w-3xl mx-auto;
+    line-height: 1.7;
+  }
+
+  /* Сетки */
+  .grid-auto {
+    @apply grid gap-6 md:gap-8;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Теги/чипы */
+  .chip {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-bg-accent text-accent text-sm font-semibold;
+    border: 1px solid rgba(234, 88, 12, 0.1);
+  }
+
+  /* Разделители */
+  .divider {
+    @apply border-t border-line my-8 md:my-12;
+  }
+
+  /* Иконки */
+  .icon-wrapper {
+    @apply w-14 h-14 rounded-2xl bg-bg-accent flex items-center justify-center;
+    border: 1px solid rgba(234, 88, 12, 0.08);
+  }
+
+  .icon-wrapper-lg {
+    @apply w-20 h-20 rounded-3xl;
   }
 }
 
 @layer utilities {
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
+  /* Текстовые утилиты */
+  .text-balance {
+    text-wrap: balance;
   }
 
-  .modern-shadow {
-    box-shadow:
-      0 4px 20px -2px rgba(0, 0, 0, 0.1),
-      0 2px 8px -2px rgba(0, 0, 0, 0.06);
+  /* Анимации */
+  .animate-in {
+    animation: fadeIn 0.5s ease-out;
   }
 
-  .modern-shadow-lg {
-    box-shadow:
-      0 10px 40px -8px rgba(0, 0, 0, 0.2),
-      0 4px 16px -4px rgba(0, 0, 0, 0.1);
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover эффекты */
+  .hover-lift {
+    @apply transition-transform duration-200;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+
+  /* Градиенты */
+  .gradient-accent {
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      var(--accent-hover) 100%
+    );
+  }
+
+  .gradient-subtle {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #0a0a0a 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
-/* Современные минималистичные градиенты */
-.modern-gradient {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+/* Переопределения для старых компонентов */
+.stats-number {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
 }
 
-.accent-gradient {
-  background: linear-gradient(135deg, #f58b54 0%, #ff9f6e 100%);
+.gradient-text {
+  color: var(--accent);
 }
 
-.success-gradient {
-  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+/* Совместимость с предыдущими стилями */
+.bg-brand-primary,
+.bg-brand-navy {
+  @apply bg-ink text-white !important;
 }
 
-.text-gradient {
-  background: linear-gradient(135deg, #1e4a8b 0%, #f58b54 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.bg-brand-accent,
+.bg-orange-500,
+.bg-orange-600 {
+  @apply bg-accent text-white !important;
 }
 
+.text-brand-primary,
+.text-brand-navy {
+  color: var(--ink) !important;
+}
+
+.text-brand-accent {
+  color: var(--accent) !important;
+}
+
+/* Современные карточки */
 .modern-card {
-  @apply bg-white border border-gray-100 shadow-sm;
+  @apply bg-white rounded-3xl p-8 shadow-sm border border-line/30;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(8px);
 }
 
 .modern-card:hover {
-  @apply shadow-xl border-gray-200;
+  @apply shadow-lg;
   transform: translateY(-4px);
+  border-color: var(--line);
 }
 
-.glass-effect {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
+/* Кнопки */
 .modern-button {
-  @apply font-medium transition-all duration-300 ease-out;
+  @apply font-semibold transition-all duration-300 ease-out rounded-2xl;
   letter-spacing: -0.01em;
 }
 
 .modern-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.3);
 }
 
-.stats-number {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  font-feature-settings: "tnum";
+/* Стили для навигации */
+.nav-link {
+  @apply text-ink-secondary hover:text-ink transition-colors duration-200 font-medium;
 }
 
-@media (min-width: 768px) {
-  .stats-number {
-    font-size: 4rem;
-  }
+.nav-link-active {
+  @apply text-accent;
+}
+
+/* Дополнительные стили */
+.section-padding {
+  @apply section;
+}
+
+.container-width {
+  @apply container;
+}
+
+.shadow-modern {
+  box-shadow: var(--shadow);
+}
+
+.shadow-modern-lg {
+  box-shadow: var(--shadow-lg);
 }
 
 /* Современные анимации */
@@ -205,7 +447,7 @@
 @keyframes modernFadeIn {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -235,58 +477,4 @@
 }
 .stagger-animation > *:nth-child(6) {
   animation-delay: 0.6s;
-}
-
-/* Дополнительные градиенты для текста */
-.text-gradient-white {
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Card hover effect */
-.card-hover {
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(30, 74, 139, 0.15);
-}
-
-/* Высококонтрастные кнопки для лучшей видимости */
-.btn-primary {
-  @apply bg-brand-accent text-white hover:bg-brand-accent/90;
-}
-
-.btn-secondary {
-  @apply bg-white text-brand-accent border-2 border-brand-accent hover:bg-brand-accent hover:text-white;
-}
-
-.btn-dark {
-  @apply bg-brand-navy text-white hover:bg-brand-primary;
-}
-
-/* Принудительные стили для высокой контрастности */
-.force-contrast {
-  color: white !important;
-  background-color: #f58b54 !important;
-}
-
-.force-contrast:hover {
-  background-color: #ff9f6e !important;
-}
-
-/* Оранжевые кнопки с черным текстом */
-.bg-brand-accent {
-  @apply text-gray-900 !important;
-}
-
-.bg-orange-500 {
-  @apply text-gray-900 !important;
-}
-
-.bg-orange-600 {
-  @apply text-gray-900 !important;
 }
