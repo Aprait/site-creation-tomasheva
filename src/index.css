@@ -9,24 +9,24 @@
   :root {
     /* Основные цвета foxmetod */
     --bg: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-tertiary: #f3f4f6;
-    --bg-accent: #fef3c7;
-    --bg-dark: #18181b;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-accent: #eff6ff;
+    --bg-dark: #0f172a;
 
-    --ink: #18181b;
-    --ink-secondary: #3f3f46;
-    --ink-tertiary: #71717a;
-    --ink-quaternary: #a1a1aa;
+    --ink: #0f172a;
+    --ink-secondary: #334155;
+    --ink-tertiary: #64748b;
+    --ink-quaternary: #94a3b8;
 
-    --line: #e4e4e7;
-    --line-secondary: #d4d4d8;
+    --line: #e2e8f0;
+    --line-secondary: #cbd5e1;
 
     /* Акцентные цвета */
-    --accent: #f97316;
-    --accent-hover: #ea580c;
-    --accent-light: rgba(249, 115, 22, 0.1);
-    --accent-lighter: rgba(249, 115, 22, 0.05);
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --accent-light: rgba(59, 130, 246, 0.1);
+    --accent-lighter: rgba(59, 130, 246, 0.05);
 
     /* Дополнительные цвета */
     --success: #10b981;
@@ -55,19 +55,19 @@
     --container-sm: 1024px;
 
     /* Legacy переменные для совместимости */
-    --brand-blue: #18181b;
-    --brand-orange: #f97316;
-    --brand-red: #f97316;
-    --brand-accent: #f97316;
-    --brand-navy: #18181b;
-    --brand-primary: #18181b;
+    --brand-blue: #3b82f6;
+    --brand-orange: #3b82f6;
+    --brand-red: #3b82f6;
+    --brand-accent: #3b82f6;
+    --brand-navy: #0f172a;
+    --brand-primary: #3b82f6;
     --background: 0 0% 100%;
     --foreground: 0 0% 4%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 4%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 4%;
-    --primary: 18 82% 49%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 98%;
     --secondary-foreground: 0 0% 4%;
@@ -77,7 +77,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 18 82% 49%;
+    --ring: 217 91% 60%;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -238,13 +238,13 @@
   .btn-primary {
     @apply bg-accent text-white hover:bg-accent-hover active:scale-[0.97];
     box-shadow:
-      0 1px 2px 0 rgba(249, 115, 22, 0.1),
+      0 1px 2px 0 rgba(59, 130, 246, 0.1),
       inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
 
   .btn-primary:hover {
     box-shadow:
-      0 8px 16px -4px rgba(249, 115, 22, 0.3),
+      0 8px 16px -4px rgba(59, 130, 246, 0.3),
       inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
 
@@ -289,7 +289,7 @@
   /* Теги/чипы */
   .chip {
     @apply inline-flex items-center px-4 py-2 rounded-full bg-bg-accent text-accent text-sm font-semibold;
-    border: 1px solid rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.1);
   }
 
   /* Разделители */
@@ -300,7 +300,7 @@
   /* Иконки */
   .icon-wrapper {
     @apply w-14 h-14 rounded-2xl bg-bg-accent flex items-center justify-center;
-    border: 1px solid rgba(249, 115, 22, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.08);
   }
 
   .icon-wrapper-lg {
@@ -353,7 +353,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #18181b 0%, #f97316 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
