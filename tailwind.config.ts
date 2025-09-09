@@ -27,38 +27,39 @@ export default {
 				// Новые цвета в стиле foxmetod
 				'bg': {
 					DEFAULT: '#FFFFFF',
-					'secondary': '#FAFAFA',
-					'tertiary': '#F5F5F5',
-					'accent': '#FFF7ED'
+					'secondary': '#F9FAFB',
+					'tertiary': '#F3F4F6',
+					'accent': '#FEF3C7',
+					'dark': '#18181B'
 				},
 				'ink': {
-					DEFAULT: '#0A0A0A',
-					'secondary': '#404040',
-					'tertiary': '#6B6B6B',
-					'quaternary': '#9CA3AF'
+					DEFAULT: '#18181B',
+					'secondary': '#3F3F46',
+					'tertiary': '#71717A',
+					'quaternary': '#A1A1AA'
 				},
 				'line': {
-					DEFAULT: '#E5E5E5',
-					'secondary': '#D4D4D4'
+					DEFAULT: '#E4E4E7',
+					'secondary': '#D4D4D8'
 				},
 				'card': '#FFFFFF',
 				'accent': {
-					DEFAULT: '#EA580C',
-					'hover': '#DC2626',
-					'light': 'rgba(234, 88, 12, 0.1)',
-					'lighter': 'rgba(234, 88, 12, 0.05)'
+					DEFAULT: '#F97316',
+					'hover': '#EA580C',
+					'light': 'rgba(249, 115, 22, 0.1)',
+					'lighter': 'rgba(249, 115, 22, 0.05)'
 				},
 				// Legacy цвета для совместимости
 				'brand': {
-					'primary': '#0A0A0A',
-					'secondary': '#404040',
-					'accent': '#EA580C',
+					'primary': '#18181B',
+					'secondary': '#3F3F46',
+					'accent': '#F97316',
 					'success': '#10B981',
 					'warning': '#F59E0B',
-					'light': '#FFF7ED',
-					'muted': '#6B6B6B',
-					'navy': '#0A0A0A',
-					'blue': '#0A0A0A'
+					'light': '#FEF3C7',
+					'muted': '#71717A',
+					'navy': '#18181B',
+					'blue': '#18181B'
 				},
 				// Градиенты
 				'gradient': {
