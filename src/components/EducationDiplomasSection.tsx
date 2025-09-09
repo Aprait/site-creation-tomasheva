@@ -84,10 +84,10 @@ const EducationDiplomasSection = () => {
 
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4 font-heading">
+            <h3 className="text-2xl font-bold mb-4 font-heading text-white">
               Международное образование
             </h3>
-            <p className="text-lg opacity-90 font-body max-w-2xl mx-auto">
+            <p className="text-lg text-white font-body max-w-2xl mx-auto">
               Двойная экспертиза в российской и международной бизнес-практике, 
               что позволяет применять лучшие мировые стандарты управления
             </p>
