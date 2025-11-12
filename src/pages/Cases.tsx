@@ -199,7 +199,8 @@ const Cases = () => {
                   >
                     <Icon name="Briefcase" size={18} />
                     Изучить услуги
-                </Button>
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
