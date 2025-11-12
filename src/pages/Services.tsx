@@ -83,65 +83,83 @@ const Services = () => {
 
   return (
     <Layout currentPage="services">
-      <div className="pt-8 pb-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="pt-16 pb-24 bg-gradient-to-b from-bg-secondary to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
-          <section className="text-center mb-20">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-heading">
-              Мои услуги
+          <section className="text-center mb-24">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light border border-accent/10 text-accent text-sm font-semibold mb-6">
+              <Icon name="Sparkles" size={16} />
+              Премиальный консалтинг
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold text-ink mb-6 font-heading tracking-tight">
+              Услуги для роста вашего бизнеса
             </h1>
-            <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
+            <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
               Помогаю компаниям выйти на новый уровень развития через системный подход, 
               внедрение технологий и стратегическое планирование
             </p>
           </section>
 
           {/* Services Grid */}
-          <div className="space-y-20">
+          <div className="space-y-12">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <div className={`bg-gradient-to-r ${service.gradient} border-t border-l border-r border-white/10 px-8 py-12 text-white`}>
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mr-6">
-                      <Icon name={service.icon as any} size={32} className="text-white" />
+              <div key={index} className="bg-white rounded-3xl shadow-sm border border-line/30 overflow-hidden hover:shadow-lg hover:border-accent/20 transition-all duration-300">
+                <div className={`bg-gradient-to-br ${service.gradient} px-10 py-8 text-white relative overflow-hidden`}>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/5 rounded-full -ml-24 -mb-24"></div>
+                  <div className="relative flex items-center">
+                    <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-5 border border-white/20">
+                      <Icon name={service.icon as any} size={28} className="text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold font-heading">{service.title}</h2>
+                    <h2 className="text-3xl font-bold font-heading tracking-tight">{service.title}</h2>
                   </div>
                 </div>
                 
-                <div className="p-8">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="p-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     
                     {/* Для кого */}
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 font-heading flex items-center">
-                        <Icon name="Users" size={20} className="text-brand-blue mr-2" />
-                        {service.subtitle}
-                      </h3>
-                      <p className="text-gray-600 font-body leading-relaxed">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center">
+                          <Icon name="Users" size={16} className="text-accent" />
+                        </div>
+                        <h3 className="text-lg font-bold text-ink font-heading">
+                          {service.subtitle}
+                        </h3>
+                      </div>
+                      <p className="text-ink-tertiary font-body leading-relaxed text-[15px]">
                         {service.description}
                       </p>
                     </div>
 
                     {/* Что получите */}
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 font-heading flex items-center">
-                        <Icon name="CheckCircle" size={20} className="text-green-500 mr-2" />
-                        Что вы получите
-                      </h3>
-                      <p className="text-gray-600 font-body leading-relaxed">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center">
+                          <Icon name="CheckCircle" size={16} className="text-green-600" />
+                        </div>
+                        <h3 className="text-lg font-bold text-ink font-heading">
+                          Что вы получите
+                        </h3>
+                      </div>
+                      <p className="text-ink-tertiary font-body leading-relaxed text-[15px]">
                         {service.results}
                       </p>
                     </div>
 
                     {/* Как работаю */}
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 font-heading flex items-center">
-                        <Icon name="Settings" size={20} className="text-brand-accent mr-2" />
-                        Как я работаю
-                      </h3>
-                      <p className="text-gray-600 font-body leading-relaxed">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center">
+                          <Icon name="Settings" size={16} className="text-brand-accent" />
+                        </div>
+                        <h3 className="text-lg font-bold text-ink font-heading">
+                          Как я работаю
+                        </h3>
+                      </div>
+                      <p className="text-ink-tertiary font-body leading-relaxed text-[15px]">
                         {service.process}
                       </p>
                     </div>
@@ -150,27 +168,41 @@ const Services = () => {
 
                   {/* Форматы и цены */}
                   {service.formats && (
-                    <div className="mt-8 pt-8 border-t border-gray-200">
-                      <h3 className="text-xl font-bold text-gray-900 mb-6 font-heading flex items-center">
-                        <Icon name="DollarSign" size={20} className="text-brand-accent mr-2" />
-                        Форматы и стоимость
-                      </h3>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="mt-10 pt-10 border-t border-line/40">
+                      <div className="flex items-center gap-2 mb-8">
+                        <div className="w-8 h-8 rounded-lg bg-accent-light flex items-center justify-center">
+                          <Icon name="DollarSign" size={16} className="text-accent" />
+                        </div>
+                        <h3 className="text-xl font-bold text-ink font-heading">
+                          Форматы и стоимость
+                        </h3>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                         {service.formats.map((format, idx) => (
-                          <div key={idx} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-brand-accent transition-colors">
-                            <h4 className="text-lg font-bold text-gray-900 mb-2 font-heading">
+                          <div key={idx} className="bg-bg-secondary rounded-2xl p-6 border border-line/50 hover:border-accent/40 hover:shadow-md transition-all duration-300 group">
+                            <h4 className="text-base font-bold text-ink mb-3 font-heading group-hover:text-accent transition-colors">
                               {format.name}
                             </h4>
-                            <p className="text-sm text-gray-600 mb-4 font-body">
+                            <p className="text-sm text-ink-quaternary mb-4 font-body leading-relaxed">
                               {format.duration}
                             </p>
-                            <p className="text-2xl font-bold text-brand-blue font-heading">
+                            <p className="text-2xl font-bold text-accent font-heading">
                               {format.price}
                             </p>
                           </div>
                         ))}
                       </div>
-                      <p className="mt-4 text-sm text-gray-500 font-body text-center">
+                      <div className="mt-8 flex justify-center">
+                        <Button 
+                          size="lg"
+                          onClick={() => setIsConsultationModalOpen(true)}
+                          className="bg-accent hover:bg-accent-hover text-white shadow-sm hover:shadow-md transition-all"
+                        >
+                          <Icon name="MessageSquare" size={18} />
+                          Узнать точную стоимость
+                        </Button>
+                      </div>
+                      <p className="mt-5 text-sm text-ink-quaternary font-body text-center">
                         Точная стоимость рассчитывается индивидуально после диагностической встречи
                       </p>
                     </div>
@@ -181,30 +213,41 @@ const Services = () => {
           </div>
 
           {/* CTA Section */}
-          <section className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
-              <h2 className="text-3xl font-bold mb-6 font-heading">
-                Готовы начать трансформацию?
-              </h2>
-              <p className="text-xl mb-8 font-body opacity-90 max-w-2xl mx-auto">
-                Каждая услуга адаптируется под специфику вашего бизнеса. 
-                Давайте обсудим, какой подход будет наиболее эффективным для вас.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button 
-                  size="lg"
-                  onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-brand-accent hover:bg-orange-500 text-white"
-                >
-                  Записаться на консультацию
-                </Button>
-                <Button 
-                  size="lg"
-                  onClick={() => navigate('/cases')}
-                  className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy"
-                >
-                  Посмотреть кейсы
-                </Button>
+          <section className="mt-24">
+            <div className="bg-gradient-to-br from-ink via-ink-secondary to-ink rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl"></div>
+              
+              <div className="relative text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold mb-6">
+                  <Icon name="Zap" size={16} />
+                  Начните прямо сейчас
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-heading tracking-tight">
+                  Готовы начать трансформацию?
+                </h2>
+                <p className="text-lg lg:text-xl mb-10 font-body opacity-90 max-w-2xl mx-auto leading-relaxed">
+                  Каждая услуга адаптируется под специфику вашего бизнеса. 
+                  Давайте обсудим, какой подход будет наиболее эффективным для вас.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <Button 
+                    size="lg"
+                    onClick={() => setIsConsultationModalOpen(true)}
+                    className="bg-white text-ink hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
+                  >
+                    <Icon name="Calendar" size={18} />
+                    Записаться на консультацию
+                  </Button>
+                  <Button 
+                    size="lg"
+                    onClick={() => navigate('/cases')}
+                    className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/20 hover:border-white/30"
+                  >
+                    <Icon name="BookOpen" size={18} />
+                    Посмотреть кейсы
+                  </Button>
+                </div>
               </div>
             </div>
           </section>

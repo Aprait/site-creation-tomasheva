@@ -19,47 +19,47 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Inter', 'system-ui', 'sans-serif'],
-				'body': ['Inter', 'system-ui', 'sans-serif'],
-				sans: ['Inter', 'system-ui', 'sans-serif']
+				'heading': ['"SF Pro Display"', 'Inter', 'system-ui', 'sans-serif'],
+				'body': ['"SF Pro Text"', 'Inter', 'system-ui', 'sans-serif'],
+				sans: ['"SF Pro Text"', 'Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Новые цвета в стиле foxmetod
+				// Premium consulting colors inspired by McKinsey, BCG, Bain
 				'bg': {
 					DEFAULT: '#FFFFFF',
-					'secondary': '#F8FAFC',
-					'tertiary': '#F1F5F9',
-					'accent': '#EFF6FF',
-					'dark': '#0F172A'
+					'secondary': '#FAFBFC',
+					'tertiary': '#F5F7FA',
+					'accent': '#F0F4F8',
+					'dark': '#0A1628'
 				},
 				'ink': {
-					DEFAULT: '#0F172A',
-					'secondary': '#334155',
-					'tertiary': '#64748B',
-					'quaternary': '#94A3B8'
+					DEFAULT: '#0A1628',
+					'secondary': '#1E293B',
+					'tertiary': '#475569',
+					'quaternary': '#64748B'
 				},
 				'line': {
-					DEFAULT: '#E2E8F0',
+					DEFAULT: '#E1E7EF',
 					'secondary': '#CBD5E1'
 				},
 				'card': '#FFFFFF',
 				'accent': {
-					DEFAULT: '#3B82F6',
-					'hover': '#2563EB',
-					'light': 'rgba(59, 130, 246, 0.1)',
-					'lighter': 'rgba(59, 130, 246, 0.05)'
+					DEFAULT: '#0066CC',
+					'hover': '#0052A3',
+					'light': 'rgba(0, 102, 204, 0.08)',
+					'lighter': 'rgba(0, 102, 204, 0.04)'
 				},
 				// Legacy цвета для совместимости
 				'brand': {
-					'primary': '#3B82F6',
-					'secondary': '#2563EB',
-					'accent': '#3B82F6',
-					'success': '#10B981',
+					'primary': '#0066CC',
+					'secondary': '#0052A3',
+					'accent': '#FF6B35',
+					'success': '#00A878',
 					'warning': '#F59E0B',
-					'light': '#EFF6FF',
+					'light': '#F0F4F8',
 					'muted': '#64748B',
-					'navy': '#0F172A',
-					'blue': '#3B82F6'
+					'navy': '#0A1628',
+					'blue': '#0066CC'
 				},
 				// Градиенты
 				'gradient': {

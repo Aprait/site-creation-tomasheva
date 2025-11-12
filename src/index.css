@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Premium fonts system-ui fallback (Apple San Francisco / Segoe UI) */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,32 +9,32 @@
 @layer base {
   /* Дизайн-система foxmetod */
   :root {
-    /* Основные цвета foxmetod */
+    /* Premium consulting colors */
     --bg: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #f1f5f9;
-    --bg-accent: #eff6ff;
-    --bg-dark: #0f172a;
+    --bg-secondary: #fafbfc;
+    --bg-tertiary: #f5f7fa;
+    --bg-accent: #f0f4f8;
+    --bg-dark: #0a1628;
 
-    --ink: #0f172a;
-    --ink-secondary: #334155;
-    --ink-tertiary: #64748b;
-    --ink-quaternary: #94a3b8;
+    --ink: #0a1628;
+    --ink-secondary: #1e293b;
+    --ink-tertiary: #475569;
+    --ink-quaternary: #64748b;
 
-    --line: #e2e8f0;
+    --line: #e1e7ef;
     --line-secondary: #cbd5e1;
 
     /* Акцентные цвета */
-    --accent: #3b82f6;
-    --accent-hover: #2563eb;
-    --accent-light: rgba(59, 130, 246, 0.1);
-    --accent-lighter: rgba(59, 130, 246, 0.05);
+    --accent: #0066cc;
+    --accent-hover: #0052a3;
+    --accent-light: rgba(0, 102, 204, 0.08);
+    --accent-lighter: rgba(0, 102, 204, 0.04);
 
     /* Дополнительные цвета */
-    --success: #10b981;
+    --success: #00a878;
     --warning: #f59e0b;
-    --error: #ef4444;
-    --info: #3b82f6;
+    --error: #dc2626;
+    --info: #0066cc;
 
     /* Размеры и параметры */
     --radius-sm: 8px;
@@ -55,12 +57,12 @@
     --container-sm: 1024px;
 
     /* Legacy переменные для совместимости */
-    --brand-blue: #3b82f6;
-    --brand-orange: #3b82f6;
-    --brand-red: #3b82f6;
-    --brand-accent: #3b82f6;
-    --brand-navy: #0f172a;
-    --brand-primary: #3b82f6;
+    --brand-blue: #0066cc;
+    --brand-orange: #ff6b35;
+    --brand-red: #ff6b35;
+    --brand-accent: #ff6b35;
+    --brand-navy: #0a1628;
+    --brand-primary: #0066cc;
     --background: 0 0% 100%;
     --foreground: 0 0% 4%;
     --card: 0 0% 100%;
