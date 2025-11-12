@@ -75,10 +75,10 @@ const CertificateGrid = () => {
     <section id="certificates" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
+          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-4 font-heading">
             Сертификаты и благодарности
           </h2>
-          <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
+          <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto">
             Документы об образовании, сертификаты и профессиональные достижения
           </p>
         </div>
@@ -87,7 +87,7 @@ const CertificateGrid = () => {
           {certificates.map((certificate, index) => (
             <Card 
               key={certificate.id} 
-              className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border border-gray-200 animate-fade-in" 
+              className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white border border-line/30 hover:border-accent animate-fade-in" 
               style={{animationDelay: `${index * 0.1}s`}}
             >
               <CardContent className="p-6">
@@ -95,26 +95,26 @@ const CertificateGrid = () => {
                   <img
                     src={certificate.imageUrl}
                     alt={certificate.title}
-                    className="w-full h-48 object-contain rounded-lg shadow-md group-hover:shadow-lg transition-shadow bg-gray-50"
+                    className="w-full h-48 object-contain rounded-lg shadow-md group-hover:shadow-lg transition-shadow bg-bg-secondary"
                   />
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="font-bold text-lg text-gray-900 group-hover:text-brand-navy transition-colors font-heading">
+                  <h3 className="font-bold text-lg text-ink group-hover:text-accent transition-colors font-heading">
                     {certificate.title}
                   </h3>
                   
-                  <p className="text-sm text-gray-600 font-body">
+                  <p className="text-sm text-ink-tertiary font-body">
                     {certificate.description}
                   </p>
                   
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Icon name="Building2" size={16} className="mr-2 text-brand-navy" />
+                  <div className="flex items-center text-sm text-ink-quaternary">
+                    <Icon name="Building2" size={16} className="mr-2 text-accent" />
                     <span className="font-body">{certificate.organization}</span>
                   </div>
                   
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Icon name="Calendar" size={16} className="mr-2 text-brand-navy" />
+                  <div className="flex items-center text-sm text-ink-quaternary">
+                    <Icon name="Calendar" size={16} className="mr-2 text-accent" />
                     <span className="font-body">{certificate.date}</span>
                   </div>
                 </div>
@@ -124,9 +124,9 @@ const CertificateGrid = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-gray-100 rounded-lg">
-            <Icon name="Award" size={20} className="text-brand-navy mr-2" />
-            <span className="text-brand-navy font-medium font-body">
+          <div className="inline-flex items-center px-6 py-3 bg-accent-light rounded-lg">
+            <Icon name="Award" size={20} className="text-accent mr-2" />
+            <span className="text-accent font-medium font-body">
               Постоянное повышение квалификации и профессиональное развитие
             </span>
           </div>

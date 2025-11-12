@@ -95,17 +95,17 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section id="clients" className="py-20 bg-gradient-to-b from-brand-light to-white">
+    <section id="clients" className="py-20 bg-gradient-to-b from-bg-tertiary to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
+          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-4 font-heading">
             Среди моих клиентов
           </h2>
-          <p className="text-xl text-gray-600 font-body">
+          <p className="text-xl text-ink-tertiary font-body">
             Компании, с которыми я работала
           </p>
-          <div className="mt-6 inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm border">
-            <span className="text-sm text-gray-600 font-body">
+          <div className="mt-6 inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-line/30">
+            <span className="text-sm text-ink-tertiary font-body">
               От стартапов до компаний с оборотом 20+ млрд ₽
             </span>
           </div>
@@ -115,20 +115,20 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover animate-fade-in border border-gray-100 group"
+              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover animate-fade-in border border-line/30 hover:border-accent group"
               style={{animationDelay: `${index * 0.05}s`}}
             >
-              <div className="w-20 h-20 flex items-center justify-center mb-4 bg-gray-50 rounded-lg overflow-hidden">
+              <div className="w-20 h-20 flex items-center justify-center mb-4 bg-bg-secondary rounded-lg overflow-hidden">
                 <img 
                   src={client.logo} 
                   alt={`Логотип ${client.name}`}
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <h3 className="text-sm font-semibold text-gray-900 text-center mb-1 font-heading">
+              <h3 className="text-sm font-semibold text-ink text-center mb-1 font-heading">
                 {client.name}
               </h3>
-              <p className="text-xs text-gray-500 text-center font-body mb-2">
+              <p className="text-xs text-ink-quaternary text-center font-body mb-2">
                 {client.category}
               </p>
               {client.website && (
@@ -136,7 +136,7 @@ const ClientsSection = () => {
                   href={client.website} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-xs text-brand-primary hover:text-brand-accent transition-colors font-body"
+                  className="text-xs text-accent hover:text-accent-hover transition-colors font-body"
                 >
                   Перейти на сайт →
                 </a>

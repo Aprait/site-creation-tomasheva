@@ -27,10 +27,10 @@ const EducationDiplomasSection = () => {
     <section id="education" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
+          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-4 font-heading">
             Высшее образование
           </h2>
-          <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
+          <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto">
             Фундаментальная подготовка в области менеджмента и бизнес-администрирования
           </p>
         </div>
@@ -39,11 +39,11 @@ const EducationDiplomasSection = () => {
           {diplomas.map((diploma, index) => (
             <div 
               key={diploma.id}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border border-gray-100"
+              className="bg-gradient-to-br from-bg-secondary to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover border border-line/30"
             >
               <div className="flex flex-col lg:flex-row gap-6 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-48 h-auto bg-gray-100 rounded-xl overflow-hidden shadow-md">
+                  <div className="w-48 h-auto bg-bg-secondary rounded-xl overflow-hidden shadow-md">
                     <img
                       src={diploma.imageUrl}
                       alt={diploma.title}
@@ -53,26 +53,26 @@ const EducationDiplomasSection = () => {
                 </div>
                 
                 <div className="flex-grow text-center lg:text-left">
-                  <div className="inline-flex items-center px-3 py-1 bg-brand-navy text-white text-sm font-medium rounded-full mb-3">
+                  <div className="inline-flex items-center px-3 py-1 bg-accent text-white text-sm font-medium rounded-full mb-3">
                     <Icon name="GraduationCap" size={16} className="mr-1" />
                     {diploma.year}
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-heading">
+                  <h3 className="text-xl font-bold text-ink mb-2 font-heading">
                     {diploma.title}
                   </h3>
                   
-                  <p className="text-lg text-brand-blue font-medium mb-2 font-body">
+                  <p className="text-lg text-accent font-medium mb-2 font-body">
                     {diploma.subtitle}
                   </p>
                   
-                  <p className="text-gray-600 mb-3 font-body">
+                  <p className="text-ink-tertiary mb-3 font-body">
                     {diploma.description}
                   </p>
                   
-                  <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-lg">
-                    <Icon name="Award" size={16} className="text-brand-navy mr-2" />
-                    <span className="text-brand-navy font-medium text-sm font-body">
+                  <div className="inline-flex items-center px-4 py-2 bg-accent-light rounded-lg">
+                    <Icon name="Award" size={16} className="text-accent mr-2" />
+                    <span className="text-accent font-medium text-sm font-body">
                       {diploma.degree}
                     </span>
                   </div>
@@ -83,7 +83,7 @@ const EducationDiplomasSection = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-accent to-accent-hover rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4 font-heading text-white">
               Международное образование
             </h3>

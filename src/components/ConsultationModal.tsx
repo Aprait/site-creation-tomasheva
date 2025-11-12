@@ -129,20 +129,20 @@ ${data.message || 'Не указано'}
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-gray-100">
+        <div className="flex items-center justify-between p-6 border-b border-line/30">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 font-heading">
+            <h2 className="text-2xl font-bold text-ink font-heading">
               Записаться на консультацию
             </h2>
-            <p className="text-gray-600 font-body mt-1">
+            <p className="text-ink-tertiary font-body mt-1">
               Заполните форму и я свяжусь с вами в ближайшее время
             </p>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 hover:bg-bg-secondary rounded-lg transition-colors"
           >
-            <Icon name="X" size={24} className="text-gray-500" />
+            <Icon name="X" size={24} className="text-ink-quaternary" />
           </button>
         </div>
 
@@ -153,10 +153,10 @@ ${data.message || 'Не указано'}
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="CheckCircle" size={32} className="text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2 font-heading">
+              <h3 className="text-xl font-bold text-ink mb-2 font-heading">
                 Заявка отправлена!
               </h3>
-              <p className="text-gray-600 font-body">
+              <p className="text-ink-tertiary font-body">
                 Я получила вашу заявку и свяжусь с вами в ближайшее время
               </p>
             </div>
@@ -165,7 +165,7 @@ ${data.message || 'Не указано'}
               {/* Имя и Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-ink mb-2">
                     Имя *
                   </label>
                   <input
@@ -173,13 +173,13 @@ ${data.message || 'Не указано'}
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-line/30 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                     placeholder="Ваше имя"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-ink mb-2">
                     Email *
                   </label>
                   <input
@@ -187,7 +187,7 @@ ${data.message || 'Не указано'}
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-line/30 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                     placeholder="your@email.com"
                     required
                   />
@@ -197,7 +197,7 @@ ${data.message || 'Не указано'}
               {/* Телефон и Компания */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-ink mb-2">
                     Телефон *
                   </label>
                   <input
@@ -205,13 +205,13 @@ ${data.message || 'Не указано'}
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-line/30 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                     placeholder="+7 (999) 123-45-67"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-ink mb-2">
                     Компания
                   </label>
                   <input
@@ -219,7 +219,7 @@ ${data.message || 'Не указано'}
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 border border-line/30 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                     placeholder="Название компании"
                   />
                 </div>
@@ -280,7 +280,7 @@ ${data.message || 'Не указано'}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-brand-accent hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg disabled:opacity-50"
+                  className="flex-1 bg-accent hover:bg-accent-hover text-white font-semibold py-3 px-6 rounded-lg disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>
