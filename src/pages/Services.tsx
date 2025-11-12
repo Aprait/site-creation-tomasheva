@@ -214,9 +214,9 @@ const Services = () => {
 
           {/* CTA Section */}
           <section className="mt-24">
-            <div className="bg-gradient-to-br from-ink via-ink-secondary to-ink rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl"></div>
+            <div className="bg-gradient-to-br from-accent via-accent to-accent-hover rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
               
               <div className="relative text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold mb-6">
@@ -234,7 +234,7 @@ const Services = () => {
                   <Button 
                     size="lg"
                     onClick={() => setIsConsultationModalOpen(true)}
-                    className="bg-white text-ink hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
+                    className="bg-white text-accent hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
                   >
                     <Icon name="Calendar" size={18} />
                     Записаться на консультацию

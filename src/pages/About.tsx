@@ -227,9 +227,9 @@ const About = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="bg-gradient-to-br from-ink via-ink-secondary to-ink rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-accent/10 rounded-full blur-3xl"></div>
+            <div className="bg-gradient-to-br from-accent via-accent to-accent-hover rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
               
               <div className="relative">
                 <h2 className="text-4xl font-bold mb-6 font-heading">
@@ -242,7 +242,7 @@ const About = () => {
                   <Button 
                     size="lg"
                     onClick={() => navigate('/cases')}
-                    className="bg-white text-ink hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
+                    className="bg-white text-accent hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
                   >
                     <Icon name="BookOpen" size={18} />
                     Изучить кейсы

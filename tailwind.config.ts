@@ -33,10 +33,10 @@ export default {
 					'dark': '#0A1628'
 				},
 				'ink': {
-					DEFAULT: '#0A1628',
-					'secondary': '#1E293B',
-					'tertiary': '#475569',
-					'quaternary': '#64748B'
+					DEFAULT: '#003D82',
+					'secondary': '#004B9E',
+					'tertiary': '#0059BA',
+					'quaternary': '#0066CC'
 				},
 				'line': {
 					DEFAULT: '#E1E7EF',
