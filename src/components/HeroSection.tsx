@@ -46,7 +46,7 @@ const HeroSection = () => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-brand-accent hover:bg-orange-500 text-white"
+              className="hidden md:flex bg-accent hover:bg-accent-hover text-white"
               variant="default"
               size="default"
             >
@@ -89,7 +89,7 @@ const HeroSection = () => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-brand-accent hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg"
+                  className="w-full bg-accent hover:bg-accent-hover text-white font-semibold py-3 px-4 rounded-lg"
                 >
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   Связаться
@@ -101,10 +101,10 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-48 md:pt-56 pb-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section className="pt-48 md:pt-56 pb-32 bg-gradient-to-br from-bg-tertiary to-white relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-brand-accent/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-brand-primary/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/5 to-transparent rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}
@@ -113,11 +113,11 @@ const HeroSection = () => {
             {/* Левая колонка (Текст) */}
             <div className="text-center md:text-left md:w-3/5">
               <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
-                <span className="block text-brand-primary">Наталья</span>
-                <span className="block text-brand-primary">Томашёва</span>
+                <span className="block text-ink">Наталья</span>
+                <span className="block text-ink">Томашёва</span>
               </h1>
               
-              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-gray-600 max-w-2xl">
+              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-ink-tertiary max-w-2xl">
                 Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний. Основатель Консалтингового агентства FOXMetoD
               </p>
               
@@ -125,7 +125,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-brand-accent hover:bg-orange-500 text-white shadow-lg hover:shadow-xl transition-all"
+                  className="bg-accent hover:bg-accent-hover text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   <Icon name="Calendar" size={20} />
                   Записаться на консультацию
@@ -134,7 +134,7 @@ const HeroSection = () => {
                   size="lg" 
                   variant="outline"
                   onClick={() => navigate('/cases')}
-                  className="hover:bg-slate-50 transition-all"
+                  className="border-accent text-accent hover:bg-accent-light transition-all"
                 >
                   <Icon name="TrendingUp" size={20} />
                   Смотреть кейсы
@@ -146,7 +146,7 @@ const HeroSection = () => {
             <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
               <div className="relative group">
                 {/* Background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-accent/20 to-brand-primary/20 rounded-2xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/20 rounded-2xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
                 
                 {/* Card */}
                 <div className="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
@@ -157,24 +157,24 @@ const HeroSection = () => {
                       alt="Наталья Томашева - бизнес-эксперт"
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent"></div>
                   </div>
                   
                   {/* Info */}
                   <div className="text-center">
-                    <h3 className="font-bold text-xl text-brand-primary mb-2">Наталья Томашёва</h3>
+                    <h3 className="font-bold text-xl text-ink mb-2">Наталья Томашёва</h3>
                     
                     
                     {/* Stats */}
                     <div className="flex justify-center gap-6 text-sm">
                       <div>
-                        <div className="font-bold text-brand-accent text-lg">280+</div>
-                        <div className="text-gray-500">команд</div>
+                        <div className="font-bold text-accent text-lg">280+</div>
+                        <div className="text-ink-quaternary">команд</div>
                       </div>
-                      <div className="border-l border-gray-200"></div>
+                      <div className="border-l border-line"></div>
                       <div>
-                        <div className="font-bold text-brand-accent text-lg">20 лет</div>
-                        <div className="text-gray-500">опыта</div>
+                        <div className="font-bold text-accent text-lg">20 лет</div>
+                        <div className="text-ink-quaternary">опыта</div>
                       </div>
                     </div>
                   </div>
