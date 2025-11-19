@@ -26,17 +26,17 @@ const HeroSection = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-line/30 z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="flex justify-between items-center h-32 md:h-36">
+          <div className="flex justify-between items-center h-20 md:h-24">
             <Logo />
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-10">
+            <div className="hidden md:flex items-center space-x-12">
               {navigationLinks.map((link) => (
                 <a 
                   key={link.pageName}
                   href={link.to} 
-                  className="text-gray-600 hover:text-brand-primary transition-colors font-medium"
+                  className="text-ink-tertiary hover:text-ink transition-colors text-sm font-medium tracking-tight"
                 >
                   {link.label}
                 </a>
@@ -46,11 +46,10 @@ const HeroSection = () => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-accent hover:bg-accent-hover text-white"
+              className="hidden md:flex bg-ink hover:bg-ink-secondary text-white rounded-xl px-6 h-11 text-sm font-medium"
               variant="default"
               size="default"
             >
-              <Icon name="Send" size={18} />
               Связаться
             </Button>
 
@@ -101,10 +100,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-48 md:pt-56 pb-32 bg-gradient-to-br from-bg-tertiary to-white relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/5 to-transparent rounded-full blur-3xl"></div>
+      <section className="pt-36 md:pt-48 pb-24 md:pb-32 bg-white relative overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}
@@ -112,70 +108,56 @@ const HeroSection = () => {
             
             {/* Левая колонка (Текст) */}
             <div className="text-center md:text-left md:w-3/5">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight font-heading tracking-tight">
-                <span className="block text-ink">Наталья</span>
-                <span className="block text-ink">Томашёва</span>
+              <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[0.95] font-heading tracking-tighter text-ink">
+                Наталья Томашёва
               </h1>
               
-              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-ink-tertiary max-w-2xl">
-                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний. Основатель Консалтингового агентства FOXMetoD
+              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-ink-tertiary max-w-2xl font-light">
+                Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний
               </p>
               
-              <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-6">
+              <div className="flex justify-center md:justify-start flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-accent hover:bg-accent-hover text-white shadow-lg hover:shadow-xl transition-all"
+                  className="bg-ink hover:bg-ink-secondary text-white rounded-xl px-8 h-14 text-base font-medium"
                 >
-                  <Icon name="Calendar" size={20} />
                   Записаться на консультацию
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline"
                   onClick={() => navigate('/cases')}
-                  className="border-accent text-accent hover:bg-accent-light transition-all"
+                  className="border-line text-ink hover:border-ink hover:bg-bg-secondary rounded-xl px-8 h-14 text-base font-medium"
                 >
-                  <Icon name="TrendingUp" size={20} />
                   Смотреть кейсы
                 </Button>
               </div>
             </div>
 
             {/* Правая колонка (Фото) */}
-            <div className="mt-12 md:mt-0 md:w-2/5 flex justify-center">
-              <div className="relative group">
-                {/* Background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/20 rounded-2xl blur-2xl transform scale-110 -z-10 group-hover:scale-125 transition-transform duration-500"></div>
+            <div className="mt-16 md:mt-0 md:w-2/5 flex justify-center">
+              <div className="relative">
+                {/* Image */}
+                <div className="relative w-72 h-96 md:w-96 md:h-[500px] rounded-3xl overflow-hidden">
+                  <img 
+                    src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
+                    alt="Наталья Томашева - бизнес-эксперт"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  />
+                </div>
                 
-                {/* Card */}
-                <div className="bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
-                  {/* Image */}
-                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden mb-6">
-                    <img 
-                      src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
-                      alt="Наталья Томашева - бизнес-эксперт"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent"></div>
-                  </div>
-                  
-                  {/* Info */}
-                  <div className="text-center">
-                    <h3 className="font-bold text-xl text-ink mb-2">Наталья Томашёва</h3>
-                    
-                    
-                    {/* Stats */}
-                    <div className="flex justify-center gap-6 text-sm">
-                      <div>
-                        <div className="font-bold text-accent text-lg">280+</div>
-                        <div className="text-ink-quaternary">команд</div>
-                      </div>
-                      <div className="border-l border-line"></div>
-                      <div>
-                        <div className="font-bold text-accent text-lg">20 лет</div>
-                        <div className="text-ink-quaternary">опыта</div>
-                      </div>
+                {/* Stats Card */}
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-line/30">
+                  <div className="flex gap-8">
+                    <div>
+                      <div className="font-bold text-ink text-2xl">280+</div>
+                      <div className="text-ink-tertiary text-sm font-medium">команд</div>
+                    </div>
+                    <div className="border-l border-line"></div>
+                    <div>
+                      <div className="font-bold text-ink text-2xl">20</div>
+                      <div className="text-ink-tertiary text-sm font-medium">лет опыта</div>
                     </div>
                   </div>
                 </div>
@@ -185,10 +167,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-slate-400 animate-bounce">
-          <Icon name="ChevronDown" size={28} />
-        </div>
+
       </section>
 
       {/* Consultation Modal */}

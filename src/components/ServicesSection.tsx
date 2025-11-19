@@ -46,73 +46,41 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-bg-tertiary to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-accent-light text-accent rounded-full font-medium mb-6">
-            <Icon name="Sparkles" size={16} className="mr-2" />
-            Мои услуги
-          </div>
-          <h2 className="text-4xl lg:text-6xl font-bold text-ink mb-6 font-heading tracking-tight">
-            Чем я могу быть полезна
+    <section id="services" className="py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="mb-24">
+          <h2 className="text-5xl lg:text-7xl font-bold text-ink mb-6 font-heading tracking-tight">
+            Услуги
           </h2>
-          <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
-            Ключевые направления моей экспертной деятельности для развития вашего бизнеса
+          <p className="text-xl text-ink-tertiary font-light max-w-2xl leading-relaxed">
+            Комплексное сопровождение бизнеса на пути к росту
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+        <div className="space-y-4">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index} 
-              className="modern-card border-0 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden" 
-              style={{animationDelay: `${index * 0.1}s`}}
+              className="group p-8 rounded-2xl border border-line/30 hover:border-ink/20 hover:bg-bg-secondary transition-all duration-300"
             >
-              <CardHeader className="pb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <Icon name={service.icon} size={28} className="text-white" />
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-bg-tertiary flex items-center justify-center group-hover:bg-ink group-hover:text-white transition-all duration-300">
+                  <Icon name={service.icon} size={24} />
                 </div>
-                <CardTitle className="text-xl font-semibold text-ink font-heading">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-ink-tertiary leading-relaxed font-body">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-semibold text-ink mb-3 font-heading">
+                    {service.title}
+                  </h3>
+                  <p className="text-ink-tertiary leading-relaxed font-light text-lg">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <p className="text-lg text-ink-tertiary font-body mb-8 max-w-4xl mx-auto">
-            Каждое направление подкреплено многолетним опытом работы с компаниями разного масштаба — 
-            от стартапов до крупных корпораций с оборотом свыше 20 млрд рублей.
-          </p>
-          <div className="inline-flex items-center px-6 py-3 bg-accent-light rounded-lg">
-            <Icon name="CheckCircle" size={20} className="text-accent mr-2" />
-            <span className="text-ink font-medium font-body">
-              Индивидуальный подход к каждому проекту
-            </span>
-          </div>
-        </div>
-        
-        {/* Call to Action */}
-        <div className="mt-20 text-center">
-          <div className="max-w-4xl mx-auto p-8 bg-white modern-shadow-lg rounded-3xl border border-line/30">
-            <h3 className="text-2xl font-bold text-ink mb-4 font-heading">
-              Не нашли подходящее решение?
-            </h3>
-            <p className="text-ink-tertiary mb-6 font-body">
-              Обсудим вашу задачу индивидуально — я помогу найти оптимальное решение
-            </p>
-            <button className="modern-button bg-accent hover:bg-accent-hover text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-              <Icon name="MessageCircle" size={20} className="mr-2 inline" />
-              Обсудить задачу
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   );

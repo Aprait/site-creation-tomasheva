@@ -19,35 +19,35 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['"SF Pro Display"', 'Inter', 'system-ui', 'sans-serif'],
-				'body': ['"SF Pro Text"', 'Inter', 'system-ui', 'sans-serif'],
-				sans: ['"SF Pro Text"', 'Inter', 'system-ui', 'sans-serif']
+				'heading': ['Inter', '-apple-system', 'system-ui', 'sans-serif'],
+				'body': ['Inter', '-apple-system', 'system-ui', 'sans-serif'],
+				sans: ['Inter', '-apple-system', 'system-ui', 'sans-serif']
 			},
 			colors: {
-				// Premium consulting colors inspired by McKinsey, BCG, Bain
+				// Minimalist design system inspired by ed.iqido.ru
 				'bg': {
 					DEFAULT: '#FFFFFF',
-					'secondary': '#FAFBFC',
-					'tertiary': '#F5F7FA',
-					'accent': '#F0F4F8',
-					'dark': '#0A1628'
+					'secondary': '#F8F9FA',
+					'tertiary': '#F1F3F5',
+					'accent': '#E9ECEF',
+					'dark': '#0D0D0D'
 				},
 				'ink': {
-					DEFAULT: '#003D82',
-					'secondary': '#004B9E',
-					'tertiary': '#0059BA',
-					'quaternary': '#0066CC'
+					DEFAULT: '#0D0D0D',
+					'secondary': '#2D2D2D',
+					'tertiary': '#6C6C6C',
+					'quaternary': '#9E9E9E'
 				},
 				'line': {
-					DEFAULT: '#E1E7EF',
-					'secondary': '#CBD5E1'
+					DEFAULT: '#E5E5E5',
+					'secondary': '#D1D1D1'
 				},
 				'card': '#FFFFFF',
 				'accent': {
-					DEFAULT: '#0066CC',
-					'hover': '#0052A3',
-					'light': 'rgba(0, 102, 204, 0.08)',
-					'lighter': 'rgba(0, 102, 204, 0.04)'
+					DEFAULT: '#0D0D0D',
+					'hover': '#2D2D2D',
+					'light': 'rgba(13, 13, 13, 0.04)',
+					'lighter': 'rgba(13, 13, 13, 0.02)'
 				},
 				// Legacy цвета для совместимости
 				'brand': {
@@ -112,9 +112,12 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: '24px',
+				md: '16px',
+				sm: '12px',
+				xl: '32px',
+				'2xl': '40px',
+				'3xl': '48px'
 			},
 			keyframes: {
 				'accordion-down': {
