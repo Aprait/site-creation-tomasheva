@@ -140,17 +140,17 @@ const FOXMetoD = () => {
     <Layout currentPage="foxmetod">
       <div className="min-h-screen bg-white">
         {/* Блок 1: Первый экран */}
-        <section className="relative py-24 md:py-32 bg-ink overflow-hidden">
+        <section className="relative py-24 md:py-32 bg-gradient-to-br from-accent to-accent-hover overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
           </div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
               Превращаем ваш бизнес в систему, которая работает без вас
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
               Обретите свободу для стратегического роста, пока ваша команда слаженно достигает результатов
             </p>
             <Button 

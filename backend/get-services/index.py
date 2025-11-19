@@ -45,10 +45,9 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         category = query_params.get('category')
         
         if category:
-            cursor.execute(
-                "SELECT * FROM services WHERE category = %s AND is_active = true ORDER BY display_order ASC",
-                (category,)
-            )
+            escaped_category = category.replace("'", "''")
+            query = f"SELECT * FROM services WHERE category = '{escaped_category}' AND is_active = true ORDER BY display_order ASC"
+            cursor.execute(query)
         else:
             cursor.execute(
                 "SELECT * FROM services WHERE is_active = true ORDER BY display_order ASC"

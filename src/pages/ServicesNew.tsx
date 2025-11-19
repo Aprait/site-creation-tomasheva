@@ -26,7 +26,7 @@ const Services = () => {
 
   return (
     <Layout currentPage="services">
-      <div className="pt-16 pb-24 bg-gradient-to-b from-bg-secondary to-white">
+      <div className="pt-16 pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
@@ -64,7 +64,7 @@ const Services = () => {
                     <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-5 border border-white/20">
                       <Icon name="Target" size={28} className="text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold font-heading tracking-tight">{service.name}</h2>
+                    <h2 className="text-3xl font-bold font-heading tracking-tight">{service.title}</h2>
                   </div>
                 </div>
                 
@@ -82,7 +82,7 @@ const Services = () => {
                         </h3>
                       </div>
                       <p className="text-ink-tertiary font-body leading-relaxed text-[15px]">
-                        {service.full_description || service.short_description}
+                        {service.description}
                       </p>
                     </div>
 
@@ -123,13 +123,8 @@ const Services = () => {
                         </h3>
                       </div>
                       <p className="text-2xl font-bold text-accent font-heading">
-                        {service.base_price ? `от ${service.base_price.toLocaleString('ru-RU')} ₽` : 'По запросу'}
+                        {service.base_price || 'По запросу'}
                       </p>
-                      {service.duration && (
-                        <p className="text-sm text-ink-quaternary font-body">
-                          {service.duration}
-                        </p>
-                      )}
                     </div>
 
                   </div>

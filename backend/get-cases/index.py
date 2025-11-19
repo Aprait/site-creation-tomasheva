@@ -46,21 +46,17 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         featured = query_params.get('featured')
         
         query = "SELECT * FROM cases WHERE 1=1"
-        params = []
         
         if category:
-            query += " AND category = %s"
-            params.append(category)
+            escaped_category = category.replace("'", "''")
+            query += f" AND category = '{escaped_category}'"
         
         if featured == 'true':
             query += " AND is_featured = true"
         
         query += " ORDER BY display_order ASC, created_at DESC"
         
-        if params:
-            cursor.execute(query, params)
-        else:
-            cursor.execute(query)
+        cursor.execute(query)
         
         cases = cursor.fetchall()
         
