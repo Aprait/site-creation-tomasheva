@@ -66,8 +66,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
-                      <Icon name="Mail" size={24} className="text-blue-600" />
+                    <div className="w-12 h-12 bg-accent-light rounded-2xl flex items-center justify-center">
+                      <Icon name="Mail" size={24} className="text-accent" />
                     </div>
                     <div>
                       <div className="font-semibold text-ink font-heading text-sm">Email</div>
@@ -78,8 +78,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center">
-                      <Icon name="Phone" size={24} className="text-green-600" />
+                    <div className="w-12 h-12 bg-accent-light rounded-2xl flex items-center justify-center">
+                      <Icon name="Phone" size={24} className="text-accent" />
                     </div>
                     <div>
                       <div className="font-semibold text-ink font-heading text-sm">Телефон</div>

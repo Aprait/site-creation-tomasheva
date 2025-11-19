@@ -115,7 +115,7 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover animate-fade-in border border-line/30 hover:border-accent group"
+              className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in border border-line/30 hover:border-accent/40 group"
               style={{animationDelay: `${index * 0.05}s`}}
             >
               <div className="w-20 h-20 flex items-center justify-center mb-4 bg-bg-secondary rounded-lg overflow-hidden">

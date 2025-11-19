@@ -94,10 +94,10 @@ const Blog = () => {
           
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-heading">
+            <h1 className="text-4xl lg:text-5xl font-bold text-ink mb-6 font-heading">
               Блог о бизнесе и технологиях
             </h1>
-            <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
+            <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto">
               Практические инсайты по управлению, стратегическому планированию, 
               внедрению ИИ и цифровой трансформации бизнеса
             </p>
@@ -112,8 +112,8 @@ const Blog = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? 'bg-brand-navy text-white shadow-lg'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-accent text-white shadow-sm'
+                      : 'bg-bg-secondary text-ink-secondary hover:bg-bg-tertiary'
                   }`}
                 >
                   {category.name} ({category.count})
@@ -125,8 +125,8 @@ const Blog = () => {
           {/* Featured Articles */}
           {selectedCategory === 'all' && (
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8 font-heading flex items-center">
-                <Icon name="Star" size={24} className="text-brand-accent mr-2" />
+              <h2 className="text-2xl font-bold text-ink mb-8 font-heading flex items-center">
+                <Icon name="Star" size={24} className="text-accent mr-2" />
                 Рекомендуемые статьи
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

@@ -102,8 +102,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/contact" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm">Контакты</Link></li>
               <li><a href="#privacy" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm">Политика конфиденциальности</a></li>
-              <li><a href="#terms" className="hover:text-white transition-colors font-body text-sm">Условия использования</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors font-body text-sm">FAQ</a></li>
+              <li><a href="#terms" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm">Условия использования</a></li>
+              <li><a href="#faq" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm">FAQ</a></li>
             </ul>
           </div>
         </div>
@@ -113,7 +113,7 @@ const Footer = () => {
         <div className="md:hidden space-y-4">
           {/* Аккордеон 1: Навигация */}
           <div>
-            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-white">
+            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-ink">
               <span>Навигация</span>
               <Icon name="ChevronDown" size={20} className="transition-transform accordion-icon" />
             </button>
@@ -130,26 +130,26 @@ const Footer = () => {
           
           {/* Аккордеон 2: Контакты */}
           <div>
-            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-white">
+            <button className="accordion-toggle flex justify-between items-center w-full text-left text-xl font-bold py-2 font-heading text-ink">
               <span>Контакты</span>
               <Icon name="ChevronDown" size={20} className="transition-transform accordion-icon" />
             </button>
             <div className="accordion-content hidden pt-2 pl-4">
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:n.tomasheva@foxmetod.ru" className="hover:text-white transition-colors font-body text-sm flex items-center">
+                  <a href="mailto:n.tomasheva@foxmetod.ru" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm flex items-center">
                     <Icon name="Mail" size={16} className="mr-2" />
                     n.tomasheva@foxmetod.ru
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+79220227225" className="hover:text-white transition-colors font-body text-sm flex items-center">
+                  <a href="tel:+79220227225" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm flex items-center">
                     <Icon name="Phone" size={16} className="mr-2" />
                     +7 922 022-72-25
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-body text-sm flex items-center">
+                  <a href="https://t.me/natalyatomasheva" target="_blank" rel="noopener noreferrer" className="text-ink-tertiary hover:text-ink transition-colors font-light text-sm flex items-center">
                     <Icon name="MessageCircle" size={16} className="mr-2" />
                     Telegram
                   </a>
@@ -164,7 +164,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-4 font-body text-sm">Эксперт по системному росту бизнеса и внедрению ИИ</p>
             <Button 
               onClick={() => setIsConsultationModalOpen(true)}
-              className="bg-brand-accent hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight"
+              className="bg-accent hover:bg-accent-hover text-white font-bold py-3 px-4 rounded-lg transition-colors text-sm leading-tight shadow-sm"
             >
               <span className="block">Записаться на</span>
               <span className="block">консультацию</span>

@@ -27,27 +27,27 @@ export default {
 				// Minimalist design system inspired by ed.iqido.ru
 				'bg': {
 					DEFAULT: '#FFFFFF',
-					'secondary': '#F8F9FA',
-					'tertiary': '#F1F3F5',
-					'accent': '#E9ECEF',
+					'secondary': '#F7F8F9',
+					'tertiary': '#F0F2F5',
+					'accent': '#E8EBF0',
 					'dark': '#0D0D0D'
 				},
 				'ink': {
 					DEFAULT: '#0D0D0D',
-					'secondary': '#2D2D2D',
-					'tertiary': '#6C6C6C',
+					'secondary': '#4A4A4A',
+					'tertiary': '#6B6B6B',
 					'quaternary': '#9E9E9E'
 				},
 				'line': {
-					DEFAULT: '#E5E5E5',
+					DEFAULT: '#E0E0E0',
 					'secondary': '#D1D1D1'
 				},
 				'card': '#FFFFFF',
 				'accent': {
-					DEFAULT: '#0D0D0D',
-					'hover': '#2D2D2D',
-					'light': 'rgba(13, 13, 13, 0.04)',
-					'lighter': 'rgba(13, 13, 13, 0.02)'
+					DEFAULT: '#00C853',
+					'hover': '#00B048',
+					'light': 'rgba(0, 200, 83, 0.08)',
+					'lighter': 'rgba(0, 200, 83, 0.04)'
 				},
 				// Legacy цвета для совместимости
 				'brand': {

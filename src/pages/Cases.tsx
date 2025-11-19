@@ -142,14 +142,14 @@ const Cases = () => {
                 <Button 
                   size="lg"
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-ink hover:bg-ink-secondary text-white rounded-xl px-8 h-14 text-base"
+                  className="bg-accent hover:bg-accent-hover text-white rounded-xl px-8 h-14 text-base shadow-sm"
                 >
                   Обсудить ваш проект
                 </Button>
                 <Button 
                   size="lg"
                   onClick={() => navigate('/services')}
-                  className="border-line text-ink hover:border-ink hover:bg-bg-secondary rounded-xl px-8 h-14 text-base"
+                  className="border-line text-ink hover:border-accent hover:bg-accent-lighter rounded-xl px-8 h-14 text-base"
                   variant="outline"
                 >
                   Изучить услуги

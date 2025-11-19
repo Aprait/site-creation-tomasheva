@@ -80,7 +80,7 @@ const Achievements = () => {
 
           {/* Education Section */}
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
+            <h2 className="text-3xl font-bold text-ink mb-12 text-center font-heading">
               Высшее образование
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -98,8 +98,8 @@ const Achievements = () => {
                   </div>
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-lg font-bold text-gray-900 font-heading">{edu.title}</h3>
-                      <span className="text-sm text-brand-blue font-medium bg-blue-50 px-2 py-1 rounded">
+                      <h3 className="text-lg font-bold text-ink font-heading">{edu.title}</h3>
+                      <span className="text-sm text-accent font-medium bg-accent-light px-2 py-1 rounded">
                         {edu.year}
                       </span>
                     </div>
@@ -112,7 +112,7 @@ const Achievements = () => {
 
           {/* Certificates Section */}
           <section className="mb-20">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center font-heading">
+            <h2 className="text-3xl font-bold text-ink mb-12 text-center font-heading">
               Курсы и сертификации
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

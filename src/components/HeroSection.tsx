@@ -46,7 +46,7 @@ const HeroSection = () => {
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-ink hover:bg-ink-secondary text-white rounded-xl px-6 h-11 text-sm font-medium"
+              className="hidden md:flex bg-accent hover:bg-accent-hover text-white rounded-xl px-6 h-11 text-sm font-medium shadow-sm"
               variant="default"
               size="default"
             >
@@ -88,7 +88,7 @@ const HeroSection = () => {
                     handleTelegramClick();
                     closeMobileMenu();
                   }}
-                  className="w-full bg-accent hover:bg-accent-hover text-white font-semibold py-3 px-4 rounded-lg"
+                  className="w-full bg-accent hover:bg-accent-hover text-white font-semibold py-3 px-4 rounded-lg shadow-sm"
                 >
                   <Icon name="MessageCircle" size={16} className="mr-2" />
                   Связаться
@@ -120,7 +120,7 @@ const HeroSection = () => {
                 <Button 
                   size="lg" 
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-ink hover:bg-ink-secondary text-white rounded-xl px-8 h-14 text-base font-medium"
+                  className="bg-accent hover:bg-accent-hover text-white rounded-xl px-8 h-14 text-base font-medium shadow-sm"
                 >
                   Записаться на консультацию
                 </Button>
@@ -128,7 +128,7 @@ const HeroSection = () => {
                   size="lg" 
                   variant="outline"
                   onClick={() => navigate('/cases')}
-                  className="border-line text-ink hover:border-ink hover:bg-bg-secondary rounded-xl px-8 h-14 text-base font-medium"
+                  className="border-line text-ink hover:border-accent hover:bg-accent-lighter rounded-xl px-8 h-14 text-base font-medium"
                 >
                   Смотреть кейсы
                 </Button>

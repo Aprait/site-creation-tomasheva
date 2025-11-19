@@ -128,8 +128,8 @@ const About = () => {
 
               {/* Growth Catalyst */}
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-line/30 hover:shadow-lg hover:border-accent/20 transition-all duration-300">
-                <div className="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Icon name="TrendingUp" size={28} className="text-green-600" />
+                <div className="w-14 h-14 bg-accent-light rounded-2xl flex items-center justify-center mb-6">
+                  <Icon name="TrendingUp" size={28} className="text-accent" />
                 </div>
                 <h3 className="text-xl font-bold text-ink mb-4 font-heading">
                   Катализатор роста
@@ -141,8 +141,8 @@ const About = () => {
 
               {/* AI Futurist */}
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-line/30 hover:shadow-lg hover:border-accent/20 transition-all duration-300">
-                <div className="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Icon name="Bot" size={28} className="text-purple-600" />
+                <div className="w-14 h-14 bg-accent-light rounded-2xl flex items-center justify-center mb-6">
+                  <Icon name="Bot" size={28} className="text-accent" />
                 </div>
                 <h3 className="text-xl font-bold text-ink mb-4 font-heading">
                   AI-футурист

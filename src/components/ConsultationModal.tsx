@@ -234,7 +234,7 @@ ${data.message || 'Не указано'}
                   name="consultationType"
                   value={formData.consultationType}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-line rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                 >
                   <option value="business-growth">Рост бизнеса</option>
                   <option value="ai-implementation">Внедрение ИИ</option>
@@ -255,7 +255,7 @@ ${data.message || 'Не указано'}
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent transition-colors"
+                  className="w-full px-4 py-3 border border-line rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
                   placeholder="Например: будни утром, выходные днем"
                 />
               </div>

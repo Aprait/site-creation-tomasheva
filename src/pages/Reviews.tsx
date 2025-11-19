@@ -134,10 +134,10 @@ const Reviews = () => {
           
           {/* Hero Section */}
           <section className="text-center mb-20">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-heading">
+            <h1 className="text-4xl lg:text-5xl font-bold text-ink mb-6 font-heading">
               Отзывы клиентов
             </h1>
-            <p className="text-xl text-gray-600 font-body max-w-3xl mx-auto">
+            <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto">
               Реальные истории людей, которые преобразили свой бизнес с моей помощью. 
               Каждый отзыв — это конкретный результат и измеримые изменения.
             </p>

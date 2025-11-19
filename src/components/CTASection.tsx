@@ -21,7 +21,7 @@ const CTASection = () => {
             <Button 
               size="lg"
               onClick={() => setIsConsultationModalOpen(true)}
-              className="bg-ink hover:bg-ink-secondary text-white rounded-xl px-8 h-14 text-base"
+              className="bg-accent hover:bg-accent-hover text-white rounded-xl px-8 h-14 text-base shadow-sm"
             >
               Записаться на консультацию
             </Button>
@@ -29,7 +29,7 @@ const CTASection = () => {
             <Button
               size="lg"
               onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
-              className="border-line text-ink hover:border-ink hover:bg-bg rounded-xl px-8 h-14 text-base"
+              className="border-line text-ink hover:border-accent hover:bg-accent-lighter rounded-xl px-8 h-14 text-base"
               variant="outline"
             >
               Написать в Telegram

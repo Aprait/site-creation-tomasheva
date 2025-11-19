@@ -140,10 +140,10 @@ const FOXMetoD = () => {
     <Layout currentPage="foxmetod">
       <div className="min-h-screen bg-white">
         {/* Блок 1: Первый экран */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-brand-primary via-blue-900 to-brand-navy overflow-hidden">
+        <section className="relative py-24 md:py-32 bg-ink overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-accent/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl" />
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
           </div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -156,7 +156,7 @@ const FOXMetoD = () => {
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-brand-accent hover:bg-orange-500 text-gray-900 font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+              className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-6 text-lg rounded-lg shadow-sm transition-all"
             >
               Получить план систематизации
             </Button>
@@ -166,15 +166,15 @@ const FOXMetoD = () => {
         {/* Блок 2: Проблема */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
               Для собственников, которые устали быть главным ресурсом своего бизнеса
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {painPoints.map((point, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
-                  <div className="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={point.icon} size={28} className="text-red-600" />
+                  <div className="w-14 h-14 bg-accent-light rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={point.icon} size={28} className="text-accent" />
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     {point.text}
@@ -201,7 +201,7 @@ const FOXMetoD = () => {
         {/* Блок 4: Продукты */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
               Как мы построим вашу систему
             </h2>
             
@@ -234,7 +234,7 @@ const FOXMetoD = () => {
         {/* Блок 5: Дополнительные компетенции */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
               Решаем и другие ключевые задачи бизнеса
             </h2>
             
@@ -260,7 +260,7 @@ const FOXMetoD = () => {
         {/* Блок 6: Команда */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
               Гарантия результата — наша команда экспертов-практиков
             </h2>
             
