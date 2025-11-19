@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,33 +6,30 @@
 
 @layer base {
   :root {
-    --technical-bg: #0f1115;
-    --technical-grid: #2a2e37;
-    --technical-card: #1a1d23;
-    --technical-accent: #ff5850;
-    --technical-green: #036442;
-    --technical-text: #e5e7eb;
-    --technical-text-muted: #9ca3af;
+    --bg: #ffffff;
+    --bg-secondary: #f7f8f9;
+    --bg-tertiary: #f0f2f5;
+    --ink: #0d0d0d;
+    --ink-secondary: #4a4a4a;
+    --ink-tertiary: #6b6b6b;
+    --accent: #00c853;
+    --accent-hover: #00b048;
 
-    --background: 222 13% 7%;
-    --foreground: 220 9% 90%;
-    --card: 222 13% 10%;
-    --card-foreground: 220 9% 90%;
-    --popover: 222 13% 10%;
-    --popover-foreground: 220 9% 90%;
-    --primary: 4 90% 65%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 142 76% 39%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 170 100% 19%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 220 13% 15%;
-    --muted-foreground: 220 9% 60%;
-    --accent: 4 90% 65%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 20%;
-    --input: 220 13% 20%;
-    --ring: 4 90% 65%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 0 0% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 142 76% 39%;
   }
 }
 
@@ -48,12 +45,14 @@
   }
 
   body {
-    @apply bg-technical-bg text-technical-text font-body;
-    background-image:
-      linear-gradient(var(--technical-grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--technical-grid) 1px, transparent 1px);
-    background-size: 50px 50px;
-    background-attachment: fixed;
+    @apply bg-white text-ink;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   h1,
@@ -62,23 +61,27 @@
   h4,
   h5,
   h6 {
-    @apply font-heading uppercase tracking-widest;
+    @apply font-heading;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-weight: 800;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-bold;
+    @apply text-2xl md:text-3xl;
   }
 
-  h4 {
-    @apply text-xl md:text-2xl font-semibold;
+  p {
+    color: var(--ink-secondary);
   }
 }
 
@@ -87,59 +90,13 @@
     @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
-  .tech-card {
-    @apply bg-technical-card border border-technical-grid rounded-lg p-6 transition-all duration-300;
-  }
-
-  .tech-card:hover {
-    @apply border-technical-accent shadow-lg shadow-technical-accent/20 -translate-y-1;
-  }
-
-  .tech-button {
-    @apply bg-technical-accent text-white px-6 py-3 rounded-lg font-bold uppercase tracking-wider transition-all duration-300;
-  }
-
-  .tech-button:hover {
-    @apply bg-[#FF6B64] shadow-lg shadow-technical-accent/40 scale-105;
-  }
-
-  .tech-button-outline {
-    @apply border-2 border-technical-accent text-technical-accent px-6 py-3 rounded-lg font-bold uppercase tracking-wider transition-all duration-300;
-  }
-
-  .tech-button-outline:hover {
-    @apply bg-technical-accent/10 border-[#FF6B64] scale-105;
-  }
-
   .section {
-    @apply py-20 md:py-32 relative;
-  }
-
-  .grid-overlay {
-    @apply absolute inset-0 pointer-events-none opacity-10;
-    background-image:
-      linear-gradient(var(--technical-grid) 2px, transparent 2px),
-      linear-gradient(90deg, var(--technical-grid) 2px, transparent 2px);
-    background-size: 100px 100px;
+    @apply py-20 md:py-32;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
   }
 }
