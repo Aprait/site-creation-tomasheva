@@ -19,53 +19,20 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'heading': ['Inter', '-apple-system', 'system-ui', 'sans-serif'],
-				'body': ['Inter', '-apple-system', 'system-ui', 'sans-serif'],
-				sans: ['Inter', '-apple-system', 'system-ui', 'sans-serif']
+				'heading': ['Space Mono', 'JetBrains Mono', 'monospace'],
+				'body': ['Inter', 'Manrope', 'sans-serif'],
+				'mono': ['Space Mono', 'JetBrains Mono', 'monospace'],
+				sans: ['Inter', 'Manrope', 'sans-serif']
 			},
 			colors: {
-				// Minimalist design system inspired by ed.iqido.ru
-				'bg': {
-					DEFAULT: '#FFFFFF',
-					'secondary': '#F7F8F9',
-					'tertiary': '#F0F2F5',
-					'accent': '#E8EBF0',
-					'dark': '#0D0D0D'
-				},
-				'ink': {
-					DEFAULT: '#0D0D0D',
-					'secondary': '#4A4A4A',
-					'tertiary': '#6B6B6B',
-					'quaternary': '#9E9E9E'
-				},
-				'line': {
-					DEFAULT: '#E0E0E0',
-					'secondary': '#D1D1D1'
-				},
-				'card': '#FFFFFF',
-				'accent': {
-					DEFAULT: '#00C853',
-					'hover': '#00B048',
-					'light': 'rgba(0, 200, 83, 0.08)',
-					'lighter': 'rgba(0, 200, 83, 0.04)'
-				},
-				// Legacy цвета для совместимости
-				'brand': {
-					'primary': '#0066CC',
-					'secondary': '#0052A3',
-					'accent': '#FF6B35',
-					'success': '#00A878',
-					'warning': '#F59E0B',
-					'light': '#F0F4F8',
-					'muted': '#64748B',
-					'navy': '#0A1628',
-					'blue': '#0066CC'
-				},
-				// Градиенты
-				'gradient': {
-					'primary': 'linear-gradient(135deg, #0F172A 0%, #334155 100%)',
-					'accent': 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
-					'success': 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
+				technical: {
+					bg: '#0F1115',
+					grid: '#2A2E37',
+					card: '#1A1D23',
+					accent: '#FF5850',
+					green: '#036442',
+					text: '#E5E7EB',
+					'text-muted': '#9CA3AF',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -100,24 +67,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
 			borderRadius: {
-				lg: '24px',
-				md: '16px',
-				sm: '12px',
-				xl: '32px',
-				'2xl': '40px',
-				'3xl': '48px'
+				lg: '8px',
+				md: '6px',
+				sm: '4px',
 			},
 			keyframes: {
 				'accordion-down': {
@@ -143,13 +97,26 @@ export default {
 				'scale-in': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'grid-flow': {
+					'0%': { backgroundPosition: '0% 0%' },
+					'100%': { backgroundPosition: '100% 100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
-				'scale-in': 'scale-in 0.2s ease-out'
+				'scale-in': 'scale-in 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'grid-flow': 'grid-flow 20s linear infinite'
+			},
+			backgroundImage: {
+				'grid-pattern': 'linear-gradient(#2A2E37 1px, transparent 1px), linear-gradient(90deg, #2A2E37 1px, transparent 1px)',
 			}
 		}
 	},
