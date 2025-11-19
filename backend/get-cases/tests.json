@@ -1,0 +1,35 @@
+{
+  "tests": [
+    {
+      "name": "Получение всех кейсов",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "cases": "array",
+        "count": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Фильтрация по категории",
+      "method": "GET",
+      "path": "/?category=AI%20Operations",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "cases": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Получение избранных кейсов",
+      "method": "GET",
+      "path": "/?featured=true",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "cases": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
