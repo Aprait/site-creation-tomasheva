@@ -124,7 +124,6 @@ const Cases = () => {
                     </div>
                   </div>
 
-                  </div>
                 </div>
               </div>
             ))}
