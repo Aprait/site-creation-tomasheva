@@ -236,11 +236,11 @@ const Blog = () => {
 
           {/* Newsletter CTA */}
           <section className="mt-20">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl p-12 text-white text-center">
+            <div className="bg-gradient-to-r from-accent to-accent-hover rounded-2xl p-12 text-white text-center">
               <h2 className="text-3xl font-bold mb-6 font-heading">
                 Не пропускайте новые статьи
               </h2>
-              <p className="text-xl mb-8 font-body opacity-90 max-w-2xl mx-auto">
+              <p className="text-xl mb-8 font-body text-white/90 max-w-2xl mx-auto">
                 Подписывайтесь на мой Telegram-канал, где я делюсь актуальными инсайтами 
                 по управлению бизнесом и внедрению новых технологий
               </p>

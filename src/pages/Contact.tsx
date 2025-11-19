@@ -127,70 +127,66 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="bg-white rounded-3xl shadow-sm border border-line/30 p-10">
-              <h2 className="text-3xl font-bold text-ink mb-6 font-heading">
+              <h2 className="text-3xl font-bold text-ink mb-3 font-heading">
                 Отправить сообщение
               </h2>
+              <p className="text-ink-tertiary mb-8 font-body">
+                Вы всегда можете связаться со мной по вопросам сотрудничества, партнёрства и выступлений
+              </p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2 font-body">
-                    Ваше имя *
-                  </label>
-                  <Input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Введите ваше имя"
-                    required
-                    className="font-body"
-                  />
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 gap-5">
+                  <div>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Ваше имя *"
+                      required
+                      className="font-body h-12 border-line/50 focus:border-accent"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Input
+                      type="email"
+                      id="contact"
+                      name="contact"
+                      value={formData.contact}
+                      onChange={handleChange}
+                      placeholder="Email *"
+                      required
+                      className="font-body h-12 border-line/50 focus:border-accent"
+                    />
+                  </div>
                 </div>
                 
                 <div>
-                  <label htmlFor="contact" className="block text-sm font-medium text-gray-700 mb-2 font-body">
-                    Email или телефон *
-                  </label>
-                  <Input
-                    type="text"
-                    id="contact"
-                    name="contact"
-                    value={formData.contact}
-                    onChange={handleChange}
-                    placeholder="email@example.com или +7 (900) 000-00-00"
-                    required
-                    className="font-body"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2 font-body">
-                    Сообщение *
-                  </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Расскажите о вашей задаче или вопросе..."
-                    rows={5}
+                    placeholder="Сообщение *"
+                    rows={6}
                     required
-                    className="font-body"
+                    className="font-body border-line/50 focus:border-accent resize-none"
                   />
                 </div>
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent-hover text-white py-3 text-lg font-semibold shadow-sm hover:shadow-md transition-all"
+                  className="w-full bg-accent hover:bg-accent-hover text-white h-12 text-base font-semibold shadow-sm hover:shadow-md transition-all rounded-xl"
                 >
-                  <Icon name="Send" size={20} />
                   Отправить сообщение
+                  <Icon name="ArrowRight" size={18} />
                 </Button>
               </form>
               
-              <p className="text-sm text-gray-500 mt-4 font-body">
-                * Обязательные поля. Обычно отвечаю в течение 24 часов.
+              <p className="text-sm text-ink-quaternary mt-6 font-body text-center">
+                Обычно отвечаю в течение 24 часов
               </p>
             </div>
 

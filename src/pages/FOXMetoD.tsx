@@ -296,13 +296,13 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 7: Призыв к действию */}
-        <section id="contact-form" className="py-20 bg-gradient-to-br from-brand-primary via-blue-900 to-brand-navy">
+        <section id="contact-form" className="py-20 bg-gradient-to-br from-accent via-accent to-accent-hover">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                 Готовы построить бизнес, который работает на вас?
               </h2>
-              <p className="text-lg text-gray-200">
+              <p className="text-lg text-white/90">
                 Запишитесь на бесплатную диагностическую сессию. Мы разберем вашу ситуацию и наметим первые 3 шага по выходу из операционной рутины. 
                 Это ни к чему вас не обязывает.
               </p>

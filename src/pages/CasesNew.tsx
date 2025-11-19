@@ -34,7 +34,7 @@ const Cases = () => {
             <h1 className="text-6xl lg:text-8xl font-bold text-ink mb-8 font-heading tracking-tight">
               Кейсы
             </h1>
-            <p className="text-2xl text-ink-tertiary font-light max-w-3xl leading-relaxed">
+            <p className="text-2xl text-ink-secondary font-light max-w-3xl leading-relaxed">
               Реальные истории трансформации бизнеса
             </p>
           </section>

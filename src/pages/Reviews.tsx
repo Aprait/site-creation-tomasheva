@@ -152,8 +152,8 @@ const Reviews = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <div className="text-4xl font-bold mb-2 text-brand-accent">{stat.number}</div>
-                    <div className="font-body">{stat.label}</div>
+                    <div className="text-4xl font-bold mb-2 text-accent">{stat.number}</div>
+                    <div className="font-body text-ink">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -243,11 +243,11 @@ const Reviews = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
+            <div className="bg-gradient-to-r from-accent to-accent-hover rounded-2xl p-12 text-white">
               <h2 className="text-3xl font-bold mb-6 font-heading">
                 Готовы стать следующим успешным кейсом?
               </h2>
-              <p className="text-xl mb-8 font-body opacity-90 max-w-2xl mx-auto">
+              <p className="text-xl mb-8 font-body text-white/90 max-w-2xl mx-auto">
                 Каждый отзыв выше — это история трансформации бизнеса. 
                 Давайте создадим такую же историю успеха для вашей компании.
               </p>
