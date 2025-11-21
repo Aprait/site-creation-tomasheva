@@ -13,10 +13,22 @@ const Contact = () => {
     contact: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Сообщение отправлено! Я свяжусь с вами в ближайшее время.');
+    setIsSubmitting(true);
+    
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setIsSubmitting(false);
+    setShowSuccess(true);
+    setFormData({ name: '', contact: '', message: '' });
+    
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -178,16 +190,42 @@ const Contact = () => {
                 
                 <Button 
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent-hover text-white h-12 text-base font-semibold shadow-sm hover:shadow-md transition-all rounded-xl"
+                  disabled={isSubmitting}
+                  className="w-full bg-accent hover:bg-accent-hover text-white h-12 text-base font-semibold shadow-sm hover:shadow-md transition-all rounded-xl disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Отправить сообщение
-                  <Icon name="ArrowRight" size={18} />
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent" />
+                      Отправляю...
+                    </>
+                  ) : (
+                    <>
+                      Отправить сообщение
+                      <Icon name="ArrowRight" size={18} />
+                    </>
+                  )}
                 </Button>
               </form>
               
               <p className="text-sm text-ink-quaternary mt-6 font-body text-center">
                 Обычно отвечаю в течение 24 часов
               </p>
+              
+              {showSuccess && (
+                <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl animate-in fade-in slide-in-from-top-2 duration-300">
+                  <div className="flex items-center gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                        <Icon name="Check" size={20} className="text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-green-900 font-heading">Сообщение отправлено!</h3>
+                      <p className="text-sm text-green-700 font-body">Я свяжусь с вами в ближайшее время</p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
           </div>
