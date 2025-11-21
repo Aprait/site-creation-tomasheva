@@ -40,7 +40,7 @@ const Cases = () => {
           </section>
 
           {/* Cases Grid */}
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 gap-8">
             {loading ? (
               <div className="text-center py-20">
                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
@@ -50,76 +50,93 @@ const Cases = () => {
               <div className="text-center py-20">
                 <p className="text-ink-tertiary">Кейсы временно недоступны</p>
               </div>
-            ) : cases.map((caseItem, index) => (
-              <div key={caseItem.id || index} className="border-t border-line/30 pt-12">
-                
-                {/* Header */}
-                <div className="mb-8">
-                  <div className="flex items-start justify-between gap-6 mb-4">
-                    <div>
-                      {caseItem.category && (
-                        <span className="inline-block px-3 py-1 bg-bg-tertiary text-ink-tertiary text-sm font-medium rounded-lg mb-4">
-                          {caseItem.category}
-                        </span>
-                      )}
-                      <h2 className="text-2xl lg:text-3xl font-bold font-heading tracking-tight text-ink">{caseItem.project_title}</h2>
+            ) : cases.map((caseItem, index) => {
+              const colors = [
+                { bg: 'from-blue-500 to-indigo-600', badge: 'bg-blue-100 text-blue-700', icon: 'Zap' },
+                { bg: 'from-emerald-500 to-green-600', badge: 'bg-emerald-100 text-emerald-700', icon: 'TrendingUp' },
+                { bg: 'from-purple-500 to-pink-600', badge: 'bg-purple-100 text-purple-700', icon: 'Sparkles' },
+                { bg: 'from-orange-500 to-red-600', badge: 'bg-orange-100 text-orange-700', icon: 'Target' },
+                { bg: 'from-cyan-500 to-blue-600', badge: 'bg-cyan-100 text-cyan-700', icon: 'BarChart' }
+              ];
+              const colorScheme = colors[index % colors.length];
+              
+              return (
+                <div key={caseItem.id || index} className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-shadow">
+                  
+                  {/* Header with gradient */}
+                  <div className={`bg-gradient-to-r ${colorScheme.bg} p-8 text-white`}>
+                    <div className="flex items-start justify-between gap-6 mb-4">
+                      <div className="flex-1">
+                        {caseItem.category && (
+                          <span className={`inline-block px-3 py-1 ${colorScheme.badge} text-sm font-medium rounded-lg mb-4`}>
+                            {caseItem.category}
+                          </span>
+                        )}
+                        <h2 className="text-2xl lg:text-3xl font-bold font-heading tracking-tight">{caseItem.project_title}</h2>
+                        {caseItem.results_metric && (
+                          <div className="text-lg font-semibold mt-3 opacity-95">{caseItem.results_metric}</div>
+                        )}
+                      </div>
+                      <Icon name={colorScheme.icon as any} size={40} className="opacity-80" />
                     </div>
                   </div>
-                  {caseItem.results_metric && (
-                    <div className="text-xl font-semibold text-ink">{caseItem.results_metric}</div>
-                  )}
-                </div>
 
-                {/* Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  
-                  {/* Left Column */}
-                  <div className="space-y-10">
-                    {caseItem.challenge_summary && (
+                  {/* Content */}
+                  <div className="p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      
+                      {/* Left Column */}
                       <div>
-                        <h3 className="text-xl font-semibold text-ink mb-4">
-                          Вызов
-                        </h3>
-                        <p className="text-ink-tertiary font-light leading-relaxed text-lg">
-                          {caseItem.challenge_summary}
-                        </p>
+                        {caseItem.challenge_summary && (
+                          <div>
+                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                              <Icon name="AlertCircle" size={20} className="text-red-500" />
+                              Вызов
+                            </h3>
+                            <p className="text-ink-tertiary leading-relaxed">
+                              {caseItem.challenge_summary}
+                            </p>
+                          </div>
+                        )}
                       </div>
-                    )}
+
+                      {/* Right Column */}
+                      <div className="space-y-6">
+                        {caseItem.outcome_text && (
+                          <div>
+                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                              <Icon name="CheckCircle" size={20} className="text-green-500" />
+                              Результат
+                            </h3>
+                            <p className="text-ink-tertiary leading-relaxed">
+                              {caseItem.outcome_text}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Tech Stack */}
+                        {caseItem.tech_stack && Array.isArray(caseItem.tech_stack) && caseItem.tech_stack.length > 0 && (
+                          <div>
+                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                              <Icon name="Code" size={20} className="text-accent" />
+                              Технологии
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                              {caseItem.tech_stack.map((tech: string, idx: number) => (
+                                <span key={idx} className={`inline-block px-3 py-1 ${colorScheme.badge} text-sm font-medium rounded-lg`}>
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                    </div>
                   </div>
-
-                  {/* Right Column */}
-                  <div className="space-y-10">
-                    {caseItem.outcome_text && (
-                      <div>
-                        <h3 className="text-xl font-semibold text-ink mb-4">
-                          Результат
-                        </h3>
-                        <p className="text-ink-tertiary font-light leading-relaxed text-lg">
-                          {caseItem.outcome_text}
-                        </p>
-                      </div>
-                    )}
-
-                    {/* Tech Stack */}
-                    {caseItem.tech_stack && Array.isArray(caseItem.tech_stack) && caseItem.tech_stack.length > 0 && (
-                      <div>
-                        <h3 className="text-xl font-semibold text-ink mb-4">
-                          Технологии
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {caseItem.tech_stack.map((tech: string, idx: number) => (
-                            <span key={idx} className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-lg">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA Section */}

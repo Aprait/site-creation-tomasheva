@@ -145,15 +145,15 @@ const Reviews = () => {
 
           {/* Stats Section */}
           <section className="mb-20">
-            <div className="bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl border border-brand-accent/20 p-12 text-white">
+            <div className="bg-gradient-to-r from-accent to-accent-hover rounded-2xl p-12 text-white shadow-xl">
               <h2 className="text-3xl font-bold text-center mb-8 font-heading">
                 Статистика работы с клиентами
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <div className="text-4xl font-bold mb-2 text-brand-accent">{stat.number}</div>
-                    <div className="font-body text-white">{stat.label}</div>
+                    <div className="text-4xl font-bold mb-2 text-white">{stat.number}</div>
+                    <div className="font-body text-white/90">{stat.label}</div>
                   </div>
                 ))}
               </div>
