@@ -95,13 +95,13 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section id="clients" className="py-20 bg-gradient-to-b from-bg-tertiary to-white">
+    <section id="clients" className="py-12 bg-gradient-to-b from-bg-tertiary to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-4 font-heading">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-3 font-heading tracking-tight">
             Среди моих клиентов
           </h2>
-          <p className="text-xl text-ink-tertiary font-body">
+          <p className="text-base text-ink-tertiary font-body leading-relaxed">
             Компании, с которыми я работала
           </p>
           <div className="mt-6 inline-flex items-center px-4 py-2 bg-white rounded-full shadow-sm border border-line/30">

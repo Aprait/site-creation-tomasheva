@@ -49,7 +49,7 @@ const HeroSection = () => {
 
             {/* Desktop CTA Button */}
             <Button 
-              onClick={handleTelegramClick}
+              onClick={() => setIsConsultationModalOpen(true)}
               className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 h-11 text-sm font-medium shadow-sm"
               variant="default"
               size="default"

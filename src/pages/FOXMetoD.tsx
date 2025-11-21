@@ -359,7 +359,7 @@ const FOXMetoD = () => {
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-brand-accent hover:bg-accent-hover text-gray-900 font-semibold py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-accent hover:bg-accent-hover text-white font-semibold py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
                 >
                   Начать систематизацию
                 </Button>

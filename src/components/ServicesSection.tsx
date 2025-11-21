@@ -7,42 +7,45 @@ const ServicesSection = () => {
     {
       icon: "Target",
       title: "Бизнес-трекинг и OKR-коучинг",
-      description: "Диагностика, поиск точек роста бизнеса, сопровождение в течение 3-12 месяцев до результата."
+      description: "Диагностика, поиск точек роста бизнеса, сопровождение в течение 3-12 месяцев до результата.",
+      bgColor: "from-blue-500 to-indigo-600",
+      iconColor: "bg-blue-100 group-hover:bg-blue-500"
     },
     {
       icon: "Brain",
       title: "Внедрение ИИ в бизнес",
-      description: "Автоматизация CRM, аналитика для отделов продаж и контроля качества, оптимизация операционных задач."
+      description: "Автоматизация CRM, аналитика для отделов продаж и контроля качества, оптимизация операционных задач.",
+      bgColor: "from-purple-500 to-violet-600",
+      iconColor: "bg-purple-100 group-hover:bg-purple-500"
     },
     {
       icon: "TrendingUp",
       title: "Разработка стратегий",
-      description: "Разработка маркетинговой стратегии, стратегии продвижения, продаж и цифровой трансформации."
+      description: "Разработка маркетинговой стратегии, стратегии продвижения, продаж и цифровой трансформации.",
+      bgColor: "from-emerald-500 to-green-600",
+      iconColor: "bg-emerald-100 group-hover:bg-emerald-500"
     },
     {
       icon: "Users",
       title: "Стратегические сессии",
-      description: "Проведение и фасилитация стратегических сессий для компаний России и СНГ."
+      description: "Проведение и фасилитация стратегических сессий для компаний России и СНГ.",
+      bgColor: "from-orange-500 to-red-600",
+      iconColor: "bg-orange-100 group-hover:bg-orange-500"
     },
     {
       icon: "Rocket",
       title: "Запуск и масштабирование стартапов",
-      description: "Полный цикл поддержки от идеи до масштабирования, включая формирование УТП и анализ метрик."
+      description: "Полный цикл поддержки от идеи до масштабирования, включая формирование УТП и анализ метрик.",
+      bgColor: "from-pink-500 to-rose-600",
+      iconColor: "bg-pink-100 group-hover:bg-pink-500"
     },
     {
       icon: "Award",
       title: "Индивидуальные консультации",
-      description: "Комплексная диагностика и советы по развитию вашего бизнеса от эксперта."
+      description: "Комплексная диагностика и советы по развитию вашего бизнеса от эксперта.",
+      bgColor: "from-cyan-500 to-blue-600",
+      iconColor: "bg-cyan-100 group-hover:bg-cyan-500"
     }
-  ];
-
-  const gradientColors = [
-    "from-blue-500 to-indigo-600",
-    "from-green-500 to-emerald-600", 
-    "from-purple-500 to-violet-600",
-    "from-orange-500 to-red-600",
-    "from-pink-500 to-rose-600",
-    "from-cyan-500 to-blue-600"
   ];
 
   return (
@@ -61,17 +64,17 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group p-6 rounded-xl border-2 border-gray-200 bg-gray-50 hover:border-accent hover:bg-white transition-all duration-300 shadow-sm hover:shadow-md"
+              className={`group p-6 rounded-xl border-2 border-gray-200 bg-gradient-to-br ${service.bgColor} hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-xl`}
             >
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent transition-all duration-300">
-                  <Icon name={service.icon} size={24} className="text-accent group-hover:text-white transition-colors" />
+                <div className={`flex-shrink-0 w-12 h-12 rounded-lg ${service.iconColor} flex items-center justify-center transition-all duration-300`}>
+                  <Icon name={service.icon} size={24} className="text-white transition-colors" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-ink mb-2 font-heading">
+                  <h3 className="text-lg font-semibold text-white mb-2 font-heading">
                     {service.title}
                   </h3>
-                  <p className="text-ink-tertiary leading-relaxed text-sm">
+                  <p className="text-white/90 leading-relaxed text-sm">
                     {service.description}
                   </p>
                 </div>

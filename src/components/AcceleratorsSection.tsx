@@ -8,6 +8,11 @@ const AcceleratorsSection = () => {
       role: "Трекер (грейд В+)"
     },
     {
+      name: "Фокус, Нечто, Спринты (М.Дашкиева)",
+      logo: "/img/Сильные идеи для нового времени.jpg",
+      role: "VIP-трекер"
+    },
+    {
       name: "Форум «Сильные идеи для нового времени»",
       logo: "/img/Сильные идеи для нового времени.jpg",
       role: "Эксперт"
@@ -35,13 +40,13 @@ const AcceleratorsSection = () => {
   ];
 
   return (
-    <section id="accelerators" className="py-20 bg-bg-secondary">
+    <section id="accelerators" className="py-12 bg-bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-4 font-heading">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-3 font-heading tracking-tight">
             Трекер и эксперт в ведущих акселераторах
           </h2>
-          <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto">
+          <p className="text-base text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
             Работа с топовыми программами развития стартапов и инновационных проектов
           </p>
         </div>

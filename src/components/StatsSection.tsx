@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const StatsSection = () => {
   const stats = [
     { 
-      number: "270+", 
+      number: "280+", 
       label: "Команд проведено через трекинг", 
       period: "за 2021-2025 гг." 
     },
@@ -29,10 +29,10 @@ const StatsSection = () => {
     <section id="results" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-3 font-heading tracking-tight">
             Результаты
           </h2>
-          <p className="text-lg text-ink-tertiary max-w-2xl leading-relaxed">
+          <p className="text-base text-ink-tertiary max-w-3xl leading-relaxed">
             Измеримые достижения в работе с командами и бизнесом
           </p>
         </div>

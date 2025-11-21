@@ -161,7 +161,7 @@ const Services = () => {
                 <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-heading tracking-tight">
                   Готовы начать трансформацию?
                 </h2>
-                <p className="text-lg lg:text-xl mb-10 font-body opacity-90 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg lg:text-xl mb-10 font-body text-white max-w-2xl mx-auto leading-relaxed">
                   Каждая услуга адаптируется под специфику вашего бизнеса. 
                   Давайте обсудим, какой подход будет наиболее эффективным для вас.
                 </p>
@@ -169,7 +169,7 @@ const Services = () => {
                   <Button 
                     size="lg"
                     onClick={() => setIsConsultationModalOpen(true)}
-                    className="bg-white text-accent hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all"
+                    className="bg-accent hover:bg-accent-hover text-white shadow-lg hover:shadow-xl transition-all"
                   >
                     <Icon name="Calendar" size={18} />
                     Записаться на консультацию
@@ -177,7 +177,7 @@ const Services = () => {
                   <Button 
                     size="lg"
                     onClick={() => navigate('/cases')}
-                    className="bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/20 hover:border-white/30"
+                    className="bg-accent-light text-accent hover:bg-accent/20 border-2 border-accent/20 hover:border-accent/30"
                   >
                     <Icon name="BookOpen" size={18} />
                     Посмотреть кейсы

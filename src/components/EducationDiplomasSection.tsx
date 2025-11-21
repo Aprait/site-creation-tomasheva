@@ -24,13 +24,13 @@ const EducationDiplomasSection = () => {
   ];
 
   return (
-    <section id="education" className="py-32 bg-bg-secondary">
+    <section id="education" className="py-12 bg-bg-secondary">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="mb-24">
-          <h2 className="text-5xl lg:text-7xl font-bold text-ink mb-6 font-heading tracking-tight">
+        <div className="mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-3 font-heading tracking-tight">
             Образование
           </h2>
-          <p className="text-xl text-ink-tertiary font-light max-w-2xl leading-relaxed">
+          <p className="text-base text-ink-tertiary max-w-3xl leading-relaxed">
             Международные стандарты бизнес-образования
           </p>
         </div>

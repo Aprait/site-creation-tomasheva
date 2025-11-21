@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
 import ServicesSection from '@/components/ServicesSection';
 import ClientsSection from '@/components/ClientsSection';
+import WorldMap from '@/components/WorldMap';
 import AcceleratorsSection from '@/components/AcceleratorsSection';
 import EducationSection from '@/components/EducationSection';
 import EducationDiplomasSection from '@/components/EducationDiplomasSection';
@@ -17,6 +18,7 @@ const Index = () => {
       <StatsSection />
       <ServicesSection />
       <ClientsSection />
+      <WorldMap />
       <AcceleratorsSection />
       <EducationDiplomasSection />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
