@@ -1,17 +1,32 @@
 import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const WorldMap = () => {
   const countries = [
-    { name: 'Россия', color: '#10B981' },
-    { name: 'Казахстан', color: '#10B981' },
-    { name: 'Узбекистан', color: '#10B981' },
-    { name: 'Таиланд', color: '#10B981' },
-    { name: 'ОАЭ', color: '#10B981' },
-    { name: 'Киргизия', color: '#10B981' },
-    { name: 'Словакия', color: '#10B981' },
-    { name: 'Испания', color: '#10B981' },
-    { name: 'Белоруссия', color: '#10B981' }
+    { name: 'Россия', lat: 55.7558, lng: 37.6173 },
+    { name: 'Казахстан', lat: 51.1694, lng: 71.4491 },
+    { name: 'Узбекистан', lat: 41.2995, lng: 69.2401 },
+    { name: 'Таиланд', lat: 13.7563, lng: 100.5018 },
+    { name: 'ОАЭ', lat: 25.2048, lng: 55.2708 },
+    { name: 'Киргизия', lat: 42.8746, lng: 74.5698 },
+    { name: 'Словакия', lat: 48.1486, lng: 17.1077 },
+    { name: 'Испания', lat: 40.4168, lng: -3.7038 },
+    { name: 'Белоруссия', lat: 53.9006, lng: 27.5590 }
   ];
+
+  const customIcon = new L.Icon({
+    iconUrl: 'data:image/svg+xml;base64,' + btoa(`
+      <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="8" fill="#10B981" stroke="white" stroke-width="2"/>
+        <circle cx="16" cy="16" r="12" fill="#10B981" opacity="0.3"/>
+      </svg>
+    `),
+    iconSize: [32, 32],
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
+  });
 
   return (
     <section className="py-12 bg-white">
@@ -26,67 +41,31 @@ const WorldMap = () => {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
-          <div className="relative w-full aspect-[2/1] bg-white rounded-xl overflow-hidden">
-            <svg
-              viewBox="0 0 1000 500"
-              className="w-full h-full"
-              xmlns="http://www.w3.org/2000/svg"
+          <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+            <MapContainer
+              center={[50, 50]}
+              zoom={3}
+              style={{ height: '100%', width: '100%' }}
+              scrollWheelZoom={false}
             >
-              <rect width="1000" height="500" fill="#E8F4F8" />
-              
-              <path d="M 100 200 Q 150 180 200 200 L 250 220 L 300 180 L 350 200 L 400 190 L 450 210 L 480 200" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
-              
-              <path d="M 450 250 Q 500 240 550 260 L 600 240 L 650 270 L 700 250 L 750 280 L 800 260 L 850 290" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
-              
-              <path d="M 200 350 L 250 330 L 300 360 L 350 340 L 400 370 L 450 350" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
-              
-              <path d="M 500 350 L 550 330 L 600 350 L 650 340" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
-              
-              <circle cx="420" cy="200" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.6s" />
-              </circle>
-              <text x="420" y="185" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Испания</text>
-              
-              <circle cx="470" cy="190" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.4s" />
-              </circle>
-              <text x="470" y="175" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Словакия</text>
-              
-              <circle cx="535" cy="175" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.2s" />
-              </circle>
-              <text x="535" y="160" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Беларусь</text>
-              
-              <circle cx="600" cy="160" r="12" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite" />
-              </circle>
-              <text x="600" y="140" textAnchor="middle" fill="#0D0D0D" fontSize="12" fontWeight="600">Россия</text>
-              
-              <circle cx="560" cy="215" r="9" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite" begin="0.2s" />
-              </circle>
-              <text x="560" y="240" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Казахстан</text>
-              
-              <circle cx="540" cy="235" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="0.4s" />
-              </circle>
-              <text x="540" y="255" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="600">Узбекистан</text>
-              
-              <circle cx="548" cy="225" r="7" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="7;11;7" dur="2s" repeatCount="indefinite" begin="0.6s" />
-              </circle>
-              <text x="548" y="210" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="600">Киргизия</text>
-              
-              <circle cx="500" cy="255" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1s" />
-              </circle>
-              <text x="500" y="275" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">ОАЭ</text>
-              
-              <circle cx="700" cy="280" r="8" fill="#10B981" opacity="0.9">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="0.8s" />
-              </circle>
-              <text x="700" y="300" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Таиланд</text>
-            </svg>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              {countries.map((country, index) => (
+                <Marker 
+                  key={index} 
+                  position={[country.lat, country.lng]}
+                  icon={customIcon}
+                >
+                  <Popup>
+                    <div className="text-center p-2">
+                      <p className="font-semibold text-ink">{country.name}</p>
+                    </div>
+                  </Popup>
+                </Marker>
+              ))}
+            </MapContainer>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
@@ -96,8 +75,7 @@ const WorldMap = () => {
                 className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gray-200"
               >
                 <div
-                  className="w-3 h-3 rounded-full"
-                  style={{ backgroundColor: country.color }}
+                  className="w-3 h-3 rounded-full bg-accent"
                 />
                 <span className="text-sm font-medium text-ink">{country.name}</span>
               </div>
