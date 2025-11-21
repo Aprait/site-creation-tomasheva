@@ -143,7 +143,7 @@ const HeroSection = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/836a580d-97da-475a-96ca-0ab1dcf55eea.JPG" 
                     alt="Наталья Томашева - бизнес-эксперт"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover transition-all duration-500"
                   />
                 </div>
                 
