@@ -156,7 +156,7 @@ const FOXMetoD = () => {
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-6 text-lg rounded-lg shadow-sm transition-all"
+              className="bg-white hover:bg-gray-100 text-accent font-semibold px-8 py-6 text-lg rounded-lg shadow-lg transition-all"
             >
               Получить план систематизации
             </Button>

@@ -5,14 +5,7 @@ import Layout from '@/components/Layout';
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'Все статьи', count: articles.length },
-    { id: 'strategy', name: 'Стратегия', count: articles.filter(a => a.category === 'strategy').length },
-    { id: 'management', name: 'Управление', count: articles.filter(a => a.category === 'management').length },
-    { id: 'ai', name: 'Искусственный интеллект', count: articles.filter(a => a.category === 'ai').length },
-    { id: 'cases', name: 'Кейсы', count: articles.filter(a => a.category === 'cases').length }
-  ];
+  const [sortBy, setSortBy] = useState<'date' | 'title'>('date');
 
   const articles = [
     {
@@ -80,12 +73,27 @@ const Blog = () => {
     }
   ];
 
+  const categories = [
+    { id: 'all', name: 'Все статьи', count: articles.length },
+    { id: 'strategy', name: 'Стратегия', count: articles.filter(a => a.category === 'strategy').length },
+    { id: 'management', name: 'Управление', count: articles.filter(a => a.category === 'management').length },
+    { id: 'ai', name: 'Искусственный интеллект', count: articles.filter(a => a.category === 'ai').length },
+    { id: 'cases', name: 'Кейсы', count: articles.filter(a => a.category === 'cases').length }
+  ];
+
   const filteredArticles = selectedCategory === 'all' 
     ? articles 
     : articles.filter(article => article.category === selectedCategory);
 
-  const featuredArticles = articles.filter(article => article.featured);
-  const regularArticles = filteredArticles.filter(article => !article.featured);
+  const sortedArticles = [...filteredArticles].sort((a, b) => {
+    if (sortBy === 'title') {
+      return a.title.localeCompare(b.title);
+    }
+    return 0;
+  });
+
+  const featuredArticles = sortedArticles.filter(article => article.featured);
+  const regularArticles = sortedArticles.filter(article => !article.featured);
 
   return (
     <Layout currentPage="blog">
@@ -103,22 +111,36 @@ const Blog = () => {
             </p>
           </section>
 
-          {/* Categories Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-accent text-white shadow-sm'
-                      : 'bg-bg-secondary text-ink-secondary hover:bg-bg-tertiary'
+          {/* Filters */}
+          <section className="mb-8">
+            <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
+              <div className="flex flex-wrap gap-3">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      selectedCategory === category.id
+                        ? 'bg-accent text-white'
+                        : 'bg-gray-100 text-ink-secondary hover:bg-gray-200'
                   }`}
                 >
                   {category.name} ({category.count})
                 </button>
               ))}
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <label className="text-sm text-ink-tertiary">Сортировка:</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as 'date' | 'title')}
+                  className="px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
+                >
+                  <option value="date">По дате</option>
+                  <option value="title">По названию</option>
+                </select>
+              </div>
             </div>
           </section>
 

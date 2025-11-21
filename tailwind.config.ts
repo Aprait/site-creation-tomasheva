@@ -43,10 +43,12 @@ export default {
 				},
 				'card': '#FFFFFF',
 				'accent': {
-					DEFAULT: '#00C853',
-					'hover': '#00B048',
-					'light': 'rgba(0, 200, 83, 0.08)',
-					'lighter': 'rgba(0, 200, 83, 0.04)'
+					DEFAULT: '#10B981',
+					'hover': '#059669',
+					'light': 'rgba(16, 185, 129, 0.08)',
+					'lighter': 'rgba(16, 185, 129, 0.04)',
+					'pastel': '#6EE7B7',
+					'mint': '#A7F3D0'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

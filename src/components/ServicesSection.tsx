@@ -46,32 +46,32 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-16 bg-white">
+    <section id="services" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
+        <div className="mb-8">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-3 font-heading tracking-tight">
             Услуги
           </h2>
-          <p className="text-lg text-ink-tertiary max-w-2xl leading-relaxed">
+          <p className="text-base text-ink-tertiary max-w-2xl leading-relaxed">
             Комплексное сопровождение бизнеса на пути к росту
           </p>
         </div>
         
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group p-8 rounded-2xl border border-line/30 hover:border-accent/30 hover:bg-bg-secondary transition-all duration-300"
+              className="group p-6 rounded-xl border-2 border-gray-200 bg-gray-50 hover:border-accent hover:bg-white transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <Icon name={service.icon} size={24} className="text-accent group-hover:text-white" />
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent transition-all duration-300">
+                  <Icon name={service.icon} size={24} className="text-accent group-hover:text-white transition-colors" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-ink mb-3 font-heading">
+                  <h3 className="text-lg font-semibold text-ink mb-2 font-heading">
                     {service.title}
                   </h3>
-                  <p className="text-ink-tertiary leading-relaxed font-light text-lg">
+                  <p className="text-ink-tertiary leading-relaxed text-sm">
                     {service.description}
                   </p>
                 </div>
