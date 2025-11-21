@@ -30,22 +30,22 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
-          <section className="text-center mb-24">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light border border-accent/10 text-accent text-sm font-semibold mb-6">
+          <section className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light border border-accent/10 text-accent text-sm font-semibold mb-4">
               <Icon name="Sparkles" size={16} />
               Премиальный консалтинг
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-ink mb-6 font-heading tracking-tight">
+            <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
               Услуги для роста вашего бизнеса
             </h1>
-            <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
               Помогаю компаниям выйти на новый уровень развития через системный подход, 
               внедрение технологий и стратегическое планирование
             </p>
           </section>
 
           {/* Services Grid */}
-          <div className="space-y-12">
+          <div className="space-y-8">
             {loading ? (
               <div className="text-center py-20">
                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
@@ -57,19 +57,19 @@ const Services = () => {
               </div>
             ) : services.map((service, index) => (
               <div key={service.id || index} className="bg-white rounded-3xl shadow-sm border border-line/30 overflow-hidden hover:shadow-lg hover:border-accent/20 transition-all duration-300">
-                <div className="bg-gradient-to-br from-accent to-accent-hover px-10 py-8 text-white relative overflow-hidden">
+                <div className="bg-gradient-to-br from-accent to-accent-hover px-8 py-6 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/5 rounded-full -ml-24 -mb-24"></div>
                   <div className="relative flex items-center">
                     <div className="w-14 h-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-5 border border-white/20">
                       <Icon name="Target" size={28} className="text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold font-heading tracking-tight">{service.title}</h2>
+                    <h2 className="text-2xl font-bold font-heading tracking-tight">{service.title}</h2>
                   </div>
                 </div>
                 
-                <div className="p-10">
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div className="p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     
                     {/* Описание */}
                     <div className="space-y-3">

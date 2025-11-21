@@ -26,13 +26,13 @@ const StatsSection = () => {
   ];
 
   return (
-    <section id="results" className="py-32 bg-white">
+    <section id="results" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="mb-24">
-          <h2 className="text-5xl lg:text-7xl font-bold text-ink mb-6 font-heading tracking-tight">
+        <div className="mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
             Результаты
           </h2>
-          <p className="text-xl text-ink-tertiary font-light max-w-2xl leading-relaxed">
+          <p className="text-lg text-ink-tertiary max-w-2xl leading-relaxed">
             Измеримые достижения в работе с командами и бизнесом
           </p>
         </div>
@@ -43,7 +43,7 @@ const StatsSection = () => {
               key={index} 
               className="p-8" 
             >
-              <div className="text-5xl lg:text-6xl font-bold text-ink mb-4 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
+              <div className="text-3xl lg:text-4xl font-bold text-ink mb-3 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
                 {stat.number}
               </div>
               <div className="text-base font-medium text-ink-secondary mb-2">

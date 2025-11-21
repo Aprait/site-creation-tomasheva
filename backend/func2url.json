@@ -1,4 +1,5 @@
 {
+  "send-email": "https://functions.poehali.dev/0b2d6b04-0221-4374-9148-6065ed3c6851",
   "get-cases": "https://functions.poehali.dev/489d476b-93b7-4c42-a6e7-5e986e039093",
   "get-services": "https://functions.poehali.dev/c35f0742-d30a-433d-bc4f-1f2a1c501ffa"
 }

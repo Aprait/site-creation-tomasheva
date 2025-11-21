@@ -100,7 +100,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-36 md:pt-48 pb-24 md:pb-32 bg-white relative overflow-hidden">
+      <section className="pt-28 md:pt-36 pb-16 md:pb-20 bg-white relative overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}
@@ -108,11 +108,11 @@ const HeroSection = () => {
             
             {/* Левая колонка (Текст) */}
             <div className="text-center md:text-left md:w-3/5">
-              <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[0.95] font-heading tracking-tighter text-ink">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-heading tracking-tight text-ink">
                 Наталья Томашёва
               </h1>
               
-              <p className="text-xl md:text-2xl mb-12 leading-relaxed font-body text-ink-tertiary max-w-2xl font-light">
+              <p className="text-lg md:text-xl mb-8 leading-relaxed font-body text-ink-tertiary max-w-2xl">
                 Эксперт по росту бизнеса и внедрению ИИ. Более 20 лет опыта в развитии и масштабировании компаний
               </p>
               

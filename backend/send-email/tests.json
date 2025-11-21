@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "name": "Valid contact form submission",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Иванов",
+        "contact": "test@example.com",
+        "message": "Интересует консультация по маркетингу"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "recipient": "sale@foxmetod.ru"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Invalid email format",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван",
+        "contact": "not-an-email",
+        "message": "Test"
+      },
+      "expectedStatus": 422
+    },
+    {
+      "name": "OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}

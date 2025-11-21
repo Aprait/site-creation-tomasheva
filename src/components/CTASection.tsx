@@ -7,13 +7,13 @@ const CTASection = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
 
   return (
-    <section className="py-32 bg-bg-secondary">
+    <section className="py-16 bg-bg-secondary">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="text-center">
-          <h2 className="text-5xl lg:text-7xl font-bold text-ink mb-8 font-heading tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-6 font-heading tracking-tight">
             Готовы к росту?
           </h2>
-          <p className="text-xl text-ink-tertiary mb-12 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-ink-tertiary mb-8 max-w-2xl mx-auto leading-relaxed">
             Обсудим ваши задачи и найдем решения
           </p>
           

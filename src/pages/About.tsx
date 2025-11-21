@@ -70,23 +70,23 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
-          <section className="mb-24">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light text-accent text-sm font-semibold mb-6">
+          <section className="mb-16">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light text-accent text-sm font-semibold mb-4">
                 <Icon name="User" size={16} />
                 Обо мне
               </div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-ink mb-6 font-heading tracking-tight">
+              <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
                 Моя экспертиза
               </h1>
-              <p className="text-xl text-ink-secondary font-body max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-ink-secondary font-body max-w-3xl mx-auto leading-relaxed">
                 Комплексный подход к развитию вашего бизнеса от опытного эксперта
               </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="space-y-6 text-lg font-body text-ink-secondary leading-relaxed">
-                  <p className="text-xl">
+                <div className="space-y-4 text-base font-body text-ink-secondary leading-relaxed">
+                  <p className="text-lg">
                     Более <span className="font-semibold text-ink">20 лет</span> я занимаюсь управлением компаниями, проектами, автоматизацией процессов и цифровой трансформацией.
                   </p>
                   <p>

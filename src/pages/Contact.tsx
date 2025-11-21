@@ -20,15 +20,31 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setShowSuccess(true);
-    setFormData({ name: '', contact: '', message: '' });
-    
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+    try {
+      const response = await fetch('https://functions.poehali.dev/0b2d6b04-0221-4374-9148-6065ed3c6851', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      
+      setShowSuccess(true);
+      setFormData({ name: '', contact: '', message: '' });
+      
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Произошла ошибка при отправке сообщения. Попробуйте позже.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -44,25 +60,25 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light text-accent text-sm font-semibold mb-6">
+          <section className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light text-accent text-sm font-semibold mb-4">
               <Icon name="MessageCircle" size={16} />
               Связь
             </div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-ink mb-6 font-heading tracking-tight">
+            <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
               Контакты
             </h1>
-            <p className="text-xl text-ink-secondary font-body max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-ink-secondary font-body max-w-2xl mx-auto leading-relaxed">
               Свяжитесь со мной, чтобы обсудить, как я могу помочь вашему бизнесу расти
             </p>
           </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-ink mb-6 font-heading">
+                <h2 className="text-2xl font-bold text-ink mb-4 font-heading">
                   Мои контакты
                 </h2>
                 
@@ -116,14 +132,14 @@ const Contact = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="bg-gradient-to-br from-accent via-accent to-accent-hover rounded-3xl p-8 text-white relative overflow-hidden shadow-sm">
+              <div className="bg-gradient-to-br from-accent via-accent to-accent-hover rounded-3xl p-6 text-white relative overflow-hidden shadow-sm">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/10 rounded-full -ml-12 -mb-12"></div>
                 <div className="relative">
-                  <h3 className="text-xl font-bold mb-4 font-heading">
+                  <h3 className="text-lg font-bold mb-3 font-heading">
                     Быстрая связь
                   </h3>
-                  <p className="mb-6 font-body text-white/90 leading-relaxed">
+                  <p className="mb-4 font-body text-white/90 leading-relaxed text-sm">
                     Для срочных вопросов рекомендую писать в Telegram — отвечаю быстрее всего
                   </p>
                   <Button 
@@ -139,7 +155,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="bg-white rounded-3xl shadow-sm border border-line/30 p-10">
-              <h2 className="text-3xl font-bold text-ink mb-3 font-heading">
+              <h2 className="text-2xl font-bold text-ink mb-3 font-heading">
                 Отправить сообщение
               </h2>
               <p className="text-ink-tertiary mb-8 font-body">

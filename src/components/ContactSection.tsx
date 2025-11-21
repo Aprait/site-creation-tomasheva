@@ -16,20 +16,20 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacts" className="py-20 bg-gradient-to-b from-bg-tertiary to-white">
+    <section id="contacts" className="py-16 bg-gradient-to-b from-bg-tertiary to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-ink mb-6 font-heading">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl lg:text-3xl font-bold text-ink mb-4 font-heading">
             Давайте обсудим ваши задачи
           </h2>
-          <p className="text-xl text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-ink-tertiary font-body max-w-3xl mx-auto leading-relaxed">
             Лучший способ начать диалог — написать мне в Telegram. 
             Я оперативно отвечаю и мы сможем быстро договориться о встрече.
           </p>
         </div>
         
         {/* Main CTA */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <Button 
             onClick={handleTelegramClick}
             size="lg"
@@ -42,7 +42,7 @@ const ContactSection = () => {
 
         {/* Alternative contacts */}
         <div className="bg-white rounded-2xl p-8 shadow-lg border border-line/30">
-          <h3 className="text-2xl font-bold text-ink mb-8 text-center font-heading">
+          <h3 className="text-xl font-bold text-ink mb-6 text-center font-heading">
             Свяжитесь со мной:
           </h3>
           

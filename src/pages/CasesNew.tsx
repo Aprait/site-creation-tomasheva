@@ -26,21 +26,21 @@ const Cases = () => {
 
   return (
     <Layout currentPage="cases">
-      <div className="pt-32 pb-24 bg-white">
+      <div className="pt-24 pb-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
           
           {/* Hero Section */}
-          <section className="mb-24">
-            <h1 className="text-6xl lg:text-8xl font-bold text-ink mb-8 font-heading tracking-tight">
+          <section className="mb-16">
+            <h1 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
               Кейсы
             </h1>
-            <p className="text-2xl text-ink-secondary font-light max-w-3xl leading-relaxed">
+            <p className="text-lg text-ink-secondary max-w-3xl leading-relaxed">
               Реальные истории трансформации бизнеса
             </p>
           </section>
 
           {/* Cases Grid */}
-          <div className="space-y-16">
+          <div className="space-y-12">
             {loading ? (
               <div className="text-center py-20">
                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
@@ -51,10 +51,10 @@ const Cases = () => {
                 <p className="text-ink-tertiary">Кейсы временно недоступны</p>
               </div>
             ) : cases.map((caseItem, index) => (
-              <div key={caseItem.id || index} className="border-t border-line/30 pt-16">
+              <div key={caseItem.id || index} className="border-t border-line/30 pt-12">
                 
                 {/* Header */}
-                <div className="mb-12">
+                <div className="mb-8">
                   <div className="flex items-start justify-between gap-6 mb-4">
                     <div>
                       {caseItem.category && (
@@ -62,11 +62,11 @@ const Cases = () => {
                           {caseItem.category}
                         </span>
                       )}
-                      <h2 className="text-4xl lg:text-5xl font-bold font-heading tracking-tight text-ink">{caseItem.title}</h2>
+                      <h2 className="text-2xl lg:text-3xl font-bold font-heading tracking-tight text-ink">{caseItem.title}</h2>
                     </div>
                   </div>
                   {caseItem.result_headline && (
-                    <div className="text-2xl font-semibold text-ink">{caseItem.result_headline}</div>
+                    <div className="text-xl font-semibold text-ink">{caseItem.result_headline}</div>
                   )}
                 </div>
 

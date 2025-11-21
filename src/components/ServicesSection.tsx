@@ -46,13 +46,13 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-white">
+    <section id="services" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="mb-24">
-          <h2 className="text-5xl lg:text-7xl font-bold text-ink mb-6 font-heading tracking-tight">
+        <div className="mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
             Услуги
           </h2>
-          <p className="text-xl text-ink-tertiary font-light max-w-2xl leading-relaxed">
+          <p className="text-lg text-ink-tertiary max-w-2xl leading-relaxed">
             Комплексное сопровождение бизнеса на пути к росту
           </p>
         </div>
