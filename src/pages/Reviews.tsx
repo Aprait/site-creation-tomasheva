@@ -152,8 +152,8 @@ const Reviews = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <div className="text-4xl font-bold mb-2 text-accent">{stat.number}</div>
-                    <div className="font-body text-ink">{stat.label}</div>
+                    <div className="text-4xl font-bold mb-2 text-brand-accent">{stat.number}</div>
+                    <div className="font-body text-white">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -255,14 +255,15 @@ const Reviews = () => {
                 <Button 
                   size="lg"
                   onClick={() => setIsConsultationModalOpen(true)}
-                  className="bg-brand-accent hover:bg-orange-500 text-white px-8 py-4 text-lg"
+                  className="bg-white text-accent hover:bg-white hover:text-accent-hover border-2 border-white px-8 py-4 text-lg font-semibold"
                 >
                   Начать сотрудничество
                 </Button>
                 <Button 
                   size="lg"
                   onClick={() => navigate('/cases')}
-                  className="bg-white text-brand-navy border-2 border-white hover:bg-gray-100 hover:text-brand-navy px-8 py-4 text-lg"
+                  variant="outline"
+                  className="bg-transparent text-accent hover:bg-white hover:text-accent border-2 border-accent px-8 py-4 text-lg font-semibold"
                 >
                   Изучить кейсы
                 </Button>

@@ -62,11 +62,11 @@ const Cases = () => {
                           {caseItem.category}
                         </span>
                       )}
-                      <h2 className="text-2xl lg:text-3xl font-bold font-heading tracking-tight text-ink">{caseItem.title}</h2>
+                      <h2 className="text-2xl lg:text-3xl font-bold font-heading tracking-tight text-ink">{caseItem.project_title}</h2>
                     </div>
                   </div>
-                  {caseItem.result_headline && (
-                    <div className="text-xl font-semibold text-ink">{caseItem.result_headline}</div>
+                  {caseItem.results_metric && (
+                    <div className="text-xl font-semibold text-ink">{caseItem.results_metric}</div>
                   )}
                 </div>
 
@@ -75,24 +75,13 @@ const Cases = () => {
                   
                   {/* Left Column */}
                   <div className="space-y-10">
-                    {caseItem.challenge && (
+                    {caseItem.challenge_summary && (
                       <div>
                         <h3 className="text-xl font-semibold text-ink mb-4">
                           Вызов
                         </h3>
                         <p className="text-ink-tertiary font-light leading-relaxed text-lg">
-                          {caseItem.challenge}
-                        </p>
-                      </div>
-                    )}
-
-                    {caseItem.solution && (
-                      <div>
-                        <h3 className="text-xl font-semibold text-ink mb-4">
-                          Решение
-                        </h3>
-                        <p className="text-ink-tertiary font-light leading-relaxed text-lg">
-                          {caseItem.solution}
+                          {caseItem.challenge_summary}
                         </p>
                       </div>
                     )}
@@ -100,40 +89,29 @@ const Cases = () => {
 
                   {/* Right Column */}
                   <div className="space-y-10">
-                    {caseItem.outcome && (
+                    {caseItem.outcome_text && (
                       <div>
                         <h3 className="text-xl font-semibold text-ink mb-4">
                           Результат
                         </h3>
                         <p className="text-ink-tertiary font-light leading-relaxed text-lg">
-                          {caseItem.outcome}
+                          {caseItem.outcome_text}
                         </p>
                       </div>
                     )}
 
-                    {/* Metrics */}
-                    {caseItem.metrics_improved && (
+                    {/* Tech Stack */}
+                    {caseItem.tech_stack && Array.isArray(caseItem.tech_stack) && caseItem.tech_stack.length > 0 && (
                       <div>
                         <h3 className="text-xl font-semibold text-ink mb-4">
-                          Ключевые метрики
+                          Технологии
                         </h3>
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-2">
-                            <Icon name="TrendingUp" size={18} className="text-accent" />
-                            <span className="text-ink-tertiary font-light text-lg">{caseItem.metrics_improved}</span>
-                          </div>
-                          {caseItem.revenue_impact && (
-                            <div className="flex items-center gap-2">
-                              <Icon name="DollarSign" size={18} className="text-accent" />
-                              <span className="text-ink-tertiary font-light text-lg">{caseItem.revenue_impact}</span>
-                            </div>
-                          )}
-                          {caseItem.time_saved && (
-                            <div className="flex items-center gap-2">
-                              <Icon name="Clock" size={18} className="text-accent" />
-                              <span className="text-ink-tertiary font-light text-lg">{caseItem.time_saved}</span>
-                            </div>
-                          )}
+                        <div className="flex flex-wrap gap-2">
+                          {caseItem.tech_stack.map((tech: string, idx: number) => (
+                            <span key={idx} className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-lg">
+                              {tech}
+                            </span>
+                          ))}
                         </div>
                       </div>
                     )}
