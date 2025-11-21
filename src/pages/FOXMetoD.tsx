@@ -140,17 +140,17 @@ const FOXMetoD = () => {
     <Layout currentPage="foxmetod">
       <div className="min-h-screen bg-white">
         {/* Блок 1: Первый экран */}
-        <section className="relative py-24 md:py-32 bg-gradient-to-br from-accent to-accent-hover overflow-hidden">
+        <section className="relative py-16 md:py-20 bg-gradient-to-br from-accent to-accent-hover overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
           </div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
               Превращаем ваш бизнес в систему, которая работает без вас
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
               Обретите свободу для стратегического роста, пока ваша команда слаженно достигает результатов
             </p>
             <Button 
@@ -164,9 +164,9 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 2: Проблема */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-ink mb-12 text-center">
               Для собственников, которые устали быть главным ресурсом своего бизнеса
             </h2>
             
@@ -186,12 +186,12 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 3: Решение */}
-        <section className="py-20 bg-white">
+        <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-primary mb-8">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-brand-primary mb-8">
               Ваша свобода — через работающую систему
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
               Мы не решаем отдельные проблемы, а строим целостные, работающие системы, которые обеспечивают устойчивый рост вашего бизнеса. 
               Наша цель — помочь вам построить компанию, которая работает слаженно и эффективно, даря вам уверенность в будущем и удовольствие от дела вашей жизни.
             </p>
@@ -199,9 +199,9 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 4: Продукты */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-ink mb-12 text-center">
               Как мы построим вашу систему
             </h2>
             
@@ -232,9 +232,9 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 5: Дополнительные компетенции */}
-        <section className="py-20 bg-white">
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-ink mb-12 text-center">
               Решаем и другие ключевые задачи бизнеса
             </h2>
             
@@ -258,9 +258,9 @@ const FOXMetoD = () => {
         </section>
 
         {/* Блок 6: Команда */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-ink mb-12 text-center">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-ink mb-12 text-center">
               Гарантия результата — наша команда экспертов-практиков
             </h2>
             

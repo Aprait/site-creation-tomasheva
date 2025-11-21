@@ -7,11 +7,11 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'Все статьи', count: 12 },
-    { id: 'strategy', name: 'Стратегия', count: 4 },
-    { id: 'management', name: 'Управление', count: 3 },
-    { id: 'ai', name: 'Искусственный интеллект', count: 3 },
-    { id: 'cases', name: 'Кейсы', count: 2 }
+    { id: 'all', name: 'Все статьи', count: articles.length },
+    { id: 'strategy', name: 'Стратегия', count: articles.filter(a => a.category === 'strategy').length },
+    { id: 'management', name: 'Управление', count: articles.filter(a => a.category === 'management').length },
+    { id: 'ai', name: 'Искусственный интеллект', count: articles.filter(a => a.category === 'ai').length },
+    { id: 'cases', name: 'Кейсы', count: articles.filter(a => a.category === 'cases').length }
   ];
 
   const articles = [
@@ -129,15 +129,13 @@ const Blog = () => {
                 <Icon name="Star" size={24} className="text-accent mr-2" />
                 Рекомендуемые статьи
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {featuredArticles.map((article, index) => (
                   <article 
                     key={article.id} 
-                    className={`bg-white rounded-xl shadow-lg overflow-hidden card-hover ${
-                      index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
-                    }`}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
                   >
-                    <div className={`relative ${index === 0 ? 'h-64 lg:h-80' : 'h-48'}`}>
+                    <div className="relative h-48">
                       <img 
                         src={article.image} 
                         alt={article.title}
@@ -148,30 +146,19 @@ const Blog = () => {
                           {article.categoryName}
                         </span>
                       </div>
-                      {index === 0 && (
-                        <div className="absolute top-4 right-4">
-                          <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                            <Icon name="Star" size={16} className="mr-1" />
-                            Популярное
-                          </span>
-                        </div>
-                      )}
+
                     </div>
-                    <div className={`p-6 ${index === 0 ? 'lg:p-8' : ''}`}>
+                    <div className="p-6">
                       <div className="flex items-center text-sm text-gray-500 mb-3 font-body">
                         <Icon name="Calendar" size={16} className="mr-1" />
                         <span className="mr-4">{article.date}</span>
                         <Icon name="Clock" size={16} className="mr-1" />
                         <span>{article.readTime}</span>
                       </div>
-                      <h3 className={`font-bold text-gray-900 mb-3 font-heading ${
-                        index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl'
-                      }`}>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">
                         {article.title}
                       </h3>
-                      <p className={`text-gray-600 font-body ${
-                        index === 0 ? 'text-lg mb-6' : 'mb-4'
-                      }`}>
+                      <p className="text-gray-600 font-body mb-4">
                         {article.excerpt}
                       </p>
                       <Button 
@@ -193,7 +180,7 @@ const Blog = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-8 font-heading">
               {selectedCategory === 'all' ? 'Все статьи' : `Категория: ${categories.find(c => c.id === selectedCategory)?.name}`}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {(selectedCategory === 'all' ? regularArticles : filteredArticles).map((article) => (
                 <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                   <div className="relative h-48">
@@ -247,7 +234,7 @@ const Blog = () => {
               <Button 
                 size="lg"
                 onClick={() => window.open('https://t.me/natalyatomasheva', '_blank')}
-                className="bg-brand-accent hover:bg-orange-500 text-white px-8 py-4 text-lg"
+                className="bg-white hover:bg-white text-accent hover:text-accent-hover px-8 py-4 text-lg font-semibold border-2 border-white"
               >
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Подписаться на Telegram

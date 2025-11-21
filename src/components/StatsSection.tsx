@@ -4,12 +4,12 @@ import { Card, CardContent } from '@/components/ui/card';
 const StatsSection = () => {
   const stats = [
     { 
-      number: "250+", 
+      number: "270+", 
       label: "Команд проведено через трекинг", 
-      period: "за 2021-2024 гг." 
+      period: "за 2021-2025 гг." 
     },
     { 
-      number: "21+ млрд ₽", 
+      number: "31+ млрд ₽", 
       label: "Годовой оборот компаний", 
       period: "с которыми велась работа" 
     },
@@ -26,9 +26,9 @@ const StatsSection = () => {
   ];
 
   return (
-    <section id="results" className="py-16 bg-white">
+    <section id="results" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="mb-12">
+        <div className="mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 font-heading tracking-tight">
             Результаты
           </h2>
@@ -37,11 +37,11 @@ const StatsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <div
               key={index} 
-              className="p-8" 
+              className="p-6 bg-gray-50 rounded-xl border border-gray-200" 
             >
               <div className="text-3xl lg:text-4xl font-bold text-ink mb-3 font-heading" style={{fontVariantNumeric: 'tabular-nums'}}>
                 {stat.number}

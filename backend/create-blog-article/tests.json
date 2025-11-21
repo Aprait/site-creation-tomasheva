@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Create blog article",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "title": "Тестовая статья",
+        "excerpt": "Краткое описание статьи",
+        "content": "Полный текст статьи для теста",
+        "category": "strategy",
+        "categoryName": "Стратегия",
+        "imageUrl": "https://example.com/image.jpg",
+        "readTime": "5 мин",
+        "featured": false
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "success": true,
+        "article_id": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Handle OPTIONS request",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}

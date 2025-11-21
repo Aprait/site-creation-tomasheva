@@ -26,27 +26,31 @@ const HeroSection = () => {
   return (
     <>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-line/30 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="flex justify-between items-center h-20 md:h-24">
+          <div className="flex justify-between items-center h-16 md:h-18">
             <Logo />
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-12">
-              {navigationLinks.map((link) => (
-                <a 
-                  key={link.pageName}
-                  href={link.to} 
-                  className="text-ink-tertiary hover:text-ink transition-colors text-sm font-medium tracking-tight"
-                >
-                  {link.label}
-                </a>
+            <div className="hidden md:flex items-center space-x-8 bg-gray-50 rounded-full px-6 py-2">
+              {navigationLinks.map((link, index) => (
+                <React.Fragment key={link.pageName}>
+                  <a 
+                    href={link.to} 
+                    className="text-ink-secondary hover:text-accent transition-colors text-sm font-medium"
+                  >
+                    {link.label}
+                  </a>
+                  {index < navigationLinks.length - 1 && (
+                    <div className="w-px h-4 bg-gray-300"></div>
+                  )}
+                </React.Fragment>
               ))}
             </div>
 
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex bg-accent hover:bg-accent-hover text-white rounded-xl px-6 h-11 text-sm font-medium shadow-sm"
+              className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 h-11 text-sm font-medium shadow-sm"
               variant="default"
               size="default"
             >
@@ -100,7 +104,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-28 md:pt-36 pb-16 md:pb-20 bg-white relative overflow-hidden">
+      <section className="pt-24 md:pt-28 pb-12 md:pb-16 bg-white relative overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative">
           {/* Родительский Flex-контейнер */}

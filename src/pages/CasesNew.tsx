@@ -83,56 +83,65 @@ const Cases = () => {
 
                   {/* Content */}
                   <div className="p-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                       
-                      {/* Left Column */}
-                      <div>
-                        {caseItem.challenge_summary && (
-                          <div>
-                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
-                              <Icon name="AlertCircle" size={20} className="text-red-500" />
-                              Вызов
-                            </h3>
-                            <p className="text-ink-tertiary leading-relaxed">
-                              {caseItem.challenge_summary}
-                            </p>
-                          </div>
-                        )}
-                      </div>
+                      {/* Вызов */}
+                      {caseItem.challenge_summary && (
+                        <div>
+                          <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                            <Icon name="AlertCircle" size={20} className="text-red-500" />
+                            Вызов
+                          </h3>
+                          <p className="text-ink-tertiary leading-relaxed text-sm">
+                            {caseItem.challenge_summary}
+                          </p>
+                        </div>
+                      )}
 
-                      {/* Right Column */}
-                      <div className="space-y-6">
-                        {caseItem.outcome_text && (
-                          <div>
-                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
-                              <Icon name="CheckCircle" size={20} className="text-green-500" />
-                              Результат
-                            </h3>
-                            <p className="text-ink-tertiary leading-relaxed">
-                              {caseItem.outcome_text}
-                            </p>
-                          </div>
-                        )}
+                      {/* Действия */}
+                      {caseItem.actions_taken && (
+                        <div>
+                          <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                            <Icon name="Settings" size={20} className="text-blue-500" />
+                            Действия
+                          </h3>
+                          <p className="text-ink-tertiary leading-relaxed text-sm">
+                            {caseItem.actions_taken}
+                          </p>
+                        </div>
+                      )}
 
-                        {/* Tech Stack */}
-                        {caseItem.tech_stack && Array.isArray(caseItem.tech_stack) && caseItem.tech_stack.length > 0 && (
-                          <div>
-                            <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
-                              <Icon name="Code" size={20} className="text-accent" />
-                              Технологии
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                              {caseItem.tech_stack.map((tech: string, idx: number) => (
-                                <span key={idx} className={`inline-block px-3 py-1 ${colorScheme.badge} text-sm font-medium rounded-lg`}>
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                      {/* Результат */}
+                      {caseItem.outcome_text && (
+                        <div>
+                          <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                            <Icon name="CheckCircle" size={20} className="text-green-500" />
+                            Результат
+                          </h3>
+                          <p className="text-ink-tertiary leading-relaxed text-sm">
+                            {caseItem.outcome_text}
+                          </p>
+                        </div>
+                      )}
 
                     </div>
+
+                    {/* Tech Stack */}
+                    {caseItem.tech_stack && Array.isArray(caseItem.tech_stack) && caseItem.tech_stack.length > 0 && (
+                      <div className="mt-6 pt-6 border-t border-gray-200">
+                        <h3 className="text-lg font-semibold text-ink mb-3 flex items-center gap-2">
+                          <Icon name="Code" size={20} className="text-accent" />
+                          Технологии
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {caseItem.tech_stack.map((tech: string, idx: number) => (
+                            <span key={idx} className={`inline-block px-3 py-1 ${colorScheme.badge} text-sm font-medium rounded-lg`}>
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
