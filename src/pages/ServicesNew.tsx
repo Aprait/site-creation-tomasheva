@@ -7,9 +7,23 @@ import ConsultationModal from '@/components/ConsultationModal';
 
 const Services = () => {
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<string>('');
   const [services, setServices] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
+  const handleServiceClick = (serviceTitle: string) => {
+    const serviceMap: Record<string, string> = {
+      'Бизнес-трекинг и OKR-коучинг': 'business-tracking',
+      'Внедрение ИИ в бизнес': 'ai-implementation',
+      'Разработка стратегий': 'strategic-planning',
+      'Стратегические сессии': 'strategic-sessions',
+      'Запуск и масштабирование стартапов': 'startup-launch',
+      'Индивидуальные консультации': 'individual-consultation'
+    };
+    setSelectedService(serviceMap[serviceTitle] || 'business-tracking');
+    setIsConsultationModalOpen(true);
+  };
 
   useEffect(() => {
     fetch('https://functions.poehali.dev/c35f0742-d30a-433d-bc4f-1f2a1c501ffa')
@@ -134,7 +148,7 @@ const Services = () => {
                     <div className="flex justify-center">
                       <Button 
                         size="lg"
-                        onClick={() => setIsConsultationModalOpen(true)}
+                        onClick={() => handleServiceClick(service.title)}
                         className="bg-accent hover:bg-accent-hover text-white shadow-sm hover:shadow-md transition-all"
                       >
                         <Icon name="MessageSquare" size={18} />
@@ -193,7 +207,11 @@ const Services = () => {
       {/* Consultation Modal */}
       <ConsultationModal 
         isOpen={isConsultationModalOpen}
-        onClose={() => setIsConsultationModalOpen(false)}
+        onClose={() => {
+          setIsConsultationModalOpen(false);
+          setSelectedService('');
+        }}
+        prefilledService={selectedService}
       />
     </Layout>
   );

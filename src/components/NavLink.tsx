@@ -32,10 +32,10 @@ const NavLink = ({ to, children, currentPage, pageName, onClick, isMobile = fals
   return (
     <Link 
       to={to} 
-      className={`transition-colors font-body font-medium ${
+      className={`text-sm font-medium transition-colors ${
         isActive 
           ? 'text-accent font-semibold' 
-          : 'text-gray-600 hover:text-brand-primary'
+          : 'text-ink-secondary hover:text-accent'
       }`}
     >
       {children}

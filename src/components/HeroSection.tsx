@@ -45,6 +45,25 @@ const HeroSection = () => {
                   )}
                 </React.Fragment>
               ))}
+              {/* Админские ссылки - видны только при разработке */}
+              {window.location.hostname === 'localhost' && (
+                <>
+                  <div className="w-px h-4 bg-gray-300"></div>
+                  <a 
+                    href="/admin/clients" 
+                    className="text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
+                  >
+                    👥 Клиенты
+                  </a>
+                  <div className="w-px h-4 bg-gray-300"></div>
+                  <a 
+                    href="/admin/certificates" 
+                    className="text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
+                  >
+                    🏆 Сертификаты
+                  </a>
+                </>
+              )}
             </div>
 
             {/* Desktop CTA Button */}

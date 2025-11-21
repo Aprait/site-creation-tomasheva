@@ -38,25 +38,47 @@ const Layout = ({ children, currentPage = '' }: LayoutProps) => {
             </Link>
             
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              {navigationLinks.map((link) => (
-                <NavLink 
-                  key={link.pageName}
-                  to={link.to}
-                  currentPage={currentPage}
-                  pageName={link.pageName}
-                >
-                  {link.label}
-                </NavLink>
+            <div className="hidden md:flex items-center space-x-8 bg-gray-50 rounded-full px-6 py-2">
+              {navigationLinks.map((link, index) => (
+                <React.Fragment key={link.pageName}>
+                  <NavLink 
+                    to={link.to}
+                    currentPage={currentPage}
+                    pageName={link.pageName}
+                  >
+                    {link.label}
+                  </NavLink>
+                  {index < navigationLinks.length - 1 && (
+                    <div className="w-px h-4 bg-gray-300"></div>
+                  )}
+                </React.Fragment>
               ))}
+              {/* Админские ссылки - видны только при разработке */}
+              {window.location.hostname === 'localhost' && (
+                <>
+                  <div className="w-px h-4 bg-gray-300"></div>
+                  <Link 
+                    to="/admin/clients" 
+                    className="text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
+                  >
+                    👥 Клиенты
+                  </Link>
+                  <div className="w-px h-4 bg-gray-300"></div>
+                  <Link 
+                    to="/admin/certificates" 
+                    className="text-orange-600 hover:text-orange-700 transition-colors text-sm font-medium"
+                  >
+                    🏆 Сертификаты
+                  </Link>
+                </>
+              )}
             </div>
 
             {/* Desktop CTA Button */}
             <Button 
               onClick={handleTelegramClick}
-              className="hidden md:flex modern-button bg-brand-accent hover:bg-blue-600 text-white font-semibold px-6 py-2.5 rounded-lg"
+              className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-6 h-11 text-sm font-medium shadow-sm"
             >
-              <Icon name="MessageCircle" size={16} className="mr-2" />
               Связаться
             </Button>
 
