@@ -32,52 +32,60 @@ const WorldMap = () => {
               className="w-full h-full"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="1000" height="500" fill="#F0F2F5" />
+              <rect width="1000" height="500" fill="#E8F4F8" />
               
-              <circle cx="550" cy="180" r="25" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="25;30;25" dur="2s" repeatCount="indefinite" />
-              </circle>
-              <text x="550" y="155" textAnchor="middle" fill="#0D0D0D" fontSize="12" fontWeight="600">Россия</text>
+              <path d="M 100 200 Q 150 180 200 200 L 250 220 L 300 180 L 350 200 L 400 190 L 450 210 L 480 200" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
               
-              <circle cx="520" cy="230" r="18" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite" begin="0.2s" />
-              </circle>
-              <text x="520" y="260" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="500">Казахстан</text>
+              <path d="M 450 250 Q 500 240 550 260 L 600 240 L 650 270 L 700 250 L 750 280 L 800 260 L 850 290" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
               
-              <circle cx="505" cy="250" r="15" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="15;19;15" dur="2s" repeatCount="indefinite" begin="0.4s" />
-              </circle>
-              <text x="505" y="276" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="500">Узбекистан</text>
+              <path d="M 200 350 L 250 330 L 300 360 L 350 340 L 400 370 L 450 350" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
               
-              <circle cx="515" cy="242" r="13" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="13;17;13" dur="2s" repeatCount="indefinite" begin="0.6s" />
-              </circle>
-              <text x="515" y="226" textAnchor="middle" fill="#0D0D0D" fontSize="9" fontWeight="500">Киргизия</text>
+              <path d="M 500 350 L 550 330 L 600 350 L 650 340" fill="#D4E7DD" stroke="#A8D5BA" strokeWidth="1" />
               
-              <circle cx="640" cy="280" r="16" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="16;20;16" dur="2s" repeatCount="indefinite" begin="0.8s" />
+              <circle cx="420" cy="200" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.6s" />
               </circle>
-              <text x="640" y="306" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="500">Таиланд</text>
+              <text x="420" y="185" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Испания</text>
               
-              <circle cx="485" cy="275" r="16" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="16;20;16" dur="2s" repeatCount="indefinite" begin="1s" />
+              <circle cx="470" cy="190" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.4s" />
               </circle>
-              <text x="485" y="301" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="500">ОАЭ</text>
+              <text x="470" y="175" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Словакия</text>
               
-              <circle cx="535" cy="185" r="14" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="14;18;14" dur="2s" repeatCount="indefinite" begin="1.2s" />
+              <circle cx="535" cy="175" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1.2s" />
               </circle>
-              <text x="535" y="172" textAnchor="middle" fill="#0D0D0D" fontSize="9" fontWeight="500">Белоруссия</text>
+              <text x="535" y="160" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Беларусь</text>
               
-              <circle cx="470" cy="200" r="14" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="14;18;14" dur="2s" repeatCount="indefinite" begin="1.4s" />
+              <circle cx="600" cy="160" r="12" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="12;16;12" dur="2s" repeatCount="indefinite" />
               </circle>
-              <text x="470" y="188" textAnchor="middle" fill="#0D0D0D" fontSize="9" fontWeight="500">Словакия</text>
+              <text x="600" y="140" textAnchor="middle" fill="#0D0D0D" fontSize="12" fontWeight="600">Россия</text>
               
-              <circle cx="420" cy="220" r="15" fill="#10B981" opacity="0.8">
-                <animate attributeName="r" values="15;19;15" dur="2s" repeatCount="indefinite" begin="1.6s" />
+              <circle cx="560" cy="215" r="9" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="9;13;9" dur="2s" repeatCount="indefinite" begin="0.2s" />
               </circle>
-              <text x="420" y="207" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="500">Испания</text>
+              <text x="560" y="240" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Казахстан</text>
+              
+              <circle cx="540" cy="235" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="0.4s" />
+              </circle>
+              <text x="540" y="255" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="600">Узбекистан</text>
+              
+              <circle cx="548" cy="225" r="7" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="7;11;7" dur="2s" repeatCount="indefinite" begin="0.6s" />
+              </circle>
+              <text x="548" y="210" textAnchor="middle" fill="#0D0D0D" fontSize="10" fontWeight="600">Киргизия</text>
+              
+              <circle cx="500" cy="255" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="1s" />
+              </circle>
+              <text x="500" y="275" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">ОАЭ</text>
+              
+              <circle cx="700" cy="280" r="8" fill="#10B981" opacity="0.9">
+                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" begin="0.8s" />
+              </circle>
+              <text x="700" y="300" textAnchor="middle" fill="#0D0D0D" fontSize="11" fontWeight="600">Таиланд</text>
             </svg>
           </div>
 

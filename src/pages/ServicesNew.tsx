@@ -69,9 +69,20 @@ const Services = () => {
               <div className="text-center py-20">
                 <p className="text-ink-tertiary">Услуги временно недоступны</p>
               </div>
-            ) : services.map((service, index) => (
+            ) : services.map((service, index) => {
+              const gradients = [
+                "from-blue-500 to-indigo-600",
+                "from-purple-500 to-violet-600", 
+                "from-emerald-500 to-green-600",
+                "from-orange-500 to-red-600",
+                "from-pink-500 to-rose-600",
+                "from-cyan-500 to-blue-600"
+              ];
+              const gradient = gradients[index % gradients.length];
+              
+              return (
               <div key={service.id || index} className="bg-white rounded-3xl shadow-sm border border-line/30 overflow-hidden hover:shadow-lg hover:border-accent/20 transition-all duration-300">
-                <div className="bg-gradient-to-br from-accent to-accent-hover px-8 py-6 text-white relative overflow-hidden">
+                <div className={`bg-gradient-to-br ${gradient} px-8 py-6 text-white relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/5 rounded-full -ml-24 -mb-24"></div>
                   <div className="relative flex items-center">
@@ -158,7 +169,8 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA Section */}
@@ -175,7 +187,7 @@ const Services = () => {
                 <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-heading tracking-tight">
                   Готовы начать трансформацию?
                 </h2>
-                <p className="text-lg lg:text-xl mb-10 font-body text-white max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg lg:text-xl mb-10 font-body text-white/90 max-w-2xl mx-auto leading-relaxed">
                   Каждая услуга адаптируется под специфику вашего бизнеса. 
                   Давайте обсудим, какой подход будет наиболее эффективным для вас.
                 </p>
@@ -191,7 +203,7 @@ const Services = () => {
                   <Button 
                     size="lg"
                     onClick={() => navigate('/cases')}
-                    className="bg-accent-light text-accent hover:bg-accent/20 border-2 border-accent/20 hover:border-accent/30"
+                    className="bg-white text-accent hover:bg-gray-50 shadow-lg hover:shadow-xl transition-all"
                   >
                     <Icon name="BookOpen" size={18} />
                     Посмотреть кейсы
