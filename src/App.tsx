@@ -14,6 +14,8 @@ import Cases from "./pages/CasesNew";
 import Reviews from "./pages/Reviews";
 import Blog from "./pages/Blog";
 import BlogEditor from "./pages/BlogEditor";
+import ClientsAdmin from "./pages/ClientsAdmin";
+import CertificatesAdmin from "./pages/CertificatesAdmin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/new" element={<BlogEditor />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/clients" element={<ClientsAdmin />} />
+          <Route path="/admin/certificates" element={<CertificatesAdmin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
