@@ -155,6 +155,7 @@ const CertificatesAdmin = () => {
           <div>
             <h1 className="text-3xl font-bold text-ink mb-2">Управление сертификатами</h1>
             <p className="text-ink-tertiary">Добавляйте и редактируйте сертификаты, награды и благодарности</p>
+            <p className="text-sm text-accent font-medium mt-1">Всего загружено: {certificates.length}</p>
           </div>
           <Button
             onClick={() => {

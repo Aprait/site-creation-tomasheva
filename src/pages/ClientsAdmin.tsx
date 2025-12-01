@@ -133,6 +133,7 @@ const ClientsAdmin = () => {
           <div>
             <h1 className="text-3xl font-bold text-ink mb-2">Управление клиентами</h1>
             <p className="text-ink-tertiary">Добавляйте и редактируйте логотипы компаний-клиентов</p>
+            <p className="text-sm text-accent font-medium mt-1">Всего загружено: {clients.length}</p>
           </div>
           <Button
             onClick={() => {
@@ -261,11 +262,14 @@ const ClientsAdmin = () => {
               </div>
 
               {client.logo_url && (
-                <div className="mb-4 flex items-center justify-center h-24 bg-gray-50 rounded-lg">
+                <div className="mb-4 flex items-center justify-center h-40 bg-gray-50 rounded-lg p-4">
                   <img
                     src={client.logo_url}
                     alt={client.company_name}
                     className="max-h-full max-w-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300x200?text=Нет+лого';
+                    }}
                   />
                 </div>
               )}
